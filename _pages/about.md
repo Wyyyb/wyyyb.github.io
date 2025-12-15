@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: <a href='https://uwaterloo.ca/'>University of Waterloo</a>; <a href='https://vectorinstitute.ai/'>Vector Institute</a>;
 
@@ -20,7 +20,7 @@ announcements:
 
 ---
 
-I'm a CS Ph.D. student at [TIGER-Lab][0] in [University of Waterloo][1], advised by Prof. [Wenhu Chen][2]. Previously, I obtained my Master's degree in Computer Science from [UC Davis][3]. I received my Bachelor's degree in Computer Science from [Chu Kochen Honors College][4], [Zhejiang University][5]. From 2021 to 2023, I worked as a full-time NLP Algorithm Engineer at [Tencent Smart Healthcare][6].
+I'm a CS Ph.D. student at [TIGER-Lab][0] in [University of Waterloo][1], advised by Prof. [Wenhu Chen][2]. Previously, I obtained my Master's degree in Computer Science from [UC Davis][3]. I received my Bachelor's degree in Computer Science from [Chu Kochen Honors College][4], [Zhejiang University][5]. From 2021 to 2023, I worked as a full-time NLP Algorithm Engineer at [Tencent][6].
 
 My research focuses on General Artificial Intelligence and its applications. I am particularly interested in understanding the behavior of LLMs, multimodal reasoning, and their evaluation.
 
@@ -30,7 +30,7 @@ My research focuses on General Artificial Intelligence and its applications. I a
 [3]: https://www.ucdavis.edu/
 [4]: http://ckc.zju.edu.cn/ckcen/
 [5]: https://www.zju.edu.cn/english/
-[6]: https://www.tencent.com/en-us/business/smart-healthcare.html
+[6]: https://www.tencent.com/
 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
