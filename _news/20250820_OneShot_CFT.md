@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🎉 [One-Shot CFT](https://tiger-ai-lab.github.io/One-Shot-CFT/) are accepted to [EMNLP 2025](https://aclanthology.org/2025.emnlp-main.149/)
+🎉 [One-Shot CFT](https://tiger-ai-lab.github.io/One-Shot-CFT/) is accepted to [EMNLP 2025](https://aclanthology.org/2025.emnlp-main.149/)
