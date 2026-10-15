@@ -59,7 +59,7 @@
   },
   "about": {
     "paragraphs": [
-      "I am a Ph.D. student in Computer Science at the <a href=\"https://uwaterloo.ca/\">University of Waterloo</a>, advised by Prof. <a href=\"https://wenhuchen.github.io/\">Wenhu Chen</a> in <a href=\"https://huggingface.co/TIGER-Lab\">TIGER-Lab</a>, and I am affiliated with the <a href=\"https://vectorinstitute.ai/\">Vector Institute</a>. I am also a Student Researcher at <a href=\"https://research.google/\">Google</a>. Before Waterloo, I was an Applied Scientist at <a href=\"https://www.tencent.com/\">Tencent</a> Smart Healthcare (2021–2023), and I have been working with TIGER-Lab since 2023. I received my M.S. in Computer Science from <a href=\"https://www.ucdavis.edu/\">UC Davis</a> and my B.Eng. in Computer Science from <a href=\"http://ckc.zju.edu.cn/\">Chu Kochen Honors College</a>, <a href=\"https://www.zju.edu.cn/english/\">Zhejiang University</a>. In 2025–2026 I was a Research Intern at <a href=\"https://www.minimax.io/\">MiniMax</a>, working on mid-training for agentic LLMs and contributing to <a href=\"https://arxiv.org/abs/2605.26494\">MiniMax-M2</a>.",
+      "I am a Ph.D. student in Computer Science at the <a href=\"https://uwaterloo.ca/\">University of Waterloo</a>, advised by Prof. <a href=\"https://wenhuchen.github.io/\">Wenhu Chen</a> in <a href=\"https://huggingface.co/TIGER-Lab\">TIGER-Lab</a>, and I am affiliated with the <a href=\"https://vectorinstitute.ai/\">Vector Institute</a>. I am currently a Student Researcher at <a href=\"https://research.google/teams/cloud-ai/\">Google Cloud AI Research</a>, working on automated research methods. Before Waterloo, I was an Applied Scientist at <a href=\"https://www.tencent.com/\">Tencent</a> Smart Healthcare (2021–2023), and I have been working with TIGER-Lab since 2023. I received my M.S. in Computer Science from <a href=\"https://www.ucdavis.edu/\">UC Davis</a> and my B.Eng. in Computer Science from <a href=\"http://ckc.zju.edu.cn/\">Chu Kochen Honors College</a>, <a href=\"https://www.zju.edu.cn/english/\">Zhejiang University</a>. In 2025–2026 I was a Research Intern at <a href=\"https://www.minimax.io/\">MiniMax</a>, working on mid-training for agentic LLMs and contributing to <a href=\"https://arxiv.org/abs/2605.26494\">MiniMax-M2</a>.",
       "My research asks how to make LLMs both more capable and more measurable. I work on <strong>post-training for reasoning</strong> (<a href=\"https://arxiv.org/abs/2501.17703\">Critique Fine-Tuning</a> teaches models to critique rather than imitate, and <a href=\"https://arxiv.org/abs/2506.03295\">works even with a single training problem</a>), <strong>evaluation</strong> (<a href=\"https://arxiv.org/abs/2406.01574\">MMLU-Pro</a> has become a standard benchmark for frontier models; <a href=\"https://claw-bench.com\">ClawBench</a> tests agents on live websites), and <strong>foundation models for coding agents</strong> (<a href=\"https://arxiv.org/abs/2607.12463\">function-aware fill-in-the-middle mid-training</a>)."
     ],
     "interests": [
@@ -135,6 +135,11 @@
   "news": [
     {
       "date": "2026-08",
+      "emoji": "💼",
+      "html": "Started as a Student Researcher at <a href=\"https://research.google/teams/cloud-ai/\">Google Cloud AI Research</a>, working on automated research methods."
+    },
+    {
+      "date": "2026-08",
       "emoji": "🎉",
       "html": "<a href=\"https://arxiv.org/abs/2604.08523\">ClawBench</a> is accepted to <strong>Findings of EMNLP 2026</strong>."
     },
@@ -208,12 +213,12 @@
     {
       "role": "Student Researcher",
       "org": "Google",
-      "org_url": "https://research.google/",
+      "org_url": "https://research.google/teams/cloud-ai/",
       "where": "",
-      "dates": "",
+      "dates": "Aug 2026 – Jan 2027",
       "logo": "assets/img/logos/google.png",
       "logo_text": "G",
-      "details": ""
+      "details": "Cloud AI Research (CAIR); working on automated research methods."
     },
     {
       "role": "Research Intern",
@@ -251,7 +256,7 @@
       "degree": "M.S. in Computer Science",
       "org": "University of California, Davis",
       "org_url": "https://www.ucdavis.edu/",
-      "dates": "",
+      "dates": "2019 – 2021",
       "logo": "assets/img/logos/ucdavis.png",
       "logo_text": "UCD",
       "details": ""
@@ -260,7 +265,7 @@
       "degree": "B.Eng. in Computer Science",
       "org": "Zhejiang University",
       "org_url": "https://www.zju.edu.cn/english/",
-      "dates": "",
+      "dates": "2015 – 2019",
       "logo": "assets/img/logos/zju.png",
       "logo_text": "ZJU",
       "details": "Chu Kochen Honors College"
