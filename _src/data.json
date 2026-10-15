@@ -59,7 +59,7 @@
   },
   "about": {
     "paragraphs": [
-      "I am a Ph.D. student in Computer Science at the <a href=\"https://uwaterloo.ca/\">University of Waterloo</a>, advised by Prof. <a href=\"https://wenhuchen.github.io/\">Wenhu Chen</a> in <a href=\"https://huggingface.co/TIGER-Lab\">TIGER-Lab</a>, and I am affiliated with the <a href=\"https://vectorinstitute.ai/\">Vector Institute</a>. I am currently a Student Researcher at <a href=\"https://research.google/teams/cloud-ai/\">Google Cloud AI Research</a>, working on automated research methods. Before Waterloo, I was an Applied Scientist at <a href=\"https://www.tencent.com/\">Tencent</a> Smart Healthcare (2021–2023), and I have been working with TIGER-Lab since 2023. I received my M.S. in Computer Science from <a href=\"https://www.ucdavis.edu/\">UC Davis</a> and my B.Eng. in Computer Science from <a href=\"http://ckc.zju.edu.cn/\">Chu Kochen Honors College</a>, <a href=\"https://www.zju.edu.cn/english/\">Zhejiang University</a>. In 2025–2026 I was a Research Intern at <a href=\"https://www.minimax.io/\">MiniMax</a>, working on pre-training and mid-training for the <a href=\"https://arxiv.org/abs/2605.26494\">MiniMax-M2</a> series.",
+      "I am a Ph.D. student in Computer Science at the <a href=\"https://uwaterloo.ca/\">University of Waterloo</a>, advised by Prof. <a href=\"https://wenhuchen.github.io/\">Wenhu Chen</a> in <a href=\"https://huggingface.co/TIGER-Lab\">TIGER-Lab</a>, and I am affiliated with the <a href=\"https://vectorinstitute.ai/\">Vector Institute</a>. I am currently a Student Researcher at <a href=\"https://research.google/teams/cloud-ai/\">Google Cloud AI Research</a>, working on automated research methods. Before Waterloo, I was an Applied Scientist at <a href=\"https://www.tencent.com/\">Tencent</a> Smart Healthcare (Apr 2021 – Aug 2023), and I have been working with TIGER-Lab since 2023. I received my M.S. in Computer Science from <a href=\"https://www.ucdavis.edu/\">UC Davis</a> and my B.Eng. in Computer Science from <a href=\"http://ckc.zju.edu.cn/\">Chu Kochen Honors College</a>, <a href=\"https://www.zju.edu.cn/english/\">Zhejiang University</a>. From June to December 2025 I was a Research Intern at <a href=\"https://www.minimax.io/\">MiniMax</a>, working on pre-training and mid-training for the <a href=\"https://arxiv.org/abs/2605.26494\">MiniMax-M2</a> series.",
       "My research asks how to make LLMs both more capable and more measurable. I work on <strong>post-training for reasoning</strong> (<a href=\"https://arxiv.org/abs/2501.17703\">Critique Fine-Tuning</a> teaches models to critique rather than imitate, and <a href=\"https://arxiv.org/abs/2506.03295\">works even with a single training problem</a>), <strong>evaluation</strong> (<a href=\"https://arxiv.org/abs/2406.01574\">MMLU-Pro</a> has become a standard benchmark for frontier models; <a href=\"https://claw-bench.com\">ClawBench</a> tests agents on live websites), and <strong>foundation models for coding agents</strong> (<a href=\"https://arxiv.org/abs/2607.12463\">function-aware fill-in-the-middle mid-training</a>)."
     ],
     "interests": [
@@ -225,7 +225,7 @@
       "org": "MiniMax",
       "org_url": "https://www.minimax.io/",
       "where": "",
-      "dates": "2025 – 2026",
+      "dates": "Jun 2025 – Dec 2025",
       "logo": "assets/img/logos/minimax.png",
       "logo_text": "MM",
       "details": "Pre-training and mid-training for the MiniMax-M2 series."
@@ -235,7 +235,7 @@
       "org": "Tencent",
       "org_url": "https://www.tencent.com/",
       "where": "",
-      "dates": "2021 – 2023",
+      "dates": "Apr 2021 – Aug 2023",
       "logo": "assets/img/logos/tencent.png",
       "logo_square": "assets/img/logos/tencent_mark.png",
       "logo_text": "T",
