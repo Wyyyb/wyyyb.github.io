@@ -247,16 +247,16 @@
       "degree": "Ph.D. in Computer Science",
       "org": "University of Waterloo",
       "org_url": "https://uwaterloo.ca/",
-      "dates": "2025 – Present",
+      "dates": "May 2024 – Present",
       "logo": "assets/img/logos/uwaterloo.png",
       "logo_text": "UW",
-      "details": "Advisor: Prof. Wenhu Chen · TIGER-Lab · Vector Institute. Working with TIGER-Lab since 2023."
+      "details": "Advisor: Prof. Wenhu Chen · TIGER-Lab · Vector Institute"
     },
     {
       "degree": "M.S. in Computer Science",
       "org": "University of California, Davis",
       "org_url": "https://www.ucdavis.edu/",
-      "dates": "2019 – 2021",
+      "dates": "Sep 2019 – Jan 2021",
       "logo": "assets/img/logos/ucdavis.png",
       "logo_text": "UCD",
       "details": ""
@@ -265,7 +265,7 @@
       "degree": "B.Eng. in Computer Science",
       "org": "Zhejiang University",
       "org_url": "https://www.zju.edu.cn/english/",
-      "dates": "2015 – 2019",
+      "dates": "Aug 2015 – Jun 2019",
       "logo": "assets/img/logos/zju.png",
       "logo_text": "ZJU",
       "details": "Chu Kochen Honors College"

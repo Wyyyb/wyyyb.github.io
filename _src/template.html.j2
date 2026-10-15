@@ -90,17 +90,6 @@
       </figure>
     </section>
 
-    {%- if affiliation_logos %}
-    <!-- ===================== LOGO STRIP ===================== -->
-    <section class="logos wrap" aria-label="Affiliations and past organisations">
-      <p class="logos-label">Affiliations &amp; experience</p>
-      <ul class="logo-row" role="list">
-        {%- for o in affiliation_logos %}
-        <li><a class="logo-plate{% if o.wordmark %} is-wordmark{% endif %}" href="{{ o.url }}" title="{{ o.name }}"><img src="{{ o.logo }}" alt="{{ o.name }}" width="{{ o.w }}" height="{{ o.h }}" loading="lazy"></a></li>
-        {%- endfor %}
-      </ul>
-    </section>
-    {%- endif %}
 
     <!-- ===================== ABOUT ===================== -->
     <section id="about" class="section wrap" aria-labelledby="about-title">
@@ -129,6 +118,17 @@
       </ol>
       <button class="news-more" type="button" aria-expanded="false" aria-controls="news-list" hidden>Show all updates</button>
     </section>
+    {%- if affiliation_logos %}
+    <!-- ===================== LOGO STRIP ===================== -->
+    <section class="logos wrap" aria-label="Affiliations and past organisations">
+      <p class="logos-label">Affiliations &amp; experience</p>
+      <ul class="logo-row" role="list">
+        {%- for o in affiliation_logos %}
+        <li><a class="logo-plate{% if o.wordmark %} is-wordmark{% endif %}" href="{{ o.url }}" title="{{ o.name }}"><img src="{{ o.logo }}" alt="{{ o.name }}" width="{{ o.w }}" height="{{ o.h }}" loading="lazy"></a></li>
+        {%- endfor %}
+      </ul>
+    </section>
+    {%- endif %}
 
     <!-- ===================== PUBLICATIONS ===================== -->
     <section id="publications" class="section wrap" aria-labelledby="pubs-title">
