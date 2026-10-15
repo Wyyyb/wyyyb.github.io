@@ -1,0 +1,317 @@
+{
+  "profile": {
+    "name": "Yubo Wang",
+    "name_cn": "王钰博",
+    "eyebrow": "Ph.D. Student in Computer Science",
+    "tagline": "I train and evaluate large language models: post-training for reasoning, robust benchmarks, and foundation models for coding agents.",
+    "affiliations": [
+      {
+        "name": "University of Waterloo",
+        "url": "https://uwaterloo.ca/"
+      },
+      {
+        "name": "Vector Institute",
+        "url": "https://vectorinstitute.ai/"
+      },
+      {
+        "name": "TIGER-Lab",
+        "url": "https://huggingface.co/TIGER-Lab"
+      }
+    ],
+    "location": "Waterloo, Canada",
+    "photo_portrait": "assets/img/profile.jpg",
+    "email": "y726wang@uwaterloo.ca",
+    "links": [
+      {
+        "label": "Email",
+        "url": "mailto:y726wang@uwaterloo.ca",
+        "icon": "envelope"
+      },
+      {
+        "label": "Google Scholar",
+        "url": "https://scholar.google.com/citations?user=s_ZW7voAAAAJ",
+        "icon": "google-scholar"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Wyyyb",
+        "icon": "github"
+      },
+      {
+        "label": "X",
+        "url": "https://x.com/YuboWang726",
+        "icon": "x-twitter"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/yubo-wang-1321a7195",
+        "icon": "linkedin"
+      }
+    ],
+    "chips": [
+      "LLM Post-Training & Reasoning",
+      "Evaluation & Benchmarks",
+      "Coding Agents & Mid-Training"
+    ],
+    "scholar_stats": null,
+    "site_url": "https://wyyyb.github.io/",
+    "description_meta": "Yubo Wang (王钰博) — Ph.D. student in Computer Science at the University of Waterloo (TIGER-Lab, Vector Institute). Research on LLM post-training and reasoning, evaluation benchmarks (MMLU-Pro), and coding-agent foundation models."
+  },
+  "about": {
+    "paragraphs": [
+      "I am a Ph.D. student in Computer Science at the <a href=\"https://uwaterloo.ca/\">University of Waterloo</a>, advised by Prof. <a href=\"https://wenhuchen.github.io/\">Wenhu Chen</a> in <a href=\"https://huggingface.co/TIGER-Lab\">TIGER-Lab</a>, and I am affiliated with the <a href=\"https://vectorinstitute.ai/\">Vector Institute</a>. I am currently a Student Researcher at <a href=\"https://research.google/teams/cloud-ai/\">Google Cloud AI Research</a>, working on automated research methods. Before Waterloo, I was an Applied Scientist at <a href=\"https://www.tencent.com/\">Tencent</a> Smart Healthcare (Apr 2021 – Aug 2023), and I have been working with TIGER-Lab since 2023. I received my M.S. in Computer Science from <a href=\"https://www.ucdavis.edu/\">UC Davis</a> and my B.Eng. in Computer Science from <a href=\"http://ckc.zju.edu.cn/\">Chu Kochen Honors College</a>, <a href=\"https://www.zju.edu.cn/english/\">Zhejiang University</a>. From June to December 2025 I was a Research Intern at <a href=\"https://www.minimax.io/\">MiniMax</a>, working on pre-training and mid-training for the <a href=\"https://arxiv.org/abs/2605.26494\">MiniMax-M2</a> series.",
+      "My research asks how to make LLMs both more capable and more measurable. I work on <strong>post-training for reasoning</strong> (<a href=\"https://arxiv.org/abs/2501.17703\">Critique Fine-Tuning</a> teaches models to critique rather than imitate, and <a href=\"https://arxiv.org/abs/2506.03295\">works even with a single training problem</a>), <strong>evaluation</strong> (<a href=\"https://arxiv.org/abs/2406.01574\">MMLU-Pro</a> has become a standard benchmark for frontier models; <a href=\"https://claw-bench.com\">ClawBench</a> tests agents on live websites), and <strong>foundation models for coding agents</strong> (<a href=\"https://arxiv.org/abs/2607.12463\">function-aware fill-in-the-middle mid-training</a>)."
+    ],
+    "interests": [
+      {
+        "label": "Post-training & Reasoning",
+        "items": [
+          {
+            "name": "Critique Fine-Tuning",
+            "url": "https://arxiv.org/abs/2501.17703"
+          },
+          {
+            "name": "One-shot CFT",
+            "url": "https://arxiv.org/abs/2506.03295"
+          },
+          {
+            "name": "Critique-Coder",
+            "url": "https://arxiv.org/abs/2509.22824"
+          },
+          {
+            "name": "RewardHarness",
+            "url": "https://arxiv.org/abs/2605.08703"
+          }
+        ]
+      },
+      {
+        "label": "Evaluation & Benchmarks",
+        "items": [
+          {
+            "name": "MMLU-Pro",
+            "url": "https://arxiv.org/abs/2406.01574"
+          },
+          {
+            "name": "MMMU-Pro",
+            "url": "https://arxiv.org/abs/2409.02813"
+          },
+          {
+            "name": "SuperGPQA",
+            "url": "https://arxiv.org/abs/2502.14739"
+          },
+          {
+            "name": "MEGA-Bench",
+            "url": "https://arxiv.org/abs/2410.10563"
+          },
+          {
+            "name": "ClawBench",
+            "url": "https://arxiv.org/abs/2604.08523"
+          }
+        ]
+      },
+      {
+        "label": "Agents, Coding & Retrieval-Augmented LLMs",
+        "items": [
+          {
+            "name": "FIM Mid-Training",
+            "url": "https://arxiv.org/abs/2607.12463"
+          },
+          {
+            "name": "MiniMax-M2",
+            "url": "https://arxiv.org/abs/2605.26494"
+          },
+          {
+            "name": "ScholarCopilot",
+            "url": "https://arxiv.org/abs/2504.00824"
+          },
+          {
+            "name": "LLM-AMT",
+            "url": "https://arxiv.org/abs/2309.02233"
+          }
+        ]
+      }
+    ]
+  },
+  "news": [
+    {
+      "date": "2026-08",
+      "emoji": "💼",
+      "html": "Started as a Student Researcher at <a href=\"https://research.google/teams/cloud-ai/\">Google Cloud AI Research</a>, working on automated research methods."
+    },
+    {
+      "date": "2026-08",
+      "emoji": "🎉",
+      "html": "<a href=\"https://arxiv.org/abs/2604.08523\">ClawBench</a> is accepted to <strong>Findings of EMNLP 2026</strong>."
+    },
+    {
+      "date": "2026-07",
+      "emoji": "🚀",
+      "html": "Released <a href=\"https://arxiv.org/abs/2607.12463\">Function-Aware FIM Mid-Training</a> for coding-agent foundation models, with <a href=\"https://github.com/TIGER-AI-Lab/FIM-Midtraining\">code</a>, <a href=\"https://huggingface.co/datasets/TIGER-Lab/FIM-Midtraining-400K\">data</a> and <a href=\"https://huggingface.co/collections/TIGER-Lab/fim-midtraining-6a55b20af7dd02d36b445cc5\">models</a>."
+    },
+    {
+      "date": "2026-07",
+      "emoji": "🎉",
+      "html": "<a href=\"https://arxiv.org/abs/2605.08703\">RewardHarness</a> is accepted to <strong>COLM 2026</strong>."
+    },
+    {
+      "date": "2026-05",
+      "emoji": "📄",
+      "html": "The <a href=\"https://arxiv.org/abs/2605.26494\">MiniMax-M2</a> technical report is out; I contributed as a research intern at MiniMax."
+    },
+    {
+      "date": "2026-04",
+      "emoji": "🦀",
+      "html": "Released <a href=\"https://claw-bench.com\">ClawBench</a>: 153 everyday online tasks on 144 live websites for AI agents."
+    },
+    {
+      "date": "2026-01",
+      "emoji": "🎉",
+      "html": "<a href=\"https://arxiv.org/abs/2509.22824\">Critique-Coder</a> is accepted to <strong>ICLR 2026</strong>."
+    },
+    {
+      "date": "2025-11",
+      "emoji": "📊",
+      "html": "<a href=\"https://arxiv.org/abs/2409.02813\">MMMU-Pro</a> is featured in Google's <a href=\"https://blog.google/products/gemini/gemini-3/\">Gemini 3</a> launch (Gemini 3 Pro scores 81%)."
+    },
+    {
+      "date": "2025-09",
+      "emoji": "🎉",
+      "html": "<a href=\"https://arxiv.org/abs/2502.14739\">SuperGPQA</a> is accepted to <strong>NeurIPS 2025</strong> (Datasets &amp; Benchmarks)."
+    },
+    {
+      "date": "2025-08",
+      "emoji": "🎉",
+      "html": "<a href=\"https://arxiv.org/abs/2506.03295\">One-Shot CFT</a> is accepted to <strong>EMNLP 2025</strong> (Main)."
+    },
+    {
+      "date": "2025-07",
+      "emoji": "🎉",
+      "html": "<a href=\"https://arxiv.org/abs/2501.17703\">Critique Fine-Tuning</a> and <a href=\"https://arxiv.org/abs/2504.00824\">ScholarCopilot</a> are accepted to <strong>COLM 2025</strong>."
+    },
+    {
+      "date": "2025-05",
+      "emoji": "🎉",
+      "html": "<a href=\"https://arxiv.org/abs/2409.02813\">MMMU-Pro</a> and <a href=\"https://arxiv.org/abs/2412.05237\">MAmmoTH-VL</a> are accepted to <strong>ACL 2025</strong> (Main)."
+    },
+    {
+      "date": "2025-01",
+      "emoji": "🎉",
+      "html": "<a href=\"https://arxiv.org/abs/2410.10563\">MEGA-Bench</a> is accepted to <strong>ICLR 2025</strong>."
+    },
+    {
+      "date": "2024-09",
+      "emoji": "🏆",
+      "html": "<a href=\"https://arxiv.org/abs/2406.01574\">MMLU-Pro</a> is accepted to <strong>NeurIPS 2024</strong> (Datasets &amp; Benchmarks) as a <strong>Spotlight</strong>, and <a href=\"https://arxiv.org/abs/2309.02233\">LLM-AMT</a> is accepted to <strong>Findings of EMNLP 2024</strong>."
+    },
+    {
+      "date": "2024-06",
+      "emoji": "🚀",
+      "html": "Released <a href=\"https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro\">MMLU-Pro</a>; it was adopted as a core benchmark of the Hugging Face <a href=\"https://huggingface.co/docs/leaderboards/open_llm_leaderboard/about\">Open LLM Leaderboard v2</a>."
+    }
+  ],
+  "experience": [
+    {
+      "role": "Student Researcher",
+      "org": "Google",
+      "org_url": "https://research.google/teams/cloud-ai/",
+      "where": "",
+      "dates": "Aug 2026 – Jan 2027",
+      "logo": "assets/img/logos/google.png",
+      "logo_text": "G",
+      "details": "Cloud AI Research (CAIR); working on automated research methods."
+    },
+    {
+      "role": "Research Intern",
+      "org": "MiniMax",
+      "org_url": "https://www.minimax.io/",
+      "where": "",
+      "dates": "Jun 2025 – Dec 2025",
+      "logo": "assets/img/logos/minimax.png",
+      "logo_text": "MM",
+      "details": "Pre-training and mid-training for the MiniMax-M2 series."
+    },
+    {
+      "role": "Applied Scientist",
+      "org": "Tencent",
+      "org_url": "https://www.tencent.com/",
+      "where": "",
+      "dates": "Apr 2021 – Aug 2023",
+      "logo": "assets/img/logos/tencent.png",
+      "logo_square": "assets/img/logos/tencent_mark.png",
+      "logo_text": "T",
+      "details": "Tencent Smart Healthcare."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Ph.D. in Computer Science",
+      "org": "University of Waterloo",
+      "org_url": "https://uwaterloo.ca/",
+      "dates": "May 2024 – Present",
+      "logo": "assets/img/logos/uwaterloo.png",
+      "logo_text": "UW",
+      "details": "Advisor: Prof. Wenhu Chen · TIGER-Lab · Vector Institute"
+    },
+    {
+      "degree": "M.S. in Computer Science",
+      "org": "University of California, Davis",
+      "org_url": "https://www.ucdavis.edu/",
+      "dates": "Sep 2019 – Jan 2021",
+      "logo": "assets/img/logos/ucdavis.png",
+      "logo_text": "UCD",
+      "details": ""
+    },
+    {
+      "degree": "B.Eng. in Computer Science",
+      "org": "Zhejiang University",
+      "org_url": "https://www.zju.edu.cn/english/",
+      "dates": "Aug 2015 – Jun 2019",
+      "logo": "assets/img/logos/zju.png",
+      "logo_text": "ZJU",
+      "details": "Chu Kochen Honors College"
+    }
+  ],
+  "service": null,
+  "footer": {
+    "copyright": "© 2026 Yubo Wang",
+    "updated": "Last updated: October 2026",
+    "credit": "Design inspired by the homepages of Jon Barron, Haozhe Wang and Dongfu Jiang."
+  },
+  "affiliation_logos": [
+    {
+      "name": "University of Waterloo",
+      "url": "https://uwaterloo.ca/",
+      "logo": "assets/img/logos/uwaterloo.png"
+    },
+    {
+      "name": "Vector Institute",
+      "url": "https://vectorinstitute.ai/",
+      "logo": "assets/img/logos/vector.png"
+    },
+    {
+      "name": "Google",
+      "url": "https://research.google/",
+      "logo": "assets/img/logos/google.png"
+    },
+    {
+      "name": "MiniMax",
+      "url": "https://www.minimax.io/",
+      "logo": "assets/img/logos/minimax.png"
+    },
+    {
+      "name": "Tencent",
+      "url": "https://www.tencent.com/",
+      "logo": "assets/img/logos/tencent.png"
+    },
+    {
+      "name": "UC Davis",
+      "url": "https://www.ucdavis.edu/",
+      "logo": "assets/img/logos/ucdavis.png"
+    },
+    {
+      "name": "Zhejiang University",
+      "url": "https://www.zju.edu.cn/english/",
+      "logo": "assets/img/logos/zju.png"
+    }
+  ]
+}

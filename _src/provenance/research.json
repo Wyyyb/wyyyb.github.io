@@ -1,0 +1,3693 @@
+{
+ "teasers": [
+  {
+   "key": "fim-midtraining",
+   "page": 1,
+   "figure_number": 1,
+   "bbox": [
+    127,
+    498,
+    387,
+    612
+   ],
+   "caption": "Figure 1: Left: A function call site and a single step of a coding agent are structurally similar, decomposing into the same four stages: context, call/action, return/observation, continuation.",
+   "what_it_shows": "The left and middle panels of the Figure 1 teaser: a side-by-side schematic showing that a function call site (caller/callee) and a coding-agent step (agent/tool) share the same context -> call -> return -> continuation structure, next to the function-level FIM mid-training recipe where a target function B is chosen from the program dependency graph, masked in an FIM-formatted prompt (<fim_prefix>/<fim_suffix>/<fim_middle>), and the SFT target is a CoT rationale plus B's body.",
+   "output_path": "/rmeng_data/yubo_data/October/yubo/website_work/teasers/fim-midtraining.png",
+   "width_px": 1295,
+   "height_px": 557,
+   "aspect_ratio": 2.325,
+   "confidence": 0.86,
+   "alternatives_considered": "(1) Full Figure 1 (all three panels incl. the SWE-Bench gains bar chart), bbox ~[127,496,490,620]: ratio ~2.9, too wide/busy for a 240 px thumbnail, and the right panel is a results chart rather than concept; rejected in favour of the concept+method panels. (2) Middle panel alone (FIM mid-training), bbox ~[252,498,387,612]: cleanest method overview but ratio ~1.18, slightly taller than the preferred range and loses the motivating analogy. (3) Figure 2 on page 3 (function-aware FIM target selection: dependency graph, score breakdown, H-I plane), bbox ~[108,72,504,186]: ratio ~3.5, too wide; its sub-panel (a) alone (ratio ~1.36) shows only the dependency graph and is less representative of the overall approach. No other figures exist in the main text (pages 2, 4-9 contain only tables).",
+   "verified": true,
+   "verdict": {
+    "ok": true,
+    "issues": [],
+    "feedback": "PASS. The teaser /rmeng_data/yubo_data/October/yubo/website_work/teasers/fim-midtraining.png is a faithful zoom-5 render of page 1, Figure 1, bbox [127,498,387,612] (Left + Middle panels; the right-hand SWE-Bench bar chart is deliberately excluded). Verified against my own re-render (pages/fim-midtraining_verify_clip.png) and zoomed edge strips (pages/fim-midtraining_verify_edge_*.png).\n\n(a) Completeness: all panel titles (y 501-507), the left \"call(args)\" label (x from 133), the legend row (y 595-599) and the bottom line \"same 4-stage decomposition...\" (y 605-609) sit fully inside the crop; the SFT panel's right border, including both rounded corners, ends at x=385.88 pt, i.e. 1.1 pt inside the 387 pt clip edge. Nothing is cut.\n(b) Purity: caption starts at y=622 (excluded), abstract ends at y=484 (excluded), arXiv stamp is at x 15-42 (excluded); the bar chart's first ink (y-axis tick labels) starts at x=388.75 pt, so no fragment of it leaks in.\n(c) Content: it is the paper's conceptual teaser (function-call-site vs coding-agent-step isomorphism) plus the method overview (dependency graph -> masked function B -> FIM prompt / SFT target). Not a table, not a results chart. The only other figure in pages 1-8 is Figure 2 on p3 (suggested bbox 105 69 507 189, ratio ~3.35: code listing + stacked bars + scatter plot), which is wider and denser and not a better teaser; page 6 contains only Tables 1-2, pages 2,4,5,7,8 have no figures. Full Figure 1 with the bar chart would be ratio ~3.16 and fail the shape check, so Left+Middle is the right panel choice.\n(d) Shape: 1295x557 px, ratio 2.325, width >= 800. OK.\n(e) Legibility: in a 241 px wide simulation (pages/fim-midtraining_verify_small.png) the three-part structure (two grey analogy panels with coloured boxes/arrows, the A->B->C graph, the prompt/target box stack) remains recognisable and the panel titles are discernible; code text is unreadable, which is expected and acceptable since no simpler overview exists.\n\nOptional cosmetic polish only (not required): the right white margin is 5 px while the other three are 12 px, because only ~1.1 pt of white exists between the SFT panel border (385.88 pt) and the clip edge (387 pt). If a symmetric pad is wanted, re-clip with x1 = 388.5 (keep it below 388.75, where the bar chart's y-axis labels begin): bbox [127,498,388.5,612]. At 240 px display width the difference is about 1 px and invisible, so the current image can be used as-is.",
+    "suggested_page": 1,
+    "suggested_figure": 1,
+    "suggested_bbox": [
+     127,
+     498,
+     388.5,
+     612
+    ]
+   }
+  },
+  {
+   "key": "one-shot-cft",
+   "page": 3,
+   "figure_number": 2,
+   "bbox": [
+    70,
+    69,
+    526,
+    234
+   ],
+   "caption": "Figure 2: Overview of the 1-shot CFT dataset construction and the key difference between SFT and CFT training.",
+   "what_it_shows": "A two-part method overview: the top shows the one-shot CFT data pipeline (a single problem fed to 10 solution generators producing 100 candidate solutions, critiqued by 7 teacher models into 700 critiques, then verified and filtered to 600), and the bottom contrasts the SFT paradigm (input problem, output reference solution) with the CFT paradigm (input problem plus candidate solution, output critique).",
+   "output_path": "/rmeng_data/yubo_data/October/yubo/website_work/teasers/one-shot-cft.png",
+   "width_px": 1824,
+   "height_px": 659,
+   "aspect_ratio": 2.77,
+   "confidence": 0.92,
+   "alternatives_considered": "Figure 1 (p.2) is a pair of results bar charts (average accuracy on math/logic benchmarks) with no method content; Figure 3 (p.5) is a side-by-side screenshot of dense SFT vs CFT model input/output text, unreadable at 240 px; Figure 4 (p.6) is an accuracy-vs-training-cost line chart. Within Figure 2, the top pipeline panel alone (~4.4:1) and the bottom paradigm panel alone (~7.5:1) are both far wider than the full figure (2.77:1), so the complete figure was kept. The crop excludes the caption (starts at y=246) and all body text; the figure's own dashed border is retained since it is part of the raster image.",
+   "verified": true,
+   "verdict": {
+    "ok": true,
+    "issues": [],
+    "feedback": "PASS. The teaser /rmeng_data/yubo_data/October/yubo/website_work/teasers/one-shot-cft.png is a complete, clean crop of Figure 2 (page 3, raster rect 71,71-524,231 pt) using bbox [70,69,526,234]. Pixel scan of the 1824x659 PNG: content occupies cols 3-1813 and rows 11-646, so there is white margin on every edge and nothing is clipped (top/middle/bottom dashed borders, all boxes from \"Single Problem\" to \"Critique-600\", SFT/CFT input/output boxes and arrows are intact). Purity is fine: the \"Figure 2:\" caption starts at y=246 pt (12 pt below the crop), page 3 has no header, the page number is at y=794, and the arXiv stamp is only on page 1. Content is correct: this is the paper's only method/pipeline overview (dataset construction + SFT-vs-CFT paradigm contrast). Alternatives were checked and are worse: Figure 1 (p.2, bbox 78,68,515,208) is a results bar chart at ratio 3.1; Figure 3 (p.5, bbox 72,69,523,293, ratio 2.0) is a text-heavy worked example that is unreadable at 240 px; Figure 4 (p.6) is a small results scatter; pages 4, 7, 8 contain only tables. Legibility: at 240x87 px the two-band pipeline structure, colored boxes and left-to-right flow remain recognisable; fine labels are not readable, which is unavoidable for the sole overview figure. One non-blocking caveat: the aspect ratio is 2.77, about 6% above the ~2.6 soft limit. This is the figure's native geometry (raster is 453x160 pt = 2.83) and cannot be fixed by cropping - the top panel alone is ratio 4.4 and the bottom panel alone is 7.8, and horizontal cropping would cut the pipeline. If a hard <=2.6 is required, letterbox with white padding (e.g. re-clip bbox [60,60,536,243] with --pad 48, giving ~1907x732 = 2.6; do not extend y1 past 243 or the trim will pull in the caption). Optional cosmetic tweak: moving x0 from 70 to 66 would make the left margin (~3 px) match the right (~10 px); not required.",
+    "suggested_page": 3,
+    "suggested_figure": 2,
+    "suggested_bbox": [
+     70,
+     69,
+     526,
+     234
+    ]
+   }
+  },
+  {
+   "key": "scholarcopilot",
+   "page": 1,
+   "figure_number": 1,
+   "bbox": [
+    141,
+    491,
+    471,
+    645
+   ],
+   "caption": "Figure 1: Comparison of traditional Retrieval-Augmented Generation (RAG) systems and our proposed ScholarCopilot.",
+   "what_it_shows": "Side-by-side schematic of a traditional RAG pipeline (separate Retriever and Generator) versus ScholarCopilot's single Generator that emits [RET] tokens to retrieve references mid-generation, with a strip of headline results (generation quality, retrieval accuracy, human study) along the bottom.",
+   "output_path": "/rmeng_data/yubo_data/October/yubo/website_work/teasers/scholarcopilot.png",
+   "width_px": 1310,
+   "height_px": 607,
+   "aspect_ratio": 2.158,
+   "confidence": 0.82,
+   "alternatives_considered": "Figure 4 (page 5, bbox 115 82 497 226, \"Unified training framework of ScholarCopilot\") is the true training-architecture diagram but has ratio 2.64 (outside the preferred 1.25-2.4 range) and its small labels and long arcs become illegible at 240 px. Figure 2 (page 3, bbox 105 81 507 345) is a detailed RAG-vs-ScholarCopilot flowchart with ratio 1.52 but is dense with small italic text, unreadable as a thumbnail. Figure 3 (page 4) is the dataset-creation pipeline, ratio about 5.2, too wide. Figure 1 was chosen because it is the paper's teaser, its right panel doubles as a system overview (Generator + [RET] token retrieval), its labels are large and legible at thumbnail size, and it is self-contained within a dashed border. Scratch renders: /rmeng_data/yubo_data/October/yubo/website_work/pages/scholarcopilot_p1_grid.png, scholarcopilot_p3_grid.png, scholarcopilot_p5_grid.png, scholarcopilot_fig1_try1.png, scholarcopilot_fig2_try1.png, scholarcopilot_fig4_try1.png.",
+   "verified": true,
+   "verdict": {
+    "ok": true,
+    "issues": [],
+    "feedback": "APPROVED. /rmeng_data/yubo_data/October/yubo/website_work/teasers/scholarcopilot.png (1310x607, ratio 2.158) is a clean, complete crop of page 1 Figure 1 (bbox [141,491,471,645]), the paper's conceptual teaser. (a) Completeness: the embedded raster (144-468 x 494-642 pt) lies fully inside the bbox; an edge-pixel scan shows ~12 px of pure white on all four sides before the dashed rounded frame begins, so no box, arrow, or label is cut. (b) Purity: no text block intersects the bbox (abstract ends y=474, 'Figure 1' caption starts y=653, arXiv stamp is at x=11-38); no caption, header, footer, or foreign fragment appears in the image. (c) Content: architecture comparison of Traditional RAG (separate Retriever + Generator) vs ScholarCopilot (single Generator emitting [RET] tokens for retrieval) plus a small headline-results strip - a method teaser, not a table or results-only chart. Alternatives were considered and are inferior: Fig 2 (p3, 402x264 pt, ratio 1.52) is a dense, text-heavy flowchart that would be illegible at 240 px; Fig 3 (p4, 390x75 pt, ratio 5.2) is the dataset pipeline and far too wide; Fig 4 (p5, 382x144 pt, ratio 2.65) is the training-loss diagram, over the ratio bound and less of an overview. (d) Shape: 2.158 within 1.2-2.6, width 1310 >= 800. (e) Legibility: two clear panels with bold colored blocks (Retriever, Generator bars, Reference/Query/[RET] tokens) remain recognisable at 240 px; the bottom results text will not be readable at that size but the structure holds, and no simpler overview exists. The source raster is 2002x910 native (~6 px/pt), so the 4x render is a crisp downsample. No changes required; keep the current crop.",
+    "suggested_page": 1,
+    "suggested_figure": 1,
+    "suggested_bbox": [
+     141,
+     491,
+     471,
+     645
+    ]
+   }
+  },
+  {
+   "key": "cft",
+   "page": 1,
+   "figure_number": 1,
+   "bbox": [
+    106,
+    201,
+    508,
+    394
+   ],
+   "caption": "Figure 1: Comparison between CFT and SFT on 50K samples from WebInstruct (Yue et al., 2024b).",
+   "what_it_shows": "A side-by-side schematic contrasting Supervised Fine-Tuning (query + imitated answer) with Critique Fine-Tuning (query + noisy answer + GPT-4o critique with a verdict), above two bar charts (MATH, OlympiadBench) showing CFT beating Base/SFT-GPT4o/SFT-verified across DeepSeek-Math, Qwen2.5 and Qwen2.5-Math base models.",
+   "output_path": "/rmeng_data/yubo_data/October/yubo/website_work/teasers/cft.png",
+   "width_px": 1592,
+   "height_px": 763,
+   "aspect_ratio": 2.087,
+   "confidence": 0.9,
+   "alternatives_considered": "Figure 1 is the only captioned figure in the 21-page PDF (pages 2-21 contain only tables and appendix text/example boxes; the Method section has no diagram). I considered cropping only the top SFT-vs-CFT schematic, but it is far too wide (398 x 89 pt, ratio ~4.5), and cropping only the CFT panel would lose the 'ours vs. baseline' contrast. The full Figure 1 (schematic + headline bar charts) fits the 1.25-2.4 ratio window, conveys the core idea, and is also the teaser used on the project page. Caveat: the small text inside the schematic will not be legible at 240 px, but the two-box structure and bar charts remain recognizable. Scratch renders: /rmeng_data/yubo_data/October/yubo/website_work/pages/cft_p1_grid.png and /rmeng_data/yubo_data/October/yubo/website_work/pages/cft_full_v1.png.",
+   "verified": true,
+   "verdict": {
+    "ok": true,
+    "issues": [],
+    "feedback": "APPROVED. /rmeng_data/yubo_data/October/yubo/website_work/teasers/cft.png is a clean, complete crop of page 1, Figure 1 (bbox [106,201,508,394]) of 2501.17703v4.pdf.\n\nVerification details:\n- Completeness: the delivered PNG has exactly 12 px of white on all four sides (the trim pad), so the figure content sat >= 3 pt inside every crop boundary - nothing is clipped. Both outer panel borders (x~108 and x~505), the panel headers, the y-axis ticks (100..20 and 50..0), the legends, the value labels and the x-axis labels (DeepSeek / Qwen2.5 / Qwen2.5-Math) are all intact; a 4x untrimmed re-render of the same bbox matches the delivered image.\n- Purity: the project URL line above the figure ends at y=198 (crop starts at 201) and the \"Figure 1:\" caption starts at y=399 (crop ends at 394); the arXiv side stamp is at x=11-38, far left of the crop. No header, footer, caption or foreign fragment is included.\n- Content: Figure 1 is the paper's conceptual teaser (side-by-side SFT vs CFT training example plus the MATH / OlympiadBench comparison). `info` on pages 2-21 shows zero figure captions (only Tables 1-10), so this is the paper's only figure and there is no method-overview diagram being ignored.\n- Shape: 1592x763 px, ratio 2.087 (within 1.2-2.6), width >= 800.\n- Legibility: at a simulated 240 px width (115 px tall) the two-panel SFT/CFT structure, the panel titles, the MATH / OlympiadBench chart titles and the taller brown CFT bars remain recognisable; at 480 px (retina) all labels read clearly. The small paragraph text inside the boxes is not readable at 240 px, which is expected and acceptable since no simpler overview exists in the paper.\n\nNo change required; keep page 1, Figure 1, bbox [106,201,508,394].",
+    "suggested_page": 1,
+    "suggested_figure": 1,
+    "suggested_bbox": [
+     106,
+     201,
+     508,
+     394
+    ]
+   }
+  },
+  {
+   "key": "mmlu-pro",
+   "page": 4,
+   "figure_number": 2,
+   "bbox": [
+    108,
+    72,
+    504,
+    128
+   ],
+   "caption": "Figure 2: MMLU-Pro Dataset Construction Pipeline",
+   "what_it_shows": "The six-step icon flow chart of how MMLU-Pro was built: Original MMLU -> Initial Filtering -> Question Collection and Integration -> Option Augmentation -> Expert Review -> MMLU-Pro.",
+   "output_path": "/rmeng_data/yubo_data/October/yubo/website_work/teasers/mmlu-pro.png",
+   "width_px": 1291,
+   "height_px": 762,
+   "aspect_ratio": 1.694,
+   "confidence": 0.85,
+   "alternatives_considered": "Figure 2 (p.4) is the paper's only method/pipeline overview, so it is the right choice, but the source is a single 396x56 pt strip (ratio 6.7) with no self-contained sub-panel. To meet the 1.25-2.4 thumbnail guidance without dropping any step, the final PNG is that exact bbox (rendered at zoom 5.8 = the raster's native 2296x322 px) re-flowed into two rows of three steps: cuts were made only through white gaps (icon/arrow band split after arrow 3 at x 1242|1275, label band split between labels 3 and 4 at x 1127|1240), no pixels were altered, row 2 is shifted so the icon centres of steps 1 and 4 align, and row 1 keeps its trailing arrow to show the wrap. NOTE: re-clipping the reported bbox directly reproduces the one-row strip, not this two-row layout; the untouched verbatim strip is saved at /rmeng_data/yubo_data/October/yubo/website_work/pages/mmlu-pro_fig2_strip.png (2298x326 px) if an unmodified crop is preferred. Other candidates rejected: Figure 1 (p.1, bbox 108 522 504 635, three-panel MMLU vs MMLU-Pro comparison; results bar/density charts, ratio 3.4, busy at 240 px; clip saved at pages/mmlu-pro_fig1_full.png), Figure 3 (p.4, two pie charts of disciplines/data sources), Figures 4-5 (p.8, pure results bar/line charts); the appendix (pp.13-25) contains only tables. 240 px preview checked at pages/mmlu-pro_preview240.png: icons recognizable and labels legible.",
+   "verified": true,
+   "verdict": {
+    "ok": true,
+    "issues": [],
+    "feedback": "PASS. /rmeng_data/yubo_data/October/yubo/website_work/teasers/mmlu-pro.png is a clean two-row re-flow of page 4 Figure 2 (MMLU-Pro Dataset Construction Pipeline). The claimed bbox [108,72,504,128] matches the embedded raster's placement rect (108,72,504,127.5); native raster is 2296x322 (7.13:1), so re-flowing into two rows of three steps was the right call - the raw strip would violate the aspect limit and be ~34 px tall at 240 px width. Verified: all 6 icons, 6 labels and 5 arrows present (split made at the arrow after 'Question Collection and Integration'; trailing arrowhead complete with 25 px white after its tip; row 2 starts cleanly on the Option Augmentation icon with no sliver). No dark pixels within 5 px of any edge (margins L24/R25/T34/B25). No caption, body text, header/footer, or Figure 3 fragments. Figure 2 is the paper's only method/pipeline overview in pages 1-6 (Fig 1 p.1 = results comparison, Fig 3 p.4 = distribution pie charts, pp. 2-3 no figures, pp. 5-6 tables). Shape 1291x762 (ratio 1.694, width >= 800). Content is at native raster resolution (row-1 content width ~1241 px vs ~1254 px native for that half), so icons are crisp; at 240 px width the six-icon flow reads clearly even though the bold labels (~5-6 px) become decorative. No changes needed.",
+    "suggested_page": 4,
+    "suggested_figure": 2,
+    "suggested_bbox": [
+     108,
+     72,
+     504,
+     128
+    ]
+   }
+  },
+  {
+   "key": "llm-amt",
+   "page": 2,
+   "figure_number": 1,
+   "bbox": [
+    86,
+    71,
+    510,
+    426
+   ],
+   "caption": "Figure 1: Overview of our proposed pipeline.",
+   "what_it_shows": "The four-stage LLM-AMT pipeline flow chart: Query Augmenter (query rewriting and expansion), Hybrid Textbook Retriever (sparse + dense retrieval, merge, reranking to top-k passages), Knowledge Self-Refiner (relevance filter, decompose into segments, usefulness filter, recompose), and LLM Reader (generator producing the final answer), illustrated with a worked medical QA example.",
+   "output_path": "/rmeng_data/yubo_data/October/yubo/website_work/teasers/llm-amt.png",
+   "width_px": 1696,
+   "height_px": 1420,
+   "aspect_ratio": 1.194,
+   "confidence": 0.92,
+   "alternatives_considered": "Figure 1 is the only figure in the main body (pages 1-18 contain no other figures; pages 19-21 hold oversized appendix rasters of prompts/case studies, unsuitable as teasers). Considered cropping a single stage panel to raise the aspect ratio above 1.25, but each horizontal stage band is ~4:1 (too wide/short) and would lose the pipeline context; a two-stage crop (~2.1:1) would omit the Query Augmenter and LLM Reader. The full pipeline at 1.19:1 is slightly below the preferred range but is clean on all four edges, excludes the caption and body text, and conveys the entire method at 240 px.",
+   "verified": true,
+   "verdict": {
+    "ok": true,
+    "issues": [],
+    "feedback": "PASS. /rmeng_data/yubo_data/October/yubo/website_work/teasers/llm-amt.png (1696x1420, ratio 1.194) is the complete Figure 1 pipeline overview from page 2 of 2309.02233v4.pdf, cropped exactly to the page's only raster image rect [86,71,510,426]. Verification: (a) Completeness - edge strips confirm the dashed \"x:\" box top border, \"Query Augmenter\"/\"Hybrid Textbook Retriever\"/\"Knowledge Self-Refiner\"/\"LLM Reader\" labels, the green/blue thought clouds, the blue dashed passage boxes, and the bottom \"y:\" box border are all intact; the only pixels touching the left/right edges are the three full-width dashed stage separators, which span the whole figure by design. (b) Purity - the Figure 1 caption starts at y=437 pt (11 pt / 44 px below the crop); no caption, body text, header, or arXiv stamp is present (pdfkit info lists no text blocks above y=437 on page 2). (c) Content - it is the paper's method overview (Query Augmenter -> Hybrid Textbook Retriever -> Knowledge Self-Refiner -> LLM Reader); pages 1-8 contain no other figure (only Tables 1-4), so nothing better was ignored. (d) Shape - width 1696 >= 800; ratio 1.194 is at the lower bound but within the ~1.2 tolerance, and the figure is intrinsically 430x361 pt so it cannot be made wider without cutting content (padding is not needed). (e) Legibility - a 240 px downscale still shows the four horizontal stage bands, bold stage labels, and the colored box/arrow flow; only the small prompt text in the clouds/boxes becomes unreadable, which is acceptable since no simpler overview exists. No change required; keep page 2, Figure 1, bbox [86,71,510,426]. Scratch renders: /rmeng_data/yubo_data/October/yubo/website_work/pages/llm-amt_verify_p2.png, llm-amt_edge_{top,bottom,left_rot,right_rot}.png, llm-amt_preview240.png.",
+    "suggested_page": 2,
+    "suggested_figure": 1,
+    "suggested_bbox": [
+     86,
+     71,
+     510,
+     426
+    ]
+   }
+  },
+  {
+   "key": "clawbench",
+   "page": 1,
+   "figure_number": 1,
+   "bbox": [
+    106,
+    246,
+    403,
+    419
+   ],
+   "caption": "Figure 1: ClawBench overview.",
+   "what_it_shows": "The Left and Middle panels of the paper's overview figure: a grid of the 15 everyday-life task categories (with counts and icons) next to a schematic contrasting traditional offline/sandbox benchmark evaluation with ClawBench's live real-website evaluation, whose five-layer trace (session replay, action screenshots, HTTP traffic, agent messages, browser actions) feeds an Agentic Evaluator that returns a rich, traceable verdict.",
+   "output_path": "/rmeng_data/yubo_data/October/yubo/website_work/teasers/clawbench.png",
+   "width_px": 1483,
+   "height_px": 863,
+   "aspect_ratio": 1.718,
+   "confidence": 0.85,
+   "alternatives_considered": "(1) Figure 4, p.5 \"Agent-as-Judge inference pipeline\" (bbox ~106 79 506 237): a clean method flow chart, but ratio 2.53 exceeds the preferred 2.4 and it is text-heavy at 240 px; scratch render at pages/clawbench_fig4_full.png (1574x621) if the parent prefers a pure pipeline figure. (2) Full Figure 1 including the Right \"Performance Comparison\" bar chart (bbox 106 246 506 419, ratio 2.31): three panels become too small/busy at 240 px and the right panel is a results chart, so it was dropped at the panel boundary (middle panel border ends x~400, right panel border starts x~405; cut at x=403 verified clean); scratch at pages/clawbench_fig1_full.png. (3) Figure 1 middle panel alone (~190x173 pt, ratio ~1.1): too square. (4) Figure 2 taxonomy donut and Figure 3 saturation bar chart (p.1), Figure 5 cost-efficiency scatter and Figure 6 tool-call histograms (p.8): results/radial charts, rejected. Pages 2-4, 6-7 contain only text and tables.",
+   "verified": true,
+   "verdict": {
+    "ok": true,
+    "issues": [],
+    "feedback": "PASS. The teaser is the Left + Middle panels of Figure 1 (page 1, bbox [106,246,403,419]), i.e. the paper's own conceptual overview: the 15-category task grid plus the \"Sandbox Evaluation (traditional benchmarks)\" vs \"Real-World Evaluation (ClawBench)\" pipeline comparison. The caption confirms the three-panel structure (Left / Middle / Right); the omitted Right panel is a separately framed results bar chart (\"Performance Comparison\", x≈404-506 pt), so dropping it is appropriate under the content rule and improves the aspect ratio (1.72 vs 2.31 for the full figure).\n\nVerified checks:\n(a) Completeness: all three framed sub-panels inside the crop (categories, sandbox, real-world) have intact dotted borders on all four sides. On the page the middle panel's right border ends at x=400.0 pt and the bar-chart panel's left border starts at x=404.1 pt, so the crop edge x1=403 falls in the blank gap. Pixel scan of the PNG: content spans x=12..1470 and y=12..850 with pure-white 12 px padding on every side; the rightmost content column (1470) is the dotted border itself, no sliver of the bar chart. Bottom rows 845-850 are the panel borders, no caption glyphs.\n(b) Purity: no \"Figure 1:\" caption (starts at y=422, crop ends at 419), no body text, no header/footer, arXiv stamp (x=15-42) and the claw-bench.com URL (y=218-224) are well outside.\n(c) Content: conceptual/system teaser, not a table or results-only chart.\n(d) Shape: 1483x863, ratio 1.718, width >= 800.\n(e) Legibility: at 240x140 px the structure (colourful category grid; two stacked evaluation panels with Task arrows, red \"Live\" pill, check/cross marks and verdict box) remains recognisable and the three bold headings are borderline readable. No simpler method overview exists in pages 1-6: Figure 4 (p.5, Agent-as-Judge pipeline, 400x158 pt, ratio 2.53) is at least as text-dense and would be only ~95 px tall at 240 px width; Figure 2 is a square sunburst taxonomy (fails shape); Figure 3 is a results chart; Table 1 is a table. Keep the current crop.",
+    "suggested_page": 1,
+    "suggested_figure": 1,
+    "suggested_bbox": [
+     106,
+     246,
+     403,
+     419
+    ]
+   }
+  },
+  {
+   "key": "critique-coder",
+   "page": 3,
+   "figure_number": 2,
+   "bbox": [
+    104,
+    156,
+    382,
+    300
+   ],
+   "caption": "Figure 2: Comparison between CRL and Standard RL.",
+   "what_it_shows": "The method overview of Critique-Coder: the rStarCoder data-preparation pipeline (generate solutions, filter slow tests) feeding two GRPO training loops of one Coding LLM Policy, Standard RL (question -> solutions -> tests -> reward) and Critique RL (question + solution -> judgement of solution -> correct judge? -> reward).",
+   "output_path": "/rmeng_data/yubo_data/October/yubo/website_work/teasers/critique-coder.png",
+   "width_px": 1095,
+   "height_px": 518,
+   "aspect_ratio": 2.114,
+   "confidence": 0.9,
+   "alternatives_considered": "Figure 2 is a three-panel figure (data pipeline | Standard RL vs CRL loops | four RL-vs-RL+CRL bar charts separated by a dashed divider at x~384 pt). The full figure (clip 104,156,508,300 -> 1580x518 px, ratio 3.05) was rendered to pages/critique-coder_fig2_full.png but is too wide and mixes in results bars, so the crop keeps only the overview panels left of the divider (tight content bbox ~111.8,166.8,379.0,290.2 pt; clip rect 104,156,382,300 with --zoom 4 --pad 12). Figure 3 (p.4, critique data generation pipeline, ~407x89 pt, ratio ~4.6) is a valid method figure but far too wide/short for a thumbnail. Figure 1 (p.1) is pure results bar charts and was rejected. Pages 5-6 contain no figures. Verified visually: all four edges clean, no caption/body text, no fragment of the right-hand bar-chart panel. Scratch renders are in /rmeng_data/yubo_data/October/yubo/website_work/pages/critique-coder_*.png.",
+   "verified": true,
+   "verdict": {
+    "ok": true,
+    "issues": [],
+    "feedback": "PASS. /rmeng_data/yubo_data/October/yubo/website_work/teasers/critique-coder.png (1095x518, ratio 2.114) is pixel-identical to a fresh render of page 3, Figure 2, bbox [104,156,382,300]. (a) Completeness: Figure 2 consists of three panels split by dashed vertical dividers; the crop keeps the data-pipeline panel and the Standard-RL-vs-CRL panel whole. Figure content ends at x=379.25 pt, the crop edge is at 382 pt and the next dashed divider is at ~384.5 pt, so nothing is cut and no arrow crosses into the omitted panel. Vertical content spans 166.75-290 pt inside the 156-300 pt crop. (b) Purity: body text ends at y=150 and the caption begins at y=308 (both outside); zero near-black pixels in any column beyond 376 pt, so no divider sliver or bar-chart fragment; no header/footer. (c) Content: this is the paper's conceptual method teaser (CRL vs standard RL). Figure 1 (p.1) is a results bar chart and Figure 3 (p.4) is a narrower data-generation pipeline; pages 5-6 contain no figures. The omitted right-hand panel (x 392-504) is only four schematic result bars (Accuracy/Thinking Length/Code Comments/Code Functions), so leaving it out is the right call. (d) Shape: 2.114 ratio, 1095 px wide. (e) Legibility: in a 240 px downscale simulation the two training loops, colored boxes, panel titles and box labels remain readable. Optional, not required: a middle-panel-only crop [198,158,382,297] (ratio ~1.47) would make labels ~1.5x larger at 240 px but drops the data-construction panel and needs zoom >= 5 to reach 800 px; the current crop is preferable as a complete overview. Scratch renders: /rmeng_data/yubo_data/October/yubo/website_work/pages/critique-coder_verify_p3.png, critique-coder_fullfig2.png, critique-coder_rightpanel.png, critique-coder_edge_strip.png, critique-coder_240px.png.",
+    "suggested_page": 3,
+    "suggested_figure": 2,
+    "suggested_bbox": [
+     104,
+     156,
+     382,
+     300
+    ]
+   }
+  },
+  {
+   "key": "minimax-m2",
+   "page": 26,
+   "figure_number": 8,
+   "bbox": [
+    84,
+    80,
+    512,
+    318
+   ],
+   "caption": "(A) The Model Iteration System used to drive M2.7’s autonomous execution.",
+   "what_it_shows": "Two-panel framework diagram of M2.7's self-evolution setup: (A) the Model Iteration System in which a human configures/steers/reviews an Agent Harness (hierarchical skills, persistent memory, guardrails, evaluation infra) that runs the M2 agent, and (B) the dual-loop RL-team workflow (Exp Plan -> Exp Dev & Run -> Analyze & Report -> Review & Discuss -> Exp Iterate Loop) with agent auto-continue and human-triggered iterations.",
+   "output_path": "/rmeng_data/yubo_data/October/yubo/website_work/teasers/minimax-m2.png",
+   "width_px": 1697,
+   "height_px": 917,
+   "aspect_ratio": 1.851,
+   "confidence": 0.62,
+   "alternatives_considered": "The paper (35-page tech report) has no single method figure; its abstract names three pillars: (i) agent data pipelines = Fig 3 p8 (bbox ~64,78,532,370; ratio 1.66; clean crop saved at pages/minimax-m2_fig3_try1.png) - strong alternative and listed first in the paper, but it is a 13-card, bullet-text-heavy poster-like figure that degrades into a dense grid at 240 px; (ii) Forge RL system = Fig 4 p20 (bbox ~108,292,472,592; ratio 1.23, just below the preferred range; infrastructure-style diagram); (iii) self-evolution = Fig 8 p26 (chosen: in-range ratio, larger blocks/labels, reads clearly at 240 px, and depicts the headline M2.7 claim of autonomously driving its own iteration). Also rejected: Fig 1 p1 (grid of benchmark bar charts - pure results), Fig 2 p7 MTP architecture (ratio 1.87, clean but a minor pre-training sub-component that would misrepresent the paper), Fig 7 p25 interleaved-thinking columns (taller than wide), Figs 5/6 (niche scheduling/prefix-tree details), Figs 9/10 (results). If the site owner prefers the data-pipeline story, swap in pages/minimax-m2_fig3_try1.png (1867x1127).",
+   "verified": true,
+   "verdict": {
+    "ok": true,
+    "issues": [],
+    "feedback": "PASS. The teaser is exactly Figure 8 of page 26 (re-clipping bbox [84,80,512,318] at zoom 4 reproduces the file byte-for-byte, 1697x917, ratio 1.851). Completeness: both panels (A: Model Iteration System with Human / Agent Harness / Agent(M2*); B: RL Team dual-loop workflow with its legend) are whole; a pixel scan shows 12 px of white on every side followed by the full outer frame lines, so no box, arrow or label is clipped. Purity: panel B's frame closes at y~312 pt and the 'Figure 8 |' caption begins at y~324 pt, so the crop (ending at 318) contains no caption, no header (y 56-66), no body text, page number or arXiv stamp. Content: it is a system/workflow overview of the paper's self-evolution component, not a table or results chart. Alternatives considered and rejected: Fig. 1 (p.1) is a results-only bar-chart grid; Fig. 2 (p.7) is the secondary MTP-module architecture with ~25 tiny token/hidden-state boxes; Fig. 3 (p.8, data pipelines) has a fine ratio (~1.78) but is 13 micro-cards of ~5-pt text that are unreadable at 240 px; Fig. 4 (p.20, Forge RL system) and Fig. 7 (p.25) are ~1.0 aspect ratio and fail the shape rule; Figs. 5, 6, 9, 10 are mechanics or results. Shape: 1.85 within 1.2-2.6, width 1697 >= 800. Legibility: in a 240-px preview the two-panel layout, colored blocks, arrows and headline labels (Model Iteration System, Agent Harness, Agent (M2*), RL Team Example Workflow, the 5 numbered steps) remain recognisable; fine print is lost but that is acceptable for a thumbnail. Keep the current crop as-is.",
+    "suggested_page": 26,
+    "suggested_figure": 8,
+    "suggested_bbox": [
+     84,
+     80,
+     512,
+     318
+    ]
+   }
+  },
+  {
+   "key": "rewardharness",
+   "page": 3,
+   "figure_number": 2,
+   "bbox": [
+    105,
+    276.2,
+    507.2,
+    495.5
+   ],
+   "caption": "Figure 2: Overview of the RewardHarness self-evolution pipeline.",
+   "what_it_shows": "The full RewardHarness method pipeline: multi-modal inputs (source image, prompt, edited image) flow into an Orchestration Layer that routes a subset of Skills/Tools from a shared library via progressive disclosure, a frozen Sub-Agent VLM builds a reasoning chain to output a preference score, and an Analysis stage compares the prediction to ground truth and emits improvement signals that update the Skills and Tools libraries in a self-evolution loop.",
+   "output_path": "/rmeng_data/yubo_data/October/yubo/website_work/teasers/rewardharness.png",
+   "width_px": 1609,
+   "height_px": 877,
+   "aspect_ratio": 1.835,
+   "confidence": 0.9,
+   "alternatives_considered": "Figure 1 on page 2 (paradigm comparison, suggested bbox 113 77 497 269, ratio ~2.08) is a clean \"RLHF with massive annotations vs. our self-evolving agentic reward modeling\" schematic and was rendered as a fallback (pages/rewardharness_fig1_try1.png), but Figure 2 is the actual method/pipeline overview, so it takes priority. Figure 3 on page 4 is a text-heavy example of a Skill and a Tool document and is unsuitable as a thumbnail. Pages 5-6 contain no figures. Note: the helper's auto-trim treats the figure's pale pink Analysis panel as white and cut off its right rounded corner, so the final image was produced from a --no-trim render (clip 101 265 511 498, zoom 4) trimmed with a stricter near-white threshold plus a 16 px pad; the content bbox is [109.0, 280.2, 503.2, 491.5] pt.",
+   "verified": true,
+   "verdict": {
+    "ok": true,
+    "issues": [],
+    "feedback": "PASS - keep /rmeng_data/yubo_data/October/yubo/website_work/teasers/rewardharness.png as is (page 3, Figure 2, bbox [105,276.2,507.2,495.5]).\n\na. Completeness: verified at pixel level - the 1609x877 PNG has a uniform 16 px pure-white margin on all four sides (non-white bbox = (16,16,1593,861); zero non-white pixels in the outer 3 px bands; all four corner pixels 255,255,255), so nothing touches or is clipped by any edge. A padded no-trim render of [95,266,517,506] (pages/rewardharness_verify_padded.png) shows every element of the figure lies inside the claimed bbox: Input panel left edge ~x=110 pt, Analysis panel right edge ~x=503 pt, Skills/Tools Library box top ~y=280 pt, 'Improvement Signals' label bottom ~y=492 pt. The dotted 'Update Skills'/'Update Tools' arrows and the bottom feedback loop are fully present.\n\nb. Purity: the Figure 2 caption block is at y=505-581 (first baseline ~9.5 pt below the crop bottom of 495.5) and the preceding body paragraph ends at y=264 (~12 pt above the crop top of 276.2); neither appears in the crop. Page 3 has no arXiv stamp, and the running header (y=28-38) and page number (y=753) are far outside. No other figure/table fragments.\n\nc. Content: Figure 2 is the paper's method/pipeline overview (Input -> Orchestration Layer -> Sub-Agent -> Analysis with the self-evolution loop). Survey of pages 1-6: p1 no figures; p2 Figure 1 'Paradigm comparison' (conceptual teaser, suggested bbox [113,77,497,269], 1536x739 px, ratio 2.08) - acceptable but not simpler (two rows, 9 boxes, 10 icon+label pairs); p4 Figure 3 is a text listing of a Skill/Tool document; p5 no figures; p6 Table 1 is a results table. Figure 2 is the correct choice.\n\nd. Shape: 1609x877 px, ratio 1.835 (within 1.2-2.6), width >= 800 px.\n\ne. Legibility: at 240x131 px (pages/rewardharness_verify_240.png) the four colour-coded panels, their header icons, the yellow flow arrows and the panel titles (Input / Orchestration Layer / Sub-Agent / Analysis) remain recognisable; only the fine text (reasoning-chain steps, analysis bullets) blurs, which is expected and acceptable. Not a sprawling many-tiny-box figure.\n\nScratch renders written: pages/rewardharness_verify_p3.png, pages/rewardharness_verify_padded.png, pages/rewardharness_fig1_alt.png, pages/rewardharness_verify_240.png.",
+    "suggested_page": 3,
+    "suggested_figure": 2,
+    "suggested_bbox": [
+     105,
+     276.2,
+     507.2,
+     495.5
+    ]
+   }
+  },
+  {
+   "key": "supergpqa",
+   "page": 6,
+   "figure_number": 2,
+   "bbox": [
+    80,
+    178,
+    515,
+    414
+   ],
+   "caption": "Figure 2. Data Collection Process of SuperGPQA.",
+   "what_it_shows": "A three-stage pipeline diagram of how SuperGPQA is built: expert Source Screening of credible resources, crowd-sourced Transcription (translate, convert to multiple-choice, standardize, generate distractors), and a rule-/model-/human-based Quality Inspection stage with its checklists.",
+   "output_path": "/rmeng_data/yubo_data/October/yubo/website_work/teasers/supergpqa.png",
+   "width_px": 1687,
+   "height_px": 900,
+   "aspect_ratio": 1.874,
+   "confidence": 0.92,
+   "alternatives_considered": "Figure 1 (page 1, \"Benchmark Comparison\"): a radar chart plus a grouped bar chart of SOTA model scores across benchmarks; rejected because it is a results/radar chart with no method content and its small axis labels would be unreadable at 240 px. No other figures appear on pages 1-6; Figure 2 is the paper's only pipeline/overview diagram in the method (Data Collection) section. Crop rectangle [80,178,515,414] pt was auto-trimmed to the figure's visible extent (~88-506 x 185-407 pt); the caption at y=432 and body text ending at y=175 are excluded, and page 6 has no arXiv stamp.",
+   "verified": true,
+   "verdict": {
+    "ok": true,
+    "issues": [],
+    "feedback": "APPROVED. /rmeng_data/yubo_data/October/yubo/website_work/teasers/supergpqa.png (1687x900, ratio 1.874) is a correct, clean crop of page 6, Figure 2 \"Data Collection Process of SuperGPQA\" using bbox [80,178,515,414].\n\nVerification details:\n- Completeness: On the gridded page render (/rmeng_data/yubo_data/October/yubo/website_work/pages/supergpqa_verify_p6.png) the figure's three dashed panels span x~88-506 pt, y~185-406 pt (the bottom being the descenders of the grey \"Source Screening / Transcription / Quality Inspection\" stage labels). The bbox leaves 7-10 pt of margin on every side. Pixel analysis of the PNG: content bbox is (12,12)-(1673,887), i.e. exactly the 12 px trim pad on all four sides, 0 non-white pixels in the outermost 3 rows/columns. The first content row (y=12) spans x 31-1649 = the tops of the left and right dashed panels; the last content row (y=887) spans x 1269-1393 = the \"p\" descender of \"Inspection\". Nothing is clipped.\n- Purity: Body text above the figure ends at y=175 pt (bbox top 178 excludes it); the \"Figure 2.\" caption sits at y=432-446 pt (bbox bottom 414 excludes it). No header, footer, page number, arXiv stamp, or foreign figure/table fragments appear in the crop.\n- Content: It is the paper's data-construction pipeline (Source Screening -> Transcription -> Quality Inspection with rule-/model-/human-based checks), i.e. the method overview for a benchmark paper. The only other figure in pages 1-8 is Figure 1 on page 1 (radar chart + bar chart \"Benchmark Comparison\"), which is a results-comparison chart and therefore a worse teaser; pages 2-5 contain no figures. The choice is correct.\n- Shape: 1687x900 px, ratio 1.874 (within 1.2-2.6), width >= 800 px.\n- Legibility: Three large panels with big icons and large grey stage labels; the structure remains recognisable at 240 px width. Inner step text will be small but is not needed to read the figure.\n\nNo changes required.",
+    "suggested_page": 6,
+    "suggested_figure": 2,
+    "suggested_bbox": [
+     80,
+     178,
+     515,
+     414
+    ]
+   }
+  },
+  {
+   "key": "mmmu-pro",
+   "page": 4,
+   "figure_number": 4,
+   "bbox": [
+    70,
+    69,
+    526,
+    416
+   ],
+   "caption": "Figure 4: Sample questions from MMMU-Pro Vision.",
+   "what_it_shows": "Five real-world photos/screenshots (a website, a monitor, handwritten paper, a notebook) in which a multiple-choice question with up to 10 options is embedded, illustrating MMMU-Pro's vision-only input setting and option augmentation.",
+   "output_path": "/rmeng_data/yubo_data/October/yubo/website_work/teasers/mmmu-pro.png",
+   "width_px": 1817,
+   "height_px": 1371,
+   "aspect_ratio": 1.325,
+   "confidence": 0.7,
+   "alternatives_considered": "Figure 1 (page 2, bbox ~[92,67,505,166]) is the true method/pipeline overview (3 steps: LLM Filtering -> Option Augmentation -> Photos/Screenshots) and renders cleanly (scratch: pages/mmmu-pro_fig1_try1.png, 1624x373 px), but its 4.35:1 aspect ratio would make it a ~55 px-tall strip with unreadable text at 240 px width, and none of its three step-panels is a self-contained overview, so it fails the thumbnail-suitability rule. Figures 3, 5, 6, 7, 8 are result charts (bar charts, scatter, pie); Figure 2 is dense question text at 4:1; appendix Figures 9-20 are tall per-sample response comparisons. Figure 4 was chosen because it conveys the paper's headline novelty (questions embedded in photos/screenshots with 10 options) at a thumbnail-friendly 1.33:1 ratio. If the site layout can accommodate a wide banner, Figure 1 is the better conceptual overview and is already rendered in the scratch folder.",
+   "verified": true,
+   "verdict": {
+    "ok": true,
+    "issues": [
+     "Not the paper's pipeline overview: Figure 1 (page 2, 'An overview of the construction process of MMMU-Pro', bbox 91 68 505 165) was skipped. It is, however, a 414x97 pt banner (ratio 4.27) that fails the 1.2-2.6 shape rule and renders as a ~240x56 px strip with no legible text, so it cannot replace this crop under the current rules.",
+     "At 240 px width none of the text in the five sample panels is legible; the thumbnail relies purely on the gestalt of 'five photographed/screenshotted exam questions' (there are no larger labels to preserve)."
+    ],
+    "feedback": "PASS. The crop is a complete, clean rendering of Figure 4 (page 4): 4x no-trim corner clips of bbox [70,69,526,416] show white margin on all four edges with every panel frame and shadow intact; all raster rects (x 72-524, y 71-411) and the vector union (71-524 x 71-412) are inside the bbox; the 'Figure 4:' caption starts at y=422, outside the crop; page 4 carries no header/footer/arXiv stamp. Shape 1817x1371 (ratio 1.325, >=800 px) is fine. Content: this is the paper's showcase of its headline contribution (the vision-only input setting with real photos/screenshots), not a table or results chart. The only true method overview in the first 8 pages, Figure 1 on page 2 (bbox 91 68 505 165, 414x97 pt), has ratio 4.27 and would fail the shape check and be a 56-px-tall unreadable strip at 240 px; Figures 2/3/5/6/7/8 and appendix Figures 9-15 are motivation banners, results charts, or tall ~1:1 case studies and are worse. Keep the current crop as-is. Optional: only if the site layout can accept a wide banner (or the pipeline can letterbox onto a ~2:1 canvas), swap to page 2 Figure 1 at bbox 91 68 505 165 for a more informative 3-step pipeline teaser.",
+    "suggested_page": 4,
+    "suggested_figure": 4,
+    "suggested_bbox": [
+     70,
+     69,
+     526,
+     416
+    ]
+   }
+  },
+  {
+   "key": "mammoth-vl",
+   "page": 2,
+   "figure_number": 2,
+   "bbox": [
+    67,
+    62,
+    528,
+    335
+   ],
+   "caption": "Overview of our simple yet scalable visual instruction data rewriting pipeline with three steps: manual data source collection, rewriting using MLLMs/LLMs, and filtering via the same MLLM as a judge.",
+   "what_it_shows": "The MAmmoTH-VL data-construction pipeline (collect 153 open multimodal instruct datasets and grade their source quality, rewrite them into detailed step-by-step CoT responses with open MLLMs/LLMs, then self-filter with the same MLLM as judge to produce MAmmoTH-VL-Instruct-12M and the VL model), with before/after Math and Science examples underneath.",
+   "output_path": "/rmeng_data/yubo_data/October/yubo/website_work/teasers/mammoth-vl.png",
+   "width_px": 1815,
+   "height_px": 1065,
+   "aspect_ratio": 1.704,
+   "confidence": 0.92,
+   "alternatives_considered": "Figure 1 (page 1): a 2x4 grid of data-scaling line charts (accuracy vs. training data scale on eight benchmarks) -- a pure results plot, unreadable at 240 px, rejected. Figure 3 (page 3): category/data-source distribution donut chart of MAmmoTH-VL-Instruct -- a statistics figure rather than a method overview, rejected. Figures 4-6 (pages 4-5): bar charts and a t-SNE plot of rewriting/filtering analysis -- results, rejected. Also considered cropping only the top pipeline row of Figure 2, but it is ~458x85 pt (ratio ~5.4), far too wide/short for the thumbnail, so the full Figure 2 (ratio 1.70) was kept; the info-suggested right edge (554 pt) was tightened to 528 pt because the extra width came from a transparent-padded raster, not visible content.",
+   "verified": true,
+   "verdict": {
+    "ok": true,
+    "issues": [],
+    "feedback": "PASS. Verification: the teaser (/rmeng_data/yubo_data/October/yubo/website_work/teasers/mammoth-vl.png, 1815x1065, ratio 1.704) is a bit-exact render (max pixel difference 0) of page 2, Figure 2, bbox [67,62,528,335] at 4x, auto-trimmed to a uniform 12 px white margin on all four sides. (a) Completeness: 6x strips rendered just outside every bbox edge (x<67, x>528, y<62, y>335) are pure white, and the inside strips show the dashed step boxes, arrows, the mammoth icon, the 'MAmmoTH-12M and VL Model' label and the beige/green Math/Science panel borders fully inside the crop; nothing is cut. (b) Purity: the 'Figure 2:' caption's glyphs start at y~341 pt (about 6 pt below the crop bottom), body text starts at y=392, there is no header/footer in the region and the arXiv stamp exists only on page 1; no fragments of other figures/tables. (c) Content: this is the paper's method/pipeline overview (Data Collection -> Rewriting -> Self Data Filtering -> MAmmoTH-12M/VL model, plus rewriting examples). Other figures on pp. 1-6 are results charts (Fig 1 scaling curves, Fig 4 score/token-length comparisons, Fig 5 t-SNE, Fig 6 filter rates) or a data-distribution plot (Fig 3), so no better overview was ignored. (d) Shape: ratio 1.704, width 1815 px, within range. (e) Legibility: in a 240 px downscale (pages/mammoth-vl_verify_240.png) the three-step pipeline, arrows, mammoth, Meta/llama icons, the two coloured example panels, the quadrilateral sketch and the sample jars remain recognisable and the step labels are discernible; the example text in the lower half is not readable at that size, which is inherent to this figure. Cropping only the top pipeline row (y 62-150) is not a viable alternative because it would be ~461x88 pt (ratio ~5.2) and fail the shape check. Keep the current crop as-is.",
+    "suggested_page": 2,
+    "suggested_figure": 2,
+    "suggested_bbox": [
+     67,
+     62,
+     528,
+     335
+    ]
+   }
+  },
+  {
+   "key": "mega-bench",
+   "page": 1,
+   "figure_number": 1,
+   "bbox": [
+    108,
+    232,
+    504,
+    522
+   ],
+   "caption": "MEGA-Bench contains 505 multimodal tasks with diverse data sources, input/output formats, and skill requirements.",
+   "what_it_shows": "The paper's teaser: a radial taxonomy tree of MEGA-Bench's eight application areas (Perception, Planning, Coding, Information Extraction, Mathematics, Knowledge, Science, Metrics) around the MEGA-Bench gem logo, surrounded by representative multimodal task examples (images plus their questions) illustrating the diversity of the 505 tasks.",
+   "output_path": "/rmeng_data/yubo_data/October/yubo/website_work/teasers/mega-bench.png",
+   "width_px": 1508,
+   "height_px": 1156,
+   "aspect_ratio": 1.3045,
+   "confidence": 0.9,
+   "alternatives_considered": "Figure 3 (p.4, annotation-process flow chart: draft taxonomy tree -> annotators -> task examples) is the closest thing to a pipeline/method diagram, but it is ~396x87 pt (ratio ~4.5) with very small text; even its left tree sub-panel is wide/short and unreadable at 240 px. Figure 2 (p.4) is four statistics pie/bar charts (data distribution, not a concept). Figure 4 (p.6) is a grid of dense text screenshots of output formats. Figures 5-6 (p.9) are radar/bar results charts. Tables 1-2 (p.7-8) excluded. Figure 1 is the only visually strong, self-contained, correctly proportioned figure that conveys the core idea (a large taxonomy-guided suite of diverse real-world multimodal tasks); it is a single raster image so the crop aligns exactly to its bounds with no caption, body text, or arXiv stamp included.",
+   "verified": true,
+   "verdict": {
+    "ok": true,
+    "issues": [],
+    "feedback": "PASS. The teaser /rmeng_data/yubo_data/October/yubo/website_work/teasers/mega-bench.png is the complete Figure 1 of arXiv 2410.10563 (page 1): it is byte-identical (md5 17c20a9b...) to a fresh `clip 1 108 232 504 522 --zoom 4` render, and that bbox is exactly the embedded raster rect of Figure 1 (native resolution 3972x2906 px, so the 1508x1156 output is a crisp downscale, not an upscale).\n\n(a) Completeness: whole figure; clearly-non-white content spans px (12,3)-(1499,1144), i.e. a clean white border of 12/3/9/12 px (L/T/R/B) and 0% non-white pixels on all four outer edge lines. Every peripheral example image and \"Q:\" blurb (Pluto poem, acrostic text at left; \"extract the following information\", \"List all of the moves...\", bridge \"scenarios\" at right; \"Track the car ... frames\", \"normalized coordinates\" at bottom) is intact.\n(b) Purity: caption (y 533-554), running header (y 28-38), title/author/URL block (y <= 209), footnotes, page number and the arXiv side stamp (x 11-38) all lie outside the bbox; no fragments of other figures/tables.\n(c) Content: this is the paper's conceptual teaser (taxonomy sunburst with representative tasks), which is the canonical MEGA-Bench overview. The only alternatives in pp. 1-8 are worse: Fig. 2 p.4 (statistics pies/bars, ~405x105 pt, ratio ~3.9), Fig. 3 p.4 (annotation pipeline, ~403x93 pt, ratio ~4.3 with tiny text), Fig. 4 p.6 (text-heavy grid of output-format examples), Tables 1-2 on pp. 7-8.\n(d) Shape: 1508x1156, ratio 1.3045 (within 1.2-2.6), width >= 800.\n(e) Legibility: a 238x184 px render (pages/mega-bench_240px_render.png) still shows the sunburst, the central gem and the eight large category labels (Mathematics, Information Extraction, Knowledge, Planning, Science, Coding, Metrics, Perception) legibly; the surrounding thumbnails read as decorative examples, which is acceptable.\n\nNon-blocking cosmetic note only: the top white margin is 3 px vs ~12 px on the other sides (sub-pixel at 240 px width); no change required.",
+    "suggested_page": 1,
+    "suggested_figure": 1,
+    "suggested_bbox": [
+     108,
+     232,
+     504,
+     522
+    ]
+   }
+  },
+  {
+   "key": "map-neo",
+   "page": 11,
+   "figure_number": 4,
+   "bbox": [
+    112,
+    62,
+    500,
+    235
+   ],
+   "caption": "Figure 4: The document conversion framework is composed of various sub-models for different parts.",
+   "what_it_shows": "A left-to-right flow chart of MAP-Neo's document conversion pipeline: a raw Document goes through Layout Detection, is split into Text/Title, Figure, Table, Equation and Others elements, which are routed into Content/Image/Table/Latex Blocks (or dropped) by an Ordering stage, then Post Processed into MarkDown.",
+   "output_path": "/rmeng_data/yubo_data/October/yubo/website_work/teasers/map-neo.png",
+   "width_px": 1522,
+   "height_px": 657,
+   "aspect_ratio": 2.317,
+   "confidence": 0.7,
+   "alternatives_considered": "Scanned pages 1-36 (no figure captions after page 18). Figure 1 (p1): base/chat benchmark bar charts - pure results, rejected. Figure 2 (p6): pie chart of Matrix Pile language/domain distribution - statistics, rejected. Figure 3 (p9): two funnel diagrams of data-pipeline retention rates - closer to the paper's core data contribution but it is a statistics chart with legend text unreadable at 240 px and aspect ratio 2.87; rendered and rejected. Figure 5 (p14): data mixture ratio charts - rejected. Figures 6-7 (p17-18): scaling-law loss curves - rejected. Figure 4 is the only genuine framework/flow diagram in the paper and has large readable boxes, so it was chosen; confidence is moderate because it depicts the document-conversion sub-pipeline rather than a whole-system overview (the paper has none).",
+   "verified": true,
+   "verdict": {
+    "ok": true,
+    "issues": [],
+    "feedback": "PASS. The teaser /rmeng_data/yubo_data/October/yubo/website_work/teasers/map-neo.png is a correct, clean crop of Figure 4 (p.11, \"document conversion framework\"), bbox [112,62,500,235].\n\nVerification performed:\n- Completeness: untrimmed renders of the claimed rect and of a wider rect [100,55,510,240] show white clearance on all four sides of the drawing (content occupies roughly x 118-493 pt, y 72-232 pt, so ~6 pt left, ~10 pt top, ~7 pt right, ~3-5 pt bottom of slack). Pixel analysis of the PNG: content bbox px [12,12,1509,644] with exactly 12 px of pure white on every edge; no dark pixels in the outer 12 rows/columns. All 15 boxes, both dashed containers (tops and bottoms), every arrow and the MarkDown panel are intact.\n- Purity: the Figure 4 caption starts at y=239 pt, 4 pt below the crop bottom (235); no caption, body text, headings, footnotes, page number, or arXiv stamp present. The small document/table/plot thumbnails inside the figure are part of the diagram itself (they depict the input document), not fragments of other figures.\n- Content: full figure inventory of the 49-page paper - Fig 1 (p1) radar result charts, Fig 2 (p6) data-distribution pie, Fig 3 (p9) retention-rate funnels, Fig 4 (p11) conversion pipeline, Fig 5 (p14) mixture-ratio pies, Fig 6/7/10 loss curves, Fig 8 (p38) code screenshot, Fig 9 (p46) checkpoint curves; no uncaptioned diagrams on pp.2-10. Figure 4 is the only method/pipeline overview diagram in the paper, so it is the right choice over the results-only Fig 1.\n- Shape: 1522x657 px, ratio 2.32 (within 1.2-2.6), width >= 800 px.\n- Legibility: a 241x108 px render preserves the left-to-right pipeline structure (document -> layout detection -> element column -> ordering blocks -> post process -> MarkDown) with the larger labels (Ordering, MarkDown, Document, Layout Detection) still recognisable; ~15 boxes, not a sprawling diagram.\n\nNo change required; keep page 11 / Figure 4 / bbox [112,62,500,235].",
+    "suggested_page": 11,
+    "suggested_figure": 4,
+    "suggested_bbox": [
+     112,
+     62,
+     500,
+     235
+    ]
+   }
+  }
+ ],
+ "metas": [
+  {
+   "key": "fim-midtraining",
+   "title": "Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models",
+   "authors": [
+    {
+     "name": "Yubo Wang",
+     "equal": true,
+     "core": false
+    },
+    {
+     "name": "Jiarong Liang",
+     "equal": true,
+     "core": false
+    },
+    {
+     "name": "Yuxuan Zhang",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Xuye Liu",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Cong Wei",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Yuyu Zhang",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Ping Nie",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Wenhu Chen",
+     "equal": false,
+     "core": false
+    }
+   ],
+   "yubo_position": 1,
+   "display_authors": "Yubo Wang*, Jiarong Liang*, Yuxuan Zhang, Xuye Liu, Cong Wei, Yuyu Zhang, Ping Nie, Wenhu Chen",
+   "venue_short": "arXiv 2026",
+   "venue_long": "arXiv preprint arXiv:2607.12463",
+   "year": 2026,
+   "month": 7,
+   "arxiv_url": "https://arxiv.org/abs/2607.12463",
+   "links": [
+    {
+     "label": "Paper",
+     "url": "https://arxiv.org/abs/2607.12463",
+     "verified": true,
+     "note": "arXiv abs page returns HTTP 200; API record matches title and 8 authors; v1 published 2026-07-14, current v3 2026-07-19"
+    },
+    {
+     "label": "Code",
+     "url": "https://github.com/TIGER-AI-Lab/FIM-Midtraining",
+     "verified": true,
+     "note": "gh api: 21 stars, 1 fork, created 2026-07-14, Apache-2.0; README title matches the paper; same URL printed on PDF page 1"
+    },
+    {
+     "label": "HF Collection",
+     "url": "https://huggingface.co/collections/TIGER-Lab/fim-midtraining-6a55b20af7dd02d36b445cc5",
+     "verified": true,
+     "note": "HF collections API: title 'FIM-Midtraining', owner TIGER-Lab; contains 6 models (FIM-Mid-7B/8B/14B, FIM-7B/8B/14B), dataset FIM-Midtraining-400K and paper 2607.12463; URL 302-redirects to the short slug /collections/TIGER-Lab/fim-midtraining (200)"
+    },
+    {
+     "label": "Dataset",
+     "url": "https://huggingface.co/datasets/TIGER-Lab/FIM-Midtraining-400K",
+     "verified": true,
+     "note": "HF datasets API: public, not gated, 215 downloads; 400K samples / ~2.6B tokens mid-training corpus (linked from README badge)"
+    },
+    {
+     "label": "Model(s)",
+     "url": "https://huggingface.co/TIGER-Lab/FIM-8B",
+     "verified": true,
+     "note": "HF models API: public; README calls FIM-8B the strongest released checkpoint (Qwen3-8B + FIM mid-training + SWE-Lego). All six checkpoints are in the HF Collection link"
+    },
+    {
+     "label": "Tweet",
+     "url": "https://x.com/YuboWang726/status/2077521989447676246",
+     "verified": true,
+     "note": "Fetched via r.jina.ai, cdn.syndication.twimg.com and fxtwitter: posted 2026-07-15 by @YuboWang726, text begins 'Introducing Function-Aware FIM Mid-Training' and links the arXiv abs and GitHub repo"
+    }
+   ],
+   "summary": "Proposes function-aware fill-in-the-middle mid-training on 2.6B tokens of code before agentic post-training, improving SWE-Bench-Verified by +2.8 to +3.2 points on Qwen2.5-Coder-7B/14B and Qwen3-8B.",
+   "highlight": "6 checkpoints + 2.6B-token corpus released on Hugging Face",
+   "highlight_source_url": "https://huggingface.co/collections/TIGER-Lab/fim-midtraining-6a55b20af7dd02d36b445cc5",
+   "github_stars": 21,
+   "distinction": "",
+   "pub_page_url": "",
+   "notes": "Venue: no peer-reviewed venue yet. PDF footer says 'Preprint.'; arXiv API record has no comments field; CITATION.cff cites 'arXiv preprint'. The OpenReview search page (https://openreview.net/search?term=...) lists the paper as 'ICLR 2027 Conference Submission2209' (forum id oduQUj3Lid, submitted 21 Aug 2026, modified 05 Oct 2026, authors shown as 'Authors' i.e. anonymized, no decision) plus a separate 'CoRR 2026' DBLP-mirror entry (forum id sDSMzbRMmC). The forum pages and OpenReview API were blocked by a browser-verification challenge, so this could not be inspected further. Because it is a double-blind submission under review, do NOT display 'ICLR 2027' or 'under review at ICLR' on the public site; re-check after ICLR 2027 decisions (~late January 2027). Authorship: Yubo Wang and Jiarong Liang share an asterisk ('* Equal contribution'); Yubo Wang and Wenhu Chen are the corresponding authors. No core-contributor list. Affiliations on PDF: Yubo Wang = University of Waterloo + Vector Institute. Citations: Google Scholar snapshot 1 (below the 100 threshold, so no citation highlight); Semantic Scholar API returned 429 and DBLP was behind an Anubis bot check, so neither could corroborate. Other verified pages not returned as links because their labels are not in the allowed set: HF Daily Papers page https://huggingface.co/papers/2607.12463 (200, title matches; the tweet asks for upvotes there). No project page exists (GitHub homepage null, has_pages false, README has no project-page link). The README teaser image is assets/teaser.png and the method figure is assets/pdg_score.png in the repo (useful for the website figure); Figure 1 on PDF page 1 is the teaser. The HF collection short URL https://huggingface.co/collections/TIGER-Lab/fim-midtraining also resolves (200) if a shorter link is preferred."
+  },
+  {
+   "key": "one-shot-cft",
+   "title": "Unleashing the Reasoning Potential of Pre-trained LLMs by Critique Fine-Tuning on One Problem",
+   "authors": [
+    {
+     "name": "Yubo Wang",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Ping Nie",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Kai Zou",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Lijun Wu",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Wenhu Chen",
+     "equal": false,
+     "core": false
+    }
+   ],
+   "yubo_position": 1,
+   "display_authors": "Yubo Wang, Ping Nie, Kai Zou, Lijun Wu, Wenhu Chen",
+   "venue_short": "EMNLP 2025",
+   "venue_long": "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP 2025, Main Conference)",
+   "year": 2025,
+   "month": 6,
+   "arxiv_url": "https://arxiv.org/abs/2506.03295",
+   "pub_page_url": "https://aclanthology.org/2025.emnlp-main.149/",
+   "github_stars": 33,
+   "links": [
+    {
+     "label": "Paper",
+     "url": "https://arxiv.org/abs/2506.03295",
+     "verified": true,
+     "note": "arXiv API: 5 authors, published 2025-06-03, v2 2025-06-05"
+    },
+    {
+     "label": "Publication Page",
+     "url": "https://aclanthology.org/2025.emnlp-main.149/",
+     "verified": true,
+     "note": "ACL Anthology, EMNLP 2025 main proceedings, pages 3017-3027, DOI 10.18653/v1/2025.emnlp-main.149"
+    },
+    {
+     "label": "Project Page",
+     "url": "https://tiger-ai-lab.github.io/One-Shot-CFT/",
+     "verified": true,
+     "note": "HTTP 200, title 'One-Shot-CFT'; links to arXiv 2506.03295, GitHub repo, HF collection and dataset"
+    },
+    {
+     "label": "Code",
+     "url": "https://github.com/TIGER-AI-Lab/One-Shot-CFT",
+     "verified": true,
+     "note": "gh api: 33 stars; README states 'our EMNLP25 paper'"
+    },
+    {
+     "label": "HF Collection",
+     "url": "https://huggingface.co/collections/TIGER-Lab/one-shot-cft-683fbb4d2bcf698dbea8fb21",
+     "verified": true,
+     "note": "HF API: collection 'One-Shot-CFT' with 1 dataset, 3 models and the paper"
+    },
+    {
+     "label": "Dataset",
+     "url": "https://huggingface.co/datasets/TIGER-Lab/One-Shot-CFT-Data",
+     "verified": true,
+     "note": "HF API: public, apache-2.0, tagged arxiv:2506.03295"
+    },
+    {
+     "label": "Model(s)",
+     "url": "https://huggingface.co/TIGER-Lab/One-Shot-CFT-Math-Qwen-7B",
+     "verified": true,
+     "note": "HF API verified; sibling models One-Shot-CFT-Math-Qwen-1.5B and -14B also verified and in the collection"
+    },
+    {
+     "label": "Tweet",
+     "url": "https://x.com/YuboWang726/status/1930454445613088986",
+     "verified": true,
+     "note": "Confirmed via api.fxtwitter.com: author @YuboWang726 (Yubo Wang), 2025-06-05, text announces the paper and links arxiv.org/abs/2506.03295"
+    }
+   ],
+   "summary": "Fine-tuning LLMs on teacher critiques of diverse solutions to a single problem improves Qwen-Math-7B by 15% on six math benchmarks, matching RL at 20x less compute.",
+   "notes": "Venue confirmed as EMNLP 2025 main conference (not Findings) from ACL Anthology 2025.emnlp-main.149 and the camera-ready footer ('Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing, pages 3017-3027, November 4-9, 2025', Suzhou, China); GitHub README/description also say EMNLP25. No oral/spotlight/award information found (Anthology page has no award marks; OpenReview API returned nothing), so distinction is left empty. The Anthology metadata title is slightly shortened ('...Potential of LLMs by...') but the camera-ready PDF and arXiv both use the full title with 'Pre-trained'. Authors identical across arXiv API, arXiv PDF, camera-ready PDF and Anthology; no equal-contribution or core-contributor marks (affiliation superscripts only). arXiv entry has no comments field. Citation snapshot is 8 (<100) and stars are 33, so no highlight. No blog, demo or leaderboard found on the README or project page. Model(s) link points to the 7B model (the flagship in the abstract); the 1.5B and 14B models are in the HF collection."
+  },
+  {
+   "key": "scholarcopilot",
+   "title": "ScholarCopilot: Training Large Language Models for Academic Writing with Accurate Citations",
+   "authors": [
+    {
+     "name": "Yubo Wang",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Xueguang Ma",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Ping Nie",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Huaye Zeng",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Zhiheng Lyu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yuxuan Zhang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Benjamin Schneider",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yi Lu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Xiang Yue",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Wenhu Chen",
+     "core": true,
+     "equal": false
+    }
+   ],
+   "yubo_position": 1,
+   "display_authors": "Yubo Wang, Xueguang Ma, Ping Nie, Huaye Zeng, Zhiheng Lyu, Yuxuan Zhang, Benjamin Schneider, Yi Lu, Xiang Yue, Wenhu Chen",
+   "venue_short": "COLM 2025",
+   "venue_long": "Conference on Language Modeling (COLM) 2025",
+   "year": 2025,
+   "month": 4,
+   "arxiv_url": "https://arxiv.org/abs/2504.00824",
+   "pub_page_url": "https://openreview.net/forum?id=r8nloXtluk",
+   "links": [
+    {
+     "label": "Paper",
+     "url": "https://arxiv.org/abs/2504.00824",
+     "verified": true,
+     "note": "arXiv API resolved id 2504.00824 to this title; v1 2025-04-01, v2 2025-04-03"
+    },
+    {
+     "label": "Publication Page",
+     "url": "https://openreview.net/forum?id=r8nloXtluk",
+     "verified": true,
+     "note": "OpenReview search API: venue 'COLM 2025', venueid colmweb.org/COLM/2025/Conference, Submission283 with Camera_Ready invitation; same forum id linked from the official COLM 2025 accepted-papers page. The forum page itself serves a browser-verification interstitial to non-browser clients."
+    },
+    {
+     "label": "Project Page",
+     "url": "https://tiger-ai-lab.github.io/ScholarCopilot/",
+     "verified": true,
+     "note": "HTTP 200, <title>ScholarCopilot</title>; links to arXiv, GitHub, HF model, HF dataset, HF space"
+    },
+    {
+     "label": "Code",
+     "url": "https://github.com/TIGER-AI-Lab/ScholarCopilot",
+     "verified": true,
+     "note": "gh api: 253 stars on 2026-10-15; description tagged [COLM 2025]; README says 'accepted to COLM 2025'"
+    },
+    {
+     "label": "Model(s)",
+     "url": "https://huggingface.co/TIGER-Lab/ScholarCopilot-v1",
+     "verified": true,
+     "note": "HF API: model TIGER-Lab/ScholarCopilot-v1, base Qwen/Qwen2.5-7B, Apache-2.0, 10 likes / 49 downloads"
+    },
+    {
+     "label": "Dataset",
+     "url": "https://huggingface.co/datasets/TIGER-Lab/ScholarCopilot-Data-v1",
+     "verified": true,
+     "note": "HF API: dataset TIGER-Lab/ScholarCopilot-Data-v1, 8 likes / 174 downloads; labelled 'Data' in README and project page"
+    },
+    {
+     "label": "Demo",
+     "url": "https://huggingface.co/spaces/TIGER-Lab/ScholarCopilot",
+     "verified": true,
+     "note": "HF API: space runtime stage RUNNING, sdk static, 25 likes"
+    },
+    {
+     "label": "HF Collection",
+     "url": "https://huggingface.co/collections/TIGER-Lab/scholarcopilot-6756f940df88114b24232074",
+     "verified": true,
+     "note": "HF collections API: title 'ScholarCopilot', owner TIGER-Lab; items: model ScholarCopilot-v1, dataset ScholarCopilot-Data-v1, space ScholarCopilot, dataset arxiv-latex-5T"
+    },
+    {
+     "label": "Tweet",
+     "url": "https://x.com/WenhuChen/status/1907861046833885397",
+     "verified": true,
+     "note": "Confirmed via r.jina.ai: Wenhu Chen's announcement thread (Apr 3, 2025, 17.4K views); thread reply states 'Work led by @YuboWang726'"
+    }
+   ],
+   "github_stars": 253,
+   "summary": "Fine-tunes Qwen2.5-7B on 500K arXiv papers to emit a [RET] token that retrieves citations mid-generation, reaching 40.1% top-1 citation retrieval accuracy versus 15.0% for E5-Mistral-7B.",
+   "highlight": "Live demo on Hugging Face Spaces",
+   "highlight_source_url": "https://huggingface.co/spaces/TIGER-Lab/ScholarCopilot",
+   "notes": "Venue evidence: (1) GitHub repo description '[COLM 2025]' and README 'The paper has been accepted to COLM 2025!'; (2) OpenReview api2 /notes/search returns note r8nloXtluk with exact title, venue 'COLM 2025', venueid colmweb.org/COLM/2025/Conference, invitations incl. Submission283/-/Camera_Ready (a second hit mvxjsbRKuK is just the DBLP/CoRR record); (3) official list https://colmweb.org/2025/AcceptedPapers.html (title 'COLM 2025: Accepted Papers') lists the paper with the full author list linking to forum r8nloXtluk and WITHOUT a Spotlight badge (20 other papers on the page carry one), so no distinction (regular/poster paper). Direct fetches of the OpenReview forum and api2 /notes?id= return a 403 'ChallengeRequiredError' / browser-verification interstitial, so decision text was not read from the forum itself. arXiv API entry has no comments field; v2 PDF header reads 'Preprint. Under review.' (predates acceptance). Author marks: dagger on Yubo Wang, Xueguang Ma, Wenhu Chen with footnote 'Core Contributors'; no equal-contribution footnote. Affiliations: 1 University of Waterloo, 2 CMU (Xiang Yue), 3 Independent Researcher (Ping Nie), 4 Vector Institute (Wenhu Chen). Additional verified artefact not in the allowed label set: YouTube demo video https://www.youtube.com/watch?v=QlY7S52sWDA (oEmbed title 'scholar copilot demo video', channel 'yubo wang'), linked from the README. The HF collection also contains dataset TIGER-Lab/arxiv-latex-5T (9,182 downloads), a related arXiv LaTeX corpus not referenced in the README/project page, so it is not listed as a paper link. No ScholarCopilot status URL from Yubo's own X account could be confirmed (r.jina.ai rendered only the profile bio, which lists ScholarCopilot), so the Tweet link is Wenhu Chen's announcement. Citation snapshot 27 (<100) and 253 stars (<1,000) were not used for the highlight."
+  },
+  {
+   "key": "cft",
+   "title": "Critique Fine-Tuning: Learning to Critique is More Effective than Learning to Imitate",
+   "authors": [
+    {
+     "name": "Yubo Wang",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Xiang Yue",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Wenhu Chen",
+     "equal": false,
+     "core": false
+    }
+   ],
+   "yubo_position": 1,
+   "display_authors": "Yubo Wang, Xiang Yue, Wenhu Chen",
+   "venue_short": "COLM 2025",
+   "venue_long": "Second Conference on Language Modeling (COLM 2025)",
+   "year": 2025,
+   "month": 1,
+   "arxiv_url": "https://arxiv.org/abs/2501.17703",
+   "pub_page_url": "https://openreview.net/forum?id=vTAz44GgOA",
+   "github_stars": 180,
+   "links": [
+    {
+     "label": "Paper",
+     "url": "https://arxiv.org/abs/2501.17703",
+     "verified": true,
+     "note": "arXiv abs page fetched; title and 3 authors match; v4 dated 2025-03-29, first version 2025-01-29"
+    },
+    {
+     "label": "Publication Page",
+     "url": "https://openreview.net/forum?id=vTAz44GgOA",
+     "verified": true,
+     "note": "Confirmed via OpenReview API (notes/search): venue 'COLM 2025', venueid colmweb.org/COLM/2025/Conference, Camera_Ready invitation, pdate 2025-07-08; same forum id is linked from https://colmweb.org/2025/AcceptedPapers.html. curl gets a 307 bot-challenge redirect then 200"
+    },
+    {
+     "label": "Project Page",
+     "url": "https://tiger-ai-lab.github.io/CritiqueFineTuning/",
+     "verified": true,
+     "note": "HTTP 200, <title>Critique Fine-Tuning</title>; links to arXiv, GitHub, HF model and dataset; figures: static/images/teaser.png (975 KB, HTTP 200), main_result.png, simple_rl_compare.png, training_dynamics.png, vs_other_reasoning_models.png"
+    },
+    {
+     "label": "Code",
+     "url": "https://github.com/TIGER-AI-Lab/CritiqueFineTuning",
+     "verified": true,
+     "note": "gh api: 180 stars, description 'Code for ... [COLM 2025]', homepage = project page, last push 2025-07-08"
+    },
+    {
+     "label": "Dataset",
+     "url": "https://huggingface.co/datasets/TIGER-Lab/WebInstruct-CFT",
+     "verified": true,
+     "note": "HF API: public, tagged arxiv:2501.17703, 59 likes; linked from README and project page"
+    },
+    {
+     "label": "Model(s)",
+     "url": "https://huggingface.co/TIGER-Lab/Qwen2.5-Math-7B-CFT",
+     "verified": true,
+     "note": "HF API: public, tagged arxiv:2501.17703; linked from project page. Second model also verified: https://huggingface.co/TIGER-Lab/Qwen2.5-32B-Instruct-CFT"
+    },
+    {
+     "label": "HF Collection",
+     "url": "https://huggingface.co/collections/TIGER-Lab/critiquefinetuning-679b25e1528e75180f55e5c4",
+     "verified": true,
+     "note": "HF collections API: title 'CritiqueFineTuning', owner TIGER-Lab; items: WebInstruct-CFT dataset, Qwen2.5-Math-7B-CFT, Qwen2.5-32B-Instruct-CFT, paper 2501.17703"
+    },
+    {
+     "label": "Tweet",
+     "url": "https://x.com/WenhuChen/status/1885060597500567562",
+     "verified": true,
+     "note": "Fetched via r.jina.ai: Wenhu Chen's announcement thread (2025-01-30, 74K views) linking the arXiv paper, GitHub repo and project page"
+    }
+   ],
+   "summary": "Trains LLMs to critique noisy responses rather than imitate correct ones, outperforming SFT by 4-10% on six math benchmarks after one hour of training on 50K examples.",
+   "notes": "Authors/markers: arXiv API and PDF v4 first page agree on Yubo Wang (1: University of Waterloo), Xiang Yue (2: Carnegie Mellon University), Wenhu Chen (1,3: Waterloo + Vector Institute); no asterisks, daggers, equal-contribution or core-contributor notes on page 1. Venue: the local PDF (v4, 29 Mar 2025) header reads 'Preprint. Under review.' and arXiv has no comments field; acceptance is established by OpenReview (note vTAz44GgOA, venue 'COLM 2025', bibtex booktitle 'Second Conference on Language Modeling', Camera_Ready invitation, pdate 2025-07-08) and by the COLM 2025 accepted-papers page (https://colmweb.org/2025/AcceptedPapers.html), where this entry has no 'Spotlight' or 'Outstanding Paper Award' badge (20 spotlight and 4 outstanding badges exist on that page for other papers), so no distinction. The GitHub description/README also state COLM 2025. The OpenReview camera-ready PDF (openreview.net/pdf?id=vTAz44GgOA) returned 403 to curl, so I could not check its header; the OpenReview by-id API endpoint returned a 403 ChallengeRequiredError, but the notes/search endpoint returned the full record. No highlight: Google Scholar snapshot is 55 citations (< 100), 180 GitHub stars, regular COLM paper; Semantic Scholar was rate-limited (429) and DBLP blocked by a bot challenge, so citations were not cross-checked. Tweet is by co-author Wenhu Chen; Yubo's own X profile (@YuboWang726, bio mentions 'Author of MMLU-Pro, CFT, ScholarCopilot') loads via jina but its timeline statuses do not render, so no first-author tweet URL could be confirmed. For the website teaser, the README embeds https://tiger-ai-lab.github.io/CritiqueFineTuning/static/images/teaser.png (verified HTTP 200, image/png), which is the SFT-vs-CFT overview figure that also appears as Figure 1 in the PDF."
+  },
+  {
+   "key": "mmlu-pro",
+   "title": "MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark",
+   "authors": [
+    {
+     "name": "Yubo Wang",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Xueguang Ma",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Ge Zhang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yuansheng Ni",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Abhranil Chandra",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Shiguang Guo",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Weiming Ren",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Aaran Arulraj",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Xuan He",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Ziyan Jiang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Tianle Li",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Max Ku",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Kai Wang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Alex Zhuang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Rongqi Fan",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Xiang Yue",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Wenhu Chen",
+     "core": true,
+     "equal": false
+    }
+   ],
+   "yubo_position": 1,
+   "display_authors": "Yubo Wang, Xueguang Ma, Ge Zhang, ..., Wenhu Chen",
+   "venue_short": "NeurIPS 2024",
+   "venue_long": "Thirty-Eighth Conference on Neural Information Processing Systems (NeurIPS 2024), Datasets and Benchmarks Track",
+   "distinction": "Spotlight (Datasets and Benchmarks Track)",
+   "year": 2024,
+   "month": 6,
+   "arxiv_url": "https://arxiv.org/abs/2406.01574",
+   "pub_page_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/ad236edc564f3e3156e1b2feafb99a24-Abstract-Datasets_and_Benchmarks_Track.html",
+   "links": [
+    {
+     "label": "Paper",
+     "url": "https://arxiv.org/abs/2406.01574",
+     "verified": true,
+     "note": "arXiv abs page returns HTTP 200 with the matching title; latest version v6 (2024-11-06); first version published 2024-06-03."
+    },
+    {
+     "label": "Publication Page",
+     "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/ad236edc564f3e3156e1b2feafb99a24-Abstract-Datasets_and_Benchmarks_Track.html",
+     "verified": true,
+     "note": "NeurIPS 2024 proceedings, Datasets and Benchmarks Track; HTTP 200, page title and the full 17-author list match."
+    },
+    {
+     "label": "Code",
+     "url": "https://github.com/TIGER-AI-Lab/MMLU-Pro",
+     "verified": true,
+     "note": "gh api: 430 stars on 2026-10-15; repo description cites the paper [NeurIPS 2024]; README links the HF dataset, leaderboard and arXiv."
+    },
+    {
+     "label": "Dataset",
+     "url": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro",
+     "verified": true,
+     "note": "HF API: public, MIT license, 569 likes, ~226K recent downloads; ~12K questions across 14 domains."
+    },
+    {
+     "label": "Leaderboard",
+     "url": "https://huggingface.co/spaces/TIGER-Lab/MMLU-Pro",
+     "verified": true,
+     "note": "HF API: Gradio space titled 'MMLU-Pro Leaderboard', runtime stage RUNNING, 258 likes."
+    },
+    {
+     "label": "HF Collection",
+     "url": "https://huggingface.co/collections/TIGER-Lab/mmlu-pro-68941812ba966b4780c47a85",
+     "verified": true,
+     "note": "HF API: collection 'MMLU-Pro' owned by TIGER-Lab; contains the dataset, the leaderboard space and the leaderboard-submission dataset."
+    },
+    {
+     "label": "Tweet",
+     "url": "https://x.com/YuboWang726/status/1839330905145610688",
+     "verified": true,
+     "note": "Confirmed via api.fxtwitter.com: posted by @YuboWang726 on 2024-09-26, announces the NeurIPS 2024 D&B spotlight and quote-tweets the paper (arXiv abs + leaderboard links)."
+    }
+   ],
+   "github_stars": 430,
+   "summary": "Extends MMLU to 12K harder, reasoning-focused questions with ten options each; model accuracy drops 16-33% and prompt sensitivity falls from 4-5% to 2%.",
+   "highlight": "2,600+ citations; used by the HF Open LLM Leaderboard",
+   "highlight_source_url": "https://huggingface.co/docs/leaderboards/open_llm_leaderboard/about",
+   "notes": "VENUE: Spotlight confirmed by three independent sources: arXiv comment field (\"accepted and published at NeurIPS 2024 Track Datasets and Benchmarks (Spotlight)\"), OpenReview API search (forum id y10DM6R2r3, venue \"NeurIPS 2024 Track Datasets and Benchmarks Spotlight\"), and the author's own tweet. PDF footer: \"38th Conference on Neural Information Processing Systems (NeurIPS 2024) Track on Datasets and Benchmarks.\" OpenReview forum https://openreview.net/forum?id=y10DM6R2r3 was verified through the API search result only; a direct HTML fetch redirected to a bot challenge page, so it is not listed as a verified link (the proceedings page is used as Publication Page instead). AUTHORS: PDF page 1 marks Yubo Wang, Xueguang Ma and Wenhu Chen with an asterisk defined as \"Core Contributors\" (not \"equal contribution\"), so core=true for those three and equal=false for all. Affiliations: 1 University of Waterloo (most authors), 2 University of Toronto (Max Ku), 3 Carnegie Mellon University (Xiang Yue). display_authors: Yubo is first author, so the \"first 3 / ... / Yubo / ... / last\" pattern collapses to \"Yubo Wang, Xueguang Ma, Ge Zhang, ..., Wenhu Chen\". LINKS: no project page, blog post, or official model release exists (README and HF dataset card only link GitHub, HF dataset, HF leaderboard space, arXiv). HIGHLIGHT provenance: \"2,600+ citations\" comes from the provided Google Scholar snapshot (2,681 on 2026-10-14, not independently fetched); \"used by the HF Open LLM Leaderboard\" is supported by highlight_source_url, whose benchmark list names MMLU-PRO and links arXiv 2406.01574. If a single-fact badge is preferred, use \"2,600+ citations\" (no URL) or \"Spotlight at NeurIPS 2024\". TEASER: Figure 1 on PDF page 1 is the natural teaser (MMLU vs MMLU-Pro: performance gap, accuracy distributions over 24 prompts, CoT vs direct); the GitHub README embeds an overview image at https://github.com/TIGER-AI-Lab/MMLU-Pro/assets/20929360/8e369fc2-5b6b-4bab-8a44-9e222e742027."
+  },
+  {
+   "key": "llm-amt",
+   "title": "Augmenting Black-box LLMs with Medical Textbooks for Biomedical Question Answering",
+   "authors": [
+    {
+     "name": "Yubo Wang",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Xueguang Ma",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Wenhu Chen",
+     "equal": false,
+     "core": false
+    }
+   ],
+   "yubo_position": 1,
+   "display_authors": "Yubo Wang, Xueguang Ma, Wenhu Chen",
+   "venue_short": "Findings of EMNLP 2024",
+   "venue_long": "Findings of the Association for Computational Linguistics: EMNLP 2024",
+   "distinction": "Findings",
+   "year": 2023,
+   "month": 9,
+   "arxiv_url": "https://arxiv.org/abs/2309.02233",
+   "pub_page_url": "https://aclanthology.org/2024.findings-emnlp.95/",
+   "links": [
+    {
+     "label": "Paper",
+     "url": "https://arxiv.org/abs/2309.02233",
+     "verified": true,
+     "note": "HTTP 200; arXiv API returns id 2309.02233v4 (latest version 23 Feb 2025)"
+    },
+    {
+     "label": "Code",
+     "url": "https://github.com/TIGER-AI-Lab/LLM-AMT",
+     "verified": true,
+     "note": "gh api: 14 stars, 1 fork, last push 2024-10-08; repo holds LLM reader, query augmenter, prompts and segmented textbook data; README says code is being released incrementally"
+    },
+    {
+     "label": "Publication Page",
+     "url": "https://aclanthology.org/2024.findings-emnlp.95/",
+     "verified": true,
+     "note": "Title and authors match; Findings of the Association for Computational Linguistics: EMNLP 2024, pp. 1754-1770, DOI 10.18653/v1/2024.findings-emnlp.95, published 2024/11"
+    }
+   ],
+   "github_stars": 14,
+   "summary": "Augments black-box LLMs with retrieval from medical textbooks via a query augmenter, hybrid retriever and knowledge self-refiner, improving accuracy 11.6-16.6% on three medical QA benchmarks.",
+   "highlight": "100+ citations",
+   "notes": "VENUE: Findings of EMNLP 2024 confirmed by three sources: arXiv comment (\"This version has been accepted and published at EMNLP Findings 2024\"), PDF page-1 footnote (\"* Published in Findings of EMNLP 2024\"), and ACL Anthology 2024.findings-emnlp.95 (citation_conference_title = \"Findings of the Association for Computational Linguistics: EMNLP 2024\", pages 1754-1770, DOI 10.18653/v1/2024.findings-emnlp.95, PDF https://aclanthology.org/2024.findings-emnlp.95.pdf). The anthology_guess ID was correct. TITLE: arXiv v1 (Sep 2023) and the GitHub README/BibTeX use \"...for Clinical Question Answering\" (this is the title Google Scholar lists); arXiv v4 (Feb 2025) and the ACL Anthology use \"...for Biomedical Question Answering\" - use the Anthology title; both refer to the same paper. AUTHOR MARKS: no equal-contribution or core-contributor marks; dagger on Wenhu Chen = \"Corresponding author\"; asterisk on the title only points to the Findings footnote. Affiliation: University of Waterloo for all three. YEAR/MONTH: 2023/09 is the first arXiv version (published 2023-09-05T13:39:38Z); the venue year is 2024. ARTEFACTS: no Hugging Face models/datasets/spaces found (HF API search for \"LLM-AMT\" and TIGER-Lab org listings returned nothing relevant); no project page, leaderboard, blog, or demo; GitHub homepage field points to the arXiv abstract; no external links inside the repo files. TWEET: r.jina.ai render of https://x.com/YuboWang726 showed the profile (50 posts) but no status URLs, so no tweet could be confirmed - omitted. HIGHLIGHT: \"100+ citations\" is derived from the orchestrator's Google Scholar snapshot (136 on 2026-10-14), rounded down to the nearest hundred; Semantic Scholar API returned HTTP 429 on two attempts, so no independent source URL was fetched - drop the highlight if a source URL is mandatory. FIGURE: Figure 1 on PDF page 2 (\"Overview of our proposed pipeline\") is the natural teaser/overview image for the website."
+  },
+  {
+   "key": "clawbench",
+   "title": "ClawBench: Can AI Agents Complete Everyday Online Tasks?",
+   "authors": [
+    {
+     "name": "Yuxuan Zhang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yubo Wang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yipeng Zhu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Penghui Du",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Junwen Miao",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Xuan Lu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Zhuofeng Li",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Xingwei Qu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Zhengkang Guo",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yuanzhe Shen",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Dingjie Song",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Han Zhou",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Tuney Zheng",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Xian Wu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Hao Yu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Songcheng Cai",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yi Lu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yunzhuo Hao",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Minyi Lei",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Liang Chen",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Kai Zou",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Huifeng Yin",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Wendong Xu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Dongfu Jiang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Ping Nie",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Jiaheng Liu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Wenhu Chen",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Kelsey R. Allen",
+     "core": false,
+     "equal": false
+    }
+   ],
+   "yubo_position": 2,
+   "display_authors": "Yuxuan Zhang, Yubo Wang, Yipeng Zhu, ..., Kelsey R. Allen",
+   "venue_short": "Findings of EMNLP 2026",
+   "venue_long": "Findings of the Association for Computational Linguistics: EMNLP 2026",
+   "distinction": "Findings (in-person poster, Poster Session B, 25 Oct 2026); also presented as a poster at the COLM 2026 Workshop on Agent Behavior (WAB)",
+   "year": 2026,
+   "month": 4,
+   "arxiv_url": "https://arxiv.org/abs/2604.08523",
+   "pub_page_url": "https://openreview.net/forum?id=bqzqPmhNiN",
+   "links": [
+    {
+     "label": "Paper",
+     "url": "https://arxiv.org/abs/2604.08523",
+     "verified": true,
+     "note": "arXiv abs page (HTTP 200); arXiv API title/authors match; v1 submitted 9 Apr 2026, v2 20 Jul 2026"
+    },
+    {
+     "label": "Project Page",
+     "url": "https://claw-bench.com",
+     "verified": true,
+     "note": "HTTP 200; <title> 'ClawBench — Real-World Browser Agent Benchmark'; listed in the arXiv comments field and as the GitHub repo homepage; hosts the live leaderboard (/leaderboard) and task explorer (/tasks)"
+    },
+    {
+     "label": "Code",
+     "url": "https://github.com/TIGER-AI-Lab/ClawBench",
+     "verified": true,
+     "note": "gh api: 1,031 stars, 62 forks, Apache-2.0, pushed 2026-10-13; old path github.com/reacher-z/ClawBench redirects here"
+    },
+    {
+     "label": "Dataset",
+     "url": "https://huggingface.co/datasets/NAIL-Group/ClawBench",
+     "verified": true,
+     "note": "HF API OK (tags arxiv:2604.08523); the README's primary 'Dataset' badge and 'hf download' target. Mirror/companion: huggingface.co/datasets/TIGER-Lab/ClawBench (in the HF collection); execution traces: TIGER-Lab/ClawBenchV2Trace and NAIL-Group/ClawBenchV1Trace"
+    },
+    {
+     "label": "Leaderboard",
+     "url": "https://huggingface.co/spaces/TIGER-Lab/ClawBench",
+     "verified": true,
+     "note": "HF API: Gradio space 'ClawBench Leaderboard', runtime RUNNING; README 'Leaderboard' badge. Same leaderboard also at https://claw-bench.com/leaderboard (HTTP 200)"
+    },
+    {
+     "label": "HF Collection",
+     "url": "https://huggingface.co/collections/TIGER-Lab/clawbench-6a0247d04680f475038797d4",
+     "verified": true,
+     "note": "HF collections API OK: title 'ClawBench', owner TIGER-Lab; contains datasets TIGER-Lab/ClawBench, NAIL-Group/ClawBenchV1Trace, TIGER-Lab/ClawBenchV2Trace, the paper, and space TIGER-Lab/ClawBench. Page 302-redirects to the alias https://huggingface.co/collections/TIGER-Lab/clawbench"
+    },
+    {
+     "label": "Tweet",
+     "url": "https://x.com/YuboWang726/status/2042578117894574507",
+     "verified": true,
+     "note": "Confirmed via r.jina.ai: Yubo Wang's own announcement, published 2026-04-10T12:19Z ('We built ClawBench to find out: 153 tasks across 144 live websites ... highest completion rate was 33.3%'), quoting @arankomatsuzaki's post https://x.com/arankomatsuzaki/status/2042441980710699364"
+    },
+    {
+     "label": "Publication Page",
+     "url": "https://openreview.net/forum?id=bqzqPmhNiN",
+     "verified": true,
+     "note": "OpenReview page of the COLM 2026 Workshop on Agent Behavior (WAB) poster version (venue 'COLM 2026 WAB Poster', venueid colmweb.org/COLM/2026/Workshop/WAB), confirmed via the OpenReview search API and the workshop site aiagentbehavior.com (submission #8, 'Paper (Regular)', Poster). The forum page itself serves a browser-verification challenge to curl/WebFetch. No ACL Anthology page exists yet for the Findings of EMNLP 2026 version (conference runs 24-29 Oct 2026)"
+    }
+   ],
+   "summary": "Evaluates agents on 153 everyday online tasks across 144 live websites, blocking final submissions for safety; the best of eight frontier models (Claude Sonnet 4.6) completes only 33.3%.",
+   "highlight": "1,000+ GitHub stars",
+   "highlight_source_url": "https://github.com/TIGER-AI-Lab/ClawBench",
+   "github_stars": 1031,
+   "notes": "VENUE: 'Findings of EMNLP 2026' is confirmed by two sources: (1) the official EMNLP 2026 'Author Presenter Schedule and Times' Google Sheet linked from https://2026.emnlp.org/program/ (https://docs.google.com/spreadsheets/d/1aXGTy_7Xeh-OXIs3iJSbDpUsZ6YhbfA76b17kBZH0Yk/edit?gid=943432490) lists row '1752-FIND | ClawBench: Can AI Agents Complete Everyday Online Tasks? | Poster | In-Person | Yuxuan Zhang | Hall H | Session 4 | Poster Session B | 2026-10-25 16:00-17:30' (the -FIND suffix is the Findings track; -MAIN rows are main conference); (2) the official repo README badge 'EMNLP 2026 Findings' and News entry '[2026.08.20] Our paper has been accepted to EMNLP 2026 Findings'. EMNLP 2026 takes place 24-29 Oct 2026, so the ACL Anthology has no entry yet (aclanthology.org/events/emnlp-2026/ is 404); once proceedings are published, replace pub_page_url with the Anthology URL. The arXiv comments field only says 'Project page: https://claw-bench.com' and the v2 PDF (20 Jul 2026, before the acceptance) carries no venue header. The paper was earlier accepted as a poster at the COLM 2026 Workshop on Agent Behavior (WAB; README news 2026.07.25; OpenReview bqzqPmhNiN; workshop site https://www.aiagentbehavior.com/ lists it as submission #8, 'Paper (Regular)', Poster, poster session 1). pub_page_url therefore points to the workshop OpenReview page, not an EMNLP page. AUTHORS: arXiv API and PDF first page agree on all 28 names and order. The PDF uses § = 'Project Lead' (Yuxuan Zhang, Wendong Xu, Ping Nie) and † = 'Advisors' (Liang Chen, Dongfu Jiang, Wenhu Chen, Kelsey R. Allen); there is no equal-contribution or core-contributor marking, so no author is flagged equal/core. Yubo Wang (2nd author, affiliations 2,5 = University of Waterloo / Vector Institute per the PDF numbering; WAB site lists University of Waterloo) has no marker. The repo's CITATION.cff lists a different (software) author list and should not be used for the paper. CITATIONS: Google Scholar snapshot 34 on 2026-10-14 (<100, so no citation highlight); Semantic Scholar API was rate-limited (429) on two attempts. OTHER VERIFIED FACTS: HF paper page https://huggingface.co/papers/2604.08523 shows 378 upvotes; in the HF daily_papers API for 2026-04-10 it is currently #1 by upvotes among 41 papers (the README/news claim '#3 HuggingFace Paper of the Day' refers to the ranking on release day and cannot be re-verified). GitHub star milestone '1,000 GitHub stars' announced in README news on 2026.10.10; gh api reports 1,031 today. Repo was created 2026-04-10 under reacher-z (Yuxuan Zhang) and transferred to TIGER-AI-Lab. No model checkpoints, demo, or blog post exist for this paper (not listed in README, project page, or HF). A PyPI package 'clawbench-eval' exists (https://pypi.org/project/clawbench-eval/, not fetched). Project page currently foregrounds the V2 corpus (130 tasks / 63 sites) and leaderboard, while the paper reports V1 (153 tasks / 144 platforms); the README notes two tasks were later removed (shipping corpus 152/129). Yubo's tweet says '7 frontier models' (v1); the v2 abstract says 8 and gives Claude Sonnet 4.6 = 33.3% as the headline number, and the README states the strongest evaluated agent completed about 1 in 3 tasks. FIGURE SUGGESTION for the website teaser: Figure 1 on page 1 of the PDF is the overview (task taxonomy, sandbox-vs-live comparison, and benchmark-saturation bar chart). TOOLING: WebSearch is blocked by org policy in this environment; verification used curl, gh api, HF APIs, the OpenReview search API, and r.jina.ai. Sibling agents share /tmp, so generic temp filenames (e.g. /tmp/or_search.json) can be overwritten; ClawBench artefacts were kept under /tmp/clawbench_work/."
+  },
+  {
+   "key": "critique-coder",
+   "title": "Critique-Coder: Enhancing Coder Models by Critique Reinforcement Learning",
+   "authors": [
+    {
+     "name": "Chi Ruan",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Dongfu Jiang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yubo Wang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Wenhu Chen",
+     "core": false,
+     "equal": false
+    }
+   ],
+   "yubo_position": 3,
+   "display_authors": "Chi Ruan, Dongfu Jiang, Yubo Wang, Wenhu Chen",
+   "venue_short": "ICLR 2026",
+   "venue_long": "The Fourteenth International Conference on Learning Representations (ICLR 2026)",
+   "distinction": "Poster",
+   "year": 2025,
+   "month": 9,
+   "arxiv_url": "https://arxiv.org/abs/2509.22824",
+   "pub_page_url": "https://openreview.net/forum?id=tsuxIeLUsz",
+   "github_stars": 13,
+   "links": [
+    {
+     "label": "Paper",
+     "url": "https://arxiv.org/abs/2509.22824",
+     "verified": true,
+     "note": "arXiv abs fetched; citation_title and 4 citation_author tags match; v1 2025-09-26, v2 2026-03-12"
+    },
+    {
+     "label": "Publication Page",
+     "url": "https://openreview.net/forum?id=tsuxIeLUsz",
+     "verified": true,
+     "note": "Confirmed via OpenReview API note tsuxIeLUsz (venue 'ICLR 2026 Poster', venueid ICLR.cc/2026/Conference, exact title and author list). The forum HTML itself returns OpenReview's browser-challenge page to curl."
+    },
+    {
+     "label": "Project Page",
+     "url": "https://tiger-ai-lab.github.io/Critique-Coder/",
+     "verified": true,
+     "note": "HTTP 200 (non-slash URL 301s here); page title matches; links to GitHub, arXiv, HF collection and HF dataset"
+    },
+    {
+     "label": "Code",
+     "url": "https://github.com/TIGER-AI-Lab/Critique-Coder",
+     "verified": true,
+     "note": "gh api: 13 stars, MIT, description 'Training Coder Models with Critique Reinforcement Learning [ICLR26]'; teaser image at assets/images/crl_teaser.jpg (raw: https://raw.githubusercontent.com/TIGER-AI-Lab/Critique-Coder/main/assets/images/crl_teaser.jpg)"
+    },
+    {
+     "label": "HF Collection",
+     "url": "https://huggingface.co/collections/TIGER-Lab/critique-coder-68dbdcdf09dbf87ed11822e4",
+     "verified": true,
+     "note": "HF collections API: title 'Critique-Coder', owner TIGER-Lab; items = paper 2509.22824, models Critique-Coder-8B and Critique-Coder-4B, dataset rStar-Critique-Data"
+    },
+    {
+     "label": "Model(s)",
+     "url": "https://huggingface.co/TIGER-Lab/Critique-Coder-8B",
+     "verified": true,
+     "note": "HF models API: public, not gated (31 downloads, 3 likes on 2026-10-15). A 4B variant also exists: https://huggingface.co/TIGER-Lab/Critique-Coder-4B (verified via API)"
+    },
+    {
+     "label": "Dataset",
+     "url": "https://huggingface.co/datasets/TIGER-Lab/rStar-Critique-Data",
+     "verified": true,
+     "note": "HF datasets API: public (56 downloads on 2026-10-15); training data used in the README's `hf download` command"
+    }
+   ],
+   "summary": "Proposes Critique Reinforcement Learning (CRL), rewarding models for correctly judging question–solution pairs; replacing 20% of RL data with CRL pushes Critique-Coder-8B past 60% on LiveCodeBench v5.",
+   "highlight": "Critique-Coder-8B tops 60% on LiveCodeBench v5",
+   "highlight_source_url": "https://arxiv.org/abs/2509.22824",
+   "notes": "VENUE: confirmed from three independent sources — PDF header 'Published as a conference paper at ICLR 2026'; GitHub repo description/README '[ICLR26]'; OpenReview API note tsuxIeLUsz with venue 'ICLR 2026 Poster' and venueid ICLR.cc/2026/Conference (bibtex booktitle 'The Fourteenth International Conference on Learning Representations', year 2026). Distinction is Poster, i.e. NOT spotlight/oral. The arXiv abs page has no 'Comments' field. YEAR/MONTH: 2025/9 is the first arXiv version (v1 published 2025-09-26; v2 2026-03-12); the conference year is 2026 — sort/display accordingly. AUTHORS: order identical in arXiv API, PDF page 1 and OpenReview; no asterisk/dagger/equal-contribution/core-contributor markers anywhere on PDF page 1. Affiliations: Chi Ruan — University of Waterloo (contact email uottawa.ca); Dongfu Jiang, Yubo Wang, Wenhu Chen — University of Waterloo + Vector Institute. TWEET: not confirmed, so omitted — jina on x.com/YuboWang726 and x.com/WenhuChen returned only profile headers (no post text), x.com/search is login-walled, and WebSearch is blocked by org policy in this environment. HIGHLIGHT: this is a paper-reported result (abstract and project page), not external recognition; citation snapshot is 6 (<100) and stars are 13, so neither qualifies — drop the highlight if only adoption-type facts are wanted. FIGURES for the website: PDF Figure 1 (page 1) is a results bar chart; the method overview ('Comparison between CRL and Standard RL') is the GitHub/project-page teaser assets/images/crl_teaser.jpg (265 KB) and the data-filtering diagram is assets/images/dataset.png (223 KB), both fetchable from raw.githubusercontent.com. Repo created 2025-09-26, last push 2026-04-11, 0 forks, topics coder/llm/rl."
+  },
+  {
+   "key": "minimax-m2",
+   "title": "The MiniMax-M2 Series: Mini Activations Unleashing Max Real-World Intelligence",
+   "authors": [
+    {
+     "name": "Aili Chen"
+    },
+    {
+     "name": "Aonian Li"
+    },
+    {
+     "name": "Baichuan Zhou"
+    },
+    {
+     "name": "Bangwei Gong"
+    },
+    {
+     "name": "Binyang Jiang"
+    },
+    {
+     "name": "Boji Dan"
+    },
+    {
+     "name": "Changhao Zhang"
+    },
+    {
+     "name": "Changqing Yu"
+    },
+    {
+     "name": "Chao Wang"
+    },
+    {
+     "name": "Cheng Ma"
+    },
+    {
+     "name": "Cheng Zhong"
+    },
+    {
+     "name": "Cheng Zhu"
+    },
+    {
+     "name": "Chengjun Xiao"
+    },
+    {
+     "name": "Chengyi Yang"
+    },
+    {
+     "name": "Chengyu Du"
+    },
+    {
+     "name": "Chenyang Zhang"
+    },
+    {
+     "name": "Chi Zhang"
+    },
+    {
+     "name": "Chuangyi Huang"
+    },
+    {
+     "name": "Chunhao Zhang"
+    },
+    {
+     "name": "Chunhui Du"
+    },
+    {
+     "name": "Chunyu Zhao"
+    },
+    {
+     "name": "Congchao Guo"
+    },
+    {
+     "name": "Da Chen"
+    },
+    {
+     "name": "Deming Ding"
+    },
+    {
+     "name": "Dianjun Sun"
+    },
+    {
+     "name": "Dong Li"
+    },
+    {
+     "name": "Dongyu Zhang"
+    },
+    {
+     "name": "Enhui Yang"
+    },
+    {
+     "name": "Fei Yu"
+    },
+    {
+     "name": "Guang Zheng"
+    },
+    {
+     "name": "Guodong Zheng"
+    },
+    {
+     "name": "Guohong Li"
+    },
+    {
+     "name": "Haichao Zhu"
+    },
+    {
+     "name": "Haigang Zhou"
+    },
+    {
+     "name": "Haimo Zhang"
+    },
+    {
+     "name": "Han Ding"
+    },
+    {
+     "name": "Hao Zhang"
+    },
+    {
+     "name": "Haohai Sun"
+    },
+    {
+     "name": "Haolin Lyu"
+    },
+    {
+     "name": "Haonan Lu"
+    },
+    {
+     "name": "Haoyu Wang"
+    },
+    {
+     "name": "Huajie Shi"
+    },
+    {
+     "name": "Huiyang Li"
+    },
+    {
+     "name": "Jiacheng Chen"
+    },
+    {
+     "name": "Jian Zhang"
+    },
+    {
+     "name": "Jiaqi Zhuang"
+    },
+    {
+     "name": "Jiaren Cai"
+    },
+    {
+     "name": "Jiaxin Pan"
+    },
+    {
+     "name": "Jiayao Li"
+    },
+    {
+     "name": "Jiayuan Song"
+    },
+    {
+     "name": "Jichuan Zhang"
+    },
+    {
+     "name": "Jie Wang"
+    },
+    {
+     "name": "Jihao Gu"
+    },
+    {
+     "name": "Jin Zhu"
+    },
+    {
+     "name": "Jingwei Dong"
+    },
+    {
+     "name": "Jingyang Li"
+    },
+    {
+     "name": "Jingyu Zhang"
+    },
+    {
+     "name": "Jingze Zhuang"
+    },
+    {
+     "name": "Jinhao Tian"
+    },
+    {
+     "name": "Jinli Liu"
+    },
+    {
+     "name": "Jinyi Hu"
+    },
+    {
+     "name": "Jun Tao"
+    },
+    {
+     "name": "Jun Zhang"
+    },
+    {
+     "name": "Junbin Ruan"
+    },
+    {
+     "name": "Junhao Xu"
+    },
+    {
+     "name": "Junjie Yan"
+    },
+    {
+     "name": "Junteng Liu"
+    },
+    {
+     "name": "Junxian He"
+    },
+    {
+     "name": "Kang Xu"
+    },
+    {
+     "name": "Ke Ji"
+    },
+    {
+     "name": "Ke Yang"
+    },
+    {
+     "name": "Kecheng Xiao"
+    },
+    {
+     "name": "Keyu Duan"
+    },
+    {
+     "name": "Keyu Li"
+    },
+    {
+     "name": "Le Han"
+    },
+    {
+     "name": "Letian Ruan"
+    },
+    {
+     "name": "Li Yuan"
+    },
+    {
+     "name": "Lianfei Yu"
+    },
+    {
+     "name": "Liheng Feng"
+    },
+    {
+     "name": "Lijie Mo"
+    },
+    {
+     "name": "Lin Li"
+    },
+    {
+     "name": "Linge Du"
+    },
+    {
+     "name": "Lingye Bao"
+    },
+    {
+     "name": "Lingyu Yang"
+    },
+    {
+     "name": "Lingyuan Zhou"
+    },
+    {
+     "name": "Loki"
+    },
+    {
+     "name": "Lu Chen"
+    },
+    {
+     "name": "Lunbin Zeng"
+    },
+    {
+     "name": "Ming Li"
+    },
+    {
+     "name": "Ming Zhong"
+    },
+    {
+     "name": "Mingliang Tao"
+    },
+    {
+     "name": "Mingyuan Chi"
+    },
+    {
+     "name": "Mujie Lin"
+    },
+    {
+     "name": "Nan Hu"
+    },
+    {
+     "name": "Ningxin Chen"
+    },
+    {
+     "name": "Peiyin Zhu"
+    },
+    {
+     "name": "Peng Gao"
+    },
+    {
+     "name": "Pengcheng Gao"
+    },
+    {
+     "name": "Pengfei Li"
+    },
+    {
+     "name": "Penglin Li"
+    },
+    {
+     "name": "Pengyu Zhao"
+    },
+    {
+     "name": "Qibin Ren"
+    },
+    {
+     "name": "Qibing Ren"
+    },
+    {
+     "name": "Qidi Xu"
+    },
+    {
+     "name": "Qihan Ren"
+    },
+    {
+     "name": "Qile Li"
+    },
+    {
+     "name": "Qin Wang"
+    },
+    {
+     "name": "Quanliang Chen"
+    },
+    {
+     "name": "Qunhong Zeng"
+    },
+    {
+     "name": "Rong Tian"
+    },
+    {
+     "name": "Rongxin Guo"
+    },
+    {
+     "name": "Rui Dong"
+    },
+    {
+     "name": "Ruitao Leng"
+    },
+    {
+     "name": "Ruize Zhang"
+    },
+    {
+     "name": "Shanqi Liu"
+    },
+    {
+     "name": "Shaoxiang Chen"
+    },
+    {
+     "name": "Shaoyu Chen"
+    },
+    {
+     "name": "Sheng Jia"
+    },
+    {
+     "name": "Shun Yao"
+    },
+    {
+     "name": "Shuoran Zhao"
+    },
+    {
+     "name": "Shuqi Yu"
+    },
+    {
+     "name": "Sichen Li"
+    },
+    {
+     "name": "Sicheng Pan"
+    },
+    {
+     "name": "Songquan Zhu"
+    },
+    {
+     "name": "Tengfei Li"
+    },
+    {
+     "name": "Tian Xie"
+    },
+    {
+     "name": "Tiancheng Qin"
+    },
+    {
+     "name": "Tianle Li"
+    },
+    {
+     "name": "Tianrun Liang"
+    },
+    {
+     "name": "Wei Liu"
+    },
+    {
+     "name": "Weiqi Xu"
+    },
+    {
+     "name": "Weitao Li"
+    },
+    {
+     "name": "Weixiang Chen"
+    },
+    {
+     "name": "Weiyu Cheng"
+    },
+    {
+     "name": "Weiyu Zhang"
+    },
+    {
+     "name": "Wenhu Chen"
+    },
+    {
+     "name": "Wenqian Zhao"
+    },
+    {
+     "name": "Xiancai Chen"
+    },
+    {
+     "name": "Xiangjun Song"
+    },
+    {
+     "name": "Xiangyuan Wang"
+    },
+    {
+     "name": "Xianzhen Luo"
+    },
+    {
+     "name": "Xiao Luo"
+    },
+    {
+     "name": "Xiao Su"
+    },
+    {
+     "name": "Xiaobo Li"
+    },
+    {
+     "name": "Xiaodong Han"
+    },
+    {
+     "name": "Xiaojie Wu"
+    },
+    {
+     "name": "Xihao Song"
+    },
+    {
+     "name": "Xingyi Han"
+    },
+    {
+     "name": "Xinyu Guan"
+    },
+    {
+     "name": "Xuan Lu"
+    },
+    {
+     "name": "Xun Zou"
+    },
+    {
+     "name": "Xunhao Lai"
+    },
+    {
+     "name": "Xutong Li"
+    },
+    {
+     "name": "Xuyang Shen"
+    },
+    {
+     "name": "Yan Gong"
+    },
+    {
+     "name": "Yan Ma"
+    },
+    {
+     "name": "Yang Jiao"
+    },
+    {
+     "name": "Yang Wang"
+    },
+    {
+     "name": "Yang Xu"
+    },
+    {
+     "name": "Yangsen Wang"
+    },
+    {
+     "name": "Ye Tang"
+    },
+    {
+     "name": "Yicheng Chen"
+    },
+    {
+     "name": "Yihang Wang"
+    },
+    {
+     "name": "Yinran Qiu"
+    },
+    {
+     "name": "Yiqi Shi"
+    },
+    {
+     "name": "Yiting Guo"
+    },
+    {
+     "name": "Yiwen Huang"
+    },
+    {
+     "name": "Yixuan Wang"
+    },
+    {
+     "name": "Yongyi Hu"
+    },
+    {
+     "name": "Yu Gao"
+    },
+    {
+     "name": "Yu Zhang"
+    },
+    {
+     "name": "Yuan Li"
+    },
+    {
+     "name": "Yuanxiang Ying"
+    },
+    {
+     "name": "Yuanzhen Zhang"
+    },
+    {
+     "name": "Yubo Wang"
+    },
+    {
+     "name": "Yuchen Song"
+    },
+    {
+     "name": "Yufeng Yang"
+    },
+    {
+     "name": "Yuhang Meng"
+    },
+    {
+     "name": "Yuhang Miao"
+    },
+    {
+     "name": "Yuhao Li"
+    },
+    {
+     "name": "Yujie Liu"
+    },
+    {
+     "name": "Yulin Hu"
+    },
+    {
+     "name": "Yunan Huang"
+    },
+    {
+     "name": "Yunji Li"
+    },
+    {
+     "name": "Yunyi Huang"
+    },
+    {
+     "name": "Yusen Zhang"
+    },
+    {
+     "name": "Yusu Hong"
+    },
+    {
+     "name": "Yutao Xie"
+    },
+    {
+     "name": "Yutong Zhang"
+    },
+    {
+     "name": "Yuwen Liao"
+    },
+    {
+     "name": "Yuxuan Shi"
+    },
+    {
+     "name": "Yuze Wenren"
+    },
+    {
+     "name": "Zebin Li"
+    },
+    {
+     "name": "Zehan Li"
+    },
+    {
+     "name": "Zejian Luo"
+    },
+    {
+     "name": "Zeyu Jin"
+    },
+    {
+     "name": "Zeyuan Sun"
+    },
+    {
+     "name": "Zhanpeng Zhou"
+    },
+    {
+     "name": "Zhaochen Su"
+    },
+    {
+     "name": "Zhendong Li"
+    },
+    {
+     "name": "Zhengmao Zhu"
+    },
+    {
+     "name": "Zhengyuan Peng"
+    },
+    {
+     "name": "Zhenhua Fan"
+    },
+    {
+     "name": "Zhi Zhang"
+    },
+    {
+     "name": "Zhichao Xu"
+    },
+    {
+     "name": "Zhiheng Lv"
+    },
+    {
+     "name": "Zhikang Xu"
+    },
+    {
+     "name": "Zhitao He"
+    },
+    {
+     "name": "Zhiwei He"
+    },
+    {
+     "name": "Zhongyuan Li"
+    },
+    {
+     "name": "Zibo Gao"
+    },
+    {
+     "name": "Zijia Wu"
+    },
+    {
+     "name": "Zijian Song"
+    },
+    {
+     "name": "Zijian Zhou"
+    },
+    {
+     "name": "Zijun Sun"
+    },
+    {
+     "name": "Zishan Huang"
+    },
+    {
+     "name": "Ziying Chen"
+    },
+    {
+     "name": "Ziyue Ge"
+    }
+   ],
+   "yubo_position": 175,
+   "display_authors": "MiniMax: Aili Chen, Aonian Li, Baichuan Zhou, ..., Yubo Wang, ..., Ziyue Ge",
+   "venue_short": "Tech Report 2026",
+   "venue_long": "MiniMax Technical Report (arXiv preprint 2605.26494)",
+   "year": 2026,
+   "month": 5,
+   "arxiv_url": "https://arxiv.org/abs/2605.26494",
+   "pub_page_url": "",
+   "distinction": "Technical report; contributors listed alphabetically (no core/equal-contribution marks)",
+   "links": [
+    {
+     "label": "Paper",
+     "url": "https://arxiv.org/abs/2605.26494",
+     "verified": true,
+     "note": "arXiv abs page HTTP 200; title matches; v1 2026-05-26, v2 2026-07-30; comments: 'Technical Report. 35 pages, 10 figures, 4 tables'"
+    },
+    {
+     "label": "Code",
+     "url": "https://github.com/MiniMax-AI/MiniMax-M2",
+     "verified": true,
+     "note": "gh api OK; 2,604 stars; official MiniMax-M2 release repo (created 2025-10-25). Sibling repos: MiniMax-AI/MiniMax-M2.1 (543 stars), MiniMax-M2.5 (586), MiniMax-M2.7 (366)"
+    },
+    {
+     "label": "Model(s)",
+     "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2",
+     "verified": true,
+     "note": "HF API OK; 1,509 likes, 211k downloads. Series checkpoints also on HF: MiniMaxAI/MiniMax-M2.1 (1,369 likes), MiniMax-M2.5 (1,520), MiniMax-M2.7 (1,256)"
+    },
+    {
+     "label": "HF Collection",
+     "url": "https://huggingface.co/collections/MiniMaxAI/minimax-m2-69607bef9bd3881ee76e11cb",
+     "verified": true,
+     "note": "HF collections API OK; official MiniMaxAI org collection 'MiniMax-M2' with all four series models (M2, M2.1, M2.5, M2.7); 29 upvotes"
+    },
+    {
+     "label": "Blog",
+     "url": "https://www.minimax.io/news/minimax-m2",
+     "verified": true,
+     "note": "HTTP 200; 'MiniMax M2 & Agent: Ingenious in Simplicity' (M2 release post, links the HF model). M2.7 post also verified: https://www.minimax.io/news/minimax-m27-en ('MiniMax M2.7: Early Echoes of Self-Evolution')"
+    }
+   ],
+   "github_stars": 2604,
+   "summary": "Introduces MiniMax-M2, open-weight 229.9B-total/9.8B-active MoE models trained with agent-driven data pipelines and the Forge RL system, competitive with closed frontier models on agentic coding and search benchmarks.",
+   "highlight": "2,600+ GitHub stars on the MiniMax-M2 model repo",
+   "highlight_source_url": "https://github.com/MiniMax-AI/MiniMax-M2",
+   "notes": "Authors: arXiv API lists 218 authors, identical in order to PDF Appendix A 'Contributors', which states they are 'listed in alphabetical order'; the first page credits only 'MiniMax' (correspondence model@minimax.io). No asterisks/daggers/core-contributor sections exist, so no author is marked core/equal. One contributor is listed by a single name ('Loki'). Yubo Wang is #175 of 218. Venue: not a conference paper; arXiv comments say 'Technical Report', PDF footer is '(c) 2026 MiniMax. All rights reserved', no 'Published as' header; no ACL Anthology/OpenReview entry applies, so pub_page_url is empty. The HF paper page https://huggingface.co/papers/2605.26494 exists (title matches) and links a separate MiniMax-AI user collection (slug MiniMax-AI/minimax-m2-69607b86b69b1adfa7aa20f1, updated 2026-05-27) that contains only this paper; the org collection with the models was chosen for 'HF Collection' instead. Caveat: the MiniMax-M2 GitHub repo and HF model card predate the report (Oct 2025) and do not cite arXiv 2605.26494; the M2.7 repo/model card link only the M2.7 news post. No dedicated project page or leaderboard found (MiniMax homepage is generic). Tweet omitted: WebSearch is blocked by org policy, r.jina.ai returned 'profile not found' for x.com/MiniMax__AI, Yubo's X profile fetch showed no M2 post, and the news pages contain no x.com status links. Google Scholar snapshot 34 citations (<100, not used). Star count 2,604 as of 2026-10-15."
+  },
+  {
+   "key": "rewardharness",
+   "title": "RewardHarness: Self-Evolving Agentic Post-Training",
+   "authors": [
+    {
+     "name": "Yuxuan Zhang",
+     "equal": true,
+     "core": false
+    },
+    {
+     "name": "Cong Wei",
+     "equal": true,
+     "core": false
+    },
+    {
+     "name": "Penghui Du",
+     "equal": true,
+     "core": false
+    },
+    {
+     "name": "Bo Li",
+     "equal": true,
+     "core": false
+    },
+    {
+     "name": "Junwen Miao",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Huaisong Zhang",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Songcheng Cai",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Yubo Wang",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Dongfu Jiang",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Yuyu Zhang",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Changqian Yu",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Ping Nie",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Wenhu Chen",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Kelsey R. Allen",
+     "equal": false,
+     "core": false
+    }
+   ],
+   "yubo_position": 8,
+   "display_authors": "Yuxuan Zhang, Cong Wei, Penghui Du, ..., Yubo Wang, ..., Kelsey R. Allen",
+   "venue_short": "COLM 2026",
+   "venue_long": "Third Conference on Language Modeling (COLM 2026)",
+   "year": 2026,
+   "month": 5,
+   "arxiv_url": "https://arxiv.org/abs/2605.08703",
+   "pub_page_url": "https://openreview.net/forum?id=tXv4YSeA2j",
+   "github_stars": 77,
+   "links": [
+    {
+     "label": "Paper",
+     "url": "https://arxiv.org/abs/2605.08703",
+     "verified": true,
+     "note": "arXiv v1 2026-05-09; v2 2026-10-12 carries the 'Published as a conference paper at COLM 2026' header."
+    },
+    {
+     "label": "Project Page",
+     "url": "https://rewardharness.com/",
+     "verified": true,
+     "note": "HTTP 200; page title 'RewardHarness: Learning Human Preferences for Image Editing with Only 100 Demonstrations', shows 'COLM 2026 - Accepted Paper' badge."
+    },
+    {
+     "label": "Code",
+     "url": "https://github.com/TIGER-AI-Lab/RewardHarness",
+     "verified": true,
+     "note": "77 stars, 9 forks (gh api, 2026-10-15); latest release v0.4.1; PyPI package 'rewardharness' 0.4.1; mirror at https://github.com/KlingAIResearch/RewardHarness (3 stars)."
+    },
+    {
+     "label": "Dataset",
+     "url": "https://huggingface.co/datasets/AgPerry/EditReward-Data-100",
+     "verified": true,
+     "note": "The 100 preference demonstrations used for library evolution (curated from TIGER-Lab/EditReward-Data); hosted under personal account AgPerry (TIGER-Lab org member) and linked as the training data from both the official README and the project page."
+    },
+    {
+     "label": "Publication Page",
+     "url": "https://openreview.net/forum?id=tXv4YSeA2j",
+     "verified": true,
+     "note": "Confirmed via the OpenReview API (note id = forum = tXv4YSeA2j, venue 'COLM 2026', venueid colmweb.org/COLM/2026/Conference, Camera_Ready invitation present). The forum HTML itself sits behind OpenReview's bot-check interstitial for curl/WebFetch."
+    },
+    {
+     "label": "Tweet",
+     "url": "https://x.com/ReacherZhang/status/2107694309231460657",
+     "verified": true,
+     "note": "First author Yuxuan Zhang's COLM 2026 poster-session tweet (2026-10-07, '#RewardHarness'), text confirmed via cdn.syndication.twimg.com. Quote-tweeted by co-author Dongfu Jiang at https://x.com/DongfuJiang/status/2107702527592710421. No RewardHarness post found on @YuboWang726."
+    }
+   ],
+   "summary": "A training-free agentic reward model for image editing that evolves a skill-and-tool library from 100 preference demonstrations, beating GPT-5 by 5.3 points on EditReward-Bench and GenAI-Bench.",
+   "highlight": "Featured on HF Daily Papers (245 upvotes)",
+   "highlight_source_url": "https://huggingface.co/papers/2605.08703",
+   "notes": "TITLE: arXiv (v1 and v2), the local PDF, the HF paper page and the GitHub README bibtex all use 'RewardHarness: Self-Evolving Agentic Post-Training'; the COLM camera-ready title on OpenReview, the project page and the colm.cc accepted-papers list is 'RewardHarness: Learning Human Preferences for Image Editing with Only 100 Demonstrations'. Returned the arXiv title; swap if the site should follow the proceedings title. AUTHORS: list and order follow arXiv v2 and the PDF first page (14 authors, Yubo Wang 8th). arXiv v1 had a different order (Yuxuan Zhang, Penghui Du, Bo Li, Cong Wei, Junwen Miao, ...) with Yubo still 8th of 14. OpenReview, the project page and the COLM accepted-papers list show 13 authors without Junwen Miao, where Yubo is 7th. Markers in the PDF: * equal contribution = Yuxuan Zhang, Cong Wei, Penghui Du, Bo Li; section-sign Project Lead = Changqian Yu; dagger Advisors = Dongfu Jiang, Ping Nie, Wenhu Chen, Kelsey R. Allen. No 'core contributor' label exists, so core=false throughout. VENUE: COLM 2026 confirmed by PDF header, OpenReview API (accepted; pdate 2026-07-08, matching the README's 2026-07-08 acceptance entry), README/PyPI/project-page badges, and the official list at https://colm.cc/Conferences/2026/AcceptedPapers (Poster Session 4, Imperial Ballroom #55, 4:30 PM PDT). That list contains no oral/spotlight designations for any paper, so no distinction is set (standard poster). HF: paper page https://huggingface.co/papers/2605.08703 (not in the allowed label set) was submitted to Daily Papers on 2026-05-15 by Penghui Du and shows 245 upvotes (daily_papers API). No HF models, spaces or collections exist for RewardHarness (the method is training-free; the released 'model' is the evolved skills/tools library in the repo). TIGER-Lab/EditReward-Bench and TIGER-Lab/GenAI-Bench are third-party benchmarks and were not added as artefacts. CITATIONS: snapshot 3 (<100), so no citation highlight. TOOLING: WebSearch is blocked by org policy in this environment; tweet discovery relied on r.jina.ai (HTML mode) plus the Twitter syndication endpoint."
+  },
+  {
+   "key": "supergpqa",
+   "title": "SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines",
+   "authors": [
+    {
+     "name": "M-A-P Team",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Xinrun Du",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yifan Yao",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Kaijing Ma",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Bingli Wang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Tianyu Zheng",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "King Zhu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Minghao Liu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yiming Liang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Xiaolong Jin",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Zhenlin Wei",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Chujie Zheng",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Kaixin Deng",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Shawn Gavin",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Shian Jia",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Sichao Jiang",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Yiyan Liao",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Rui Li",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Qinrui Li",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Sirun Li",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Yizhi Li",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Yunwen Li",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "David Ma",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Yuansheng Ni",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Haoran Que",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Qiyao Wang",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Zhoufutu Wen",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Siwei Wu",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Tyshawn Hsing",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Ming Xu",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Zhenzhu Yang",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Zekun Moore Wang",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Junting Zhou",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Yuelin Bai",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Xingyuan Bu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Chenglin Cai",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Liang Chen",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yifan Chen",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Chengtuo Cheng",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Tianhao Cheng",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Keyi Ding",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Siming Huang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yun Huang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yaoru Li",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yizhe Li",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Zhaoqun Li",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Tianhao Liang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Chengdong Lin",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Hongquan Lin",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yinghao Ma",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Tianyang Pang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Zhongyuan Peng",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Zifan Peng",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Qige Qi",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Shi Qiu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Xingwei Qu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Shanghaoran Quan",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yizhou Tan",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Zili Wang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Chenqing Wang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Hao Wang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yiya Wang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yubo Wang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Jiajun Xu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Kexin Yang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Ruibin Yuan",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yuanhao Yue",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Tianyang Zhan",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Chun Zhang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Jinyang Zhang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Xiyue Zhang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Xingjian Zhang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yue Zhang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yongchi Zhao",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Xiangyu Zheng",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Chenghua Zhong",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yang Gao",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Zhoujun Li",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Dayiheng Liu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Qian Liu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Tianyu Liu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Shiwen Ni",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Junran Peng",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yujia Qin",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Wenbo Su",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Guoyin Wang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Shi Wang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Jian Yang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Min Yang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Meng Cao",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Xiang Yue",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Zhaoxiang Zhang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Wangchunshu Zhou",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Jiaheng Liu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Qunshu Lin",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Wenhao Huang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Ge Zhang",
+     "core": false,
+     "equal": false
+    }
+   ],
+   "yubo_position": 63,
+   "display_authors": "M-A-P Team: Xinrun Du, Yifan Yao, Kaijing Ma, ..., Yubo Wang, ..., Ge Zhang",
+   "venue_short": "NeurIPS 2025",
+   "venue_long": "Advances in Neural Information Processing Systems (NeurIPS 2025), Datasets and Benchmarks Track",
+   "distinction": "Datasets and Benchmarks Track (poster)",
+   "year": 2025,
+   "month": 2,
+   "arxiv_url": "https://arxiv.org/abs/2502.14739",
+   "pub_page_url": "https://openreview.net/forum?id=6WgflzYQpf",
+   "links": [
+    {
+     "label": "Paper",
+     "url": "https://arxiv.org/abs/2502.14739",
+     "verified": true,
+     "note": "arXiv abs page fetched; title matches; v1 2025-02-20, latest v4 2025-03-28; no 'Comments' field on the abs page."
+    },
+    {
+     "label": "Publication Page",
+     "url": "https://openreview.net/forum?id=6WgflzYQpf",
+     "verified": true,
+     "note": "Fetching the forum directly returns an OpenReview bot-challenge (CAPTCHA) page, so its body could not be read. The URL is confirmed as the correct resource by two official sources I did fetch: (1) the NeurIPS 2025 virtual-site JSON entry (id 121825) whose paper_url is exactly this forum id, with decision 'Accept (poster)'; (2) the OpenReview search listing (via r.jina.ai), which shows this forum id with the exact title and 'NeurIPS 2025 Datasets and Benchmarks Track poster', published 18 Sept 2025. NeurIPS virtual page (fetched, HTTP 200, title matches): https://neurips.cc/virtual/2025/poster/121825"
+    },
+    {
+     "label": "Project Page",
+     "url": "https://supergpqa.github.io/",
+     "verified": true,
+     "note": "HTTP 200; listed on the PDF title page. It is a JS single-page app (page <title> is 'super gpqa'); its bundle links to arXiv 2502.14739, github.com/SuperGPQA/SuperGPQA and the HF dataset, and contains an in-page 'LeaderBoard' section."
+    },
+    {
+     "label": "Code",
+     "url": "https://github.com/SuperGPQA/SuperGPQA",
+     "verified": true,
+     "note": "gh api repos/SuperGPQA/SuperGPQA: 193 stars on 2026-10-15; README is the evaluation code for the paper and links Homepage / HF dataset / arXiv / HF leaderboard space."
+    },
+    {
+     "label": "Dataset",
+     "url": "https://huggingface.co/datasets/m-a-p/SuperGPQA",
+     "verified": true,
+     "note": "HF API: id m-a-p/SuperGPQA, public, 11,566 downloads, 93 likes, ODC-BY license, lastModified 2025-04-30; dataset card links the paper."
+    }
+   ],
+   "github_stars": 193,
+   "summary": "Introduces SuperGPQA, a 26,529-question benchmark spanning 285 graduate disciplines built via human-LLM collaborative filtering; the strongest model tested, DeepSeek-R1, reaches 61.82% accuracy.",
+   "highlight": "Used in Qwen3 and Kimi K2 evaluations",
+   "highlight_source_url": "https://arxiv.org/abs/2505.09388",
+   "notes": "AUTHORS: arXiv API lists 97 entries, with the pseudo-author 'M-A-P Team' first; Yubo Wang is entry 63 (62nd individual). The PDF title page shows only 'M-A-P, ByteDance Seed, 2077.AI'; individual names appear in Sec. 6 'Contributions and Acknowledgements' (pp. 26-28) in tiers that match the arXiv order exactly: Leading Authors (7: Xinrun Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu); Outstanding Contributors (4: Yiming Liang, Xiaolong Jin, Zhenlin Wei, Chujie Zheng); Core Contributors, alphabetical (21, arXiv positions 13-33, marked core=true); Contributors, alphabetical (43, positions 34-76, includes 'Yubo Wang, University of Waterloo'); Organization and Sponsor Committee, alphabetical (17, positions 77-93); Corresponding Authors (4: Jiaheng Liu, Qunshu Lin, Wenhao Huang, Ge Zhang). The paper uses no asterisk/dagger equal-contribution marks, so equal=false for everyone; Yubo Wang is NOT a core contributor. Name variants across sources (arXiv form used above): King Zhu = 'Kang Zhu' (OpenReview/BibTeX); Shawn Gavin = 'Shuyue Guo'; David Ma = 'Dehua Ma'; Tyshawn Hsing = 'Tianshun Xing'; Kaixin Deng = 'Kaixing Deng'; OpenReview/NeurIPS list the first author as 'Xeron Du' (= Xinrun Du). The task's example display string ended with Wenhao Huang, but the actual last arXiv author is Ge Zhang. VENUE: NeurIPS 2025 Datasets and Benchmarks Track, poster (not spotlight/oral). Evidence: neurips.cc/static/virtual/data/neurips-2025-orals-posters.json entry id 121825, decision 'Accept (poster)', session 'San Diego Poster Session 4', paper_url openreview.net/forum?id=6WgflzYQpf; NeurIPS poster page https://neurips.cc/virtual/2025/poster/121825 (HTTP 200, title 'NeurIPS Poster SuperGPQA: ...', links the same OpenReview forum, lists Yubo Wang); OpenReview search listing says 'NeurIPS 2025 Datasets and Benchmarks Track poster', published 18 Sept 2025. OpenReview forum/PDF/API endpoints are CAPTCHA-gated for bots; papers.nips.cc/paper_files/paper/2025 currently lists only the Creative AI track, so no proceedings URL exists yet; dblp and Semantic Scholar were bot-blocked/rate-limited. GitHub README/BibTeX still cite the arXiv preprint (no NeurIPS mention). OMITTED LINKS: Leaderboard space https://huggingface.co/spaces/m-a-p/SuperGPQA (linked from README) returns HTTP 401 from both the HF API and the web page and is absent from m-a-p's public spaces list, i.e. private/unavailable (a known public space returned 200 as a control). Secondary official dataset of model responses exists and is public: https://huggingface.co/datasets/m-a-p/SuperGPQA-Records (HF API verified, 1,594 downloads) - omitted as a secondary artefact; add as a second 'Dataset' link if desired. No tweet found on the project page or via r.jina.ai/https://x.com/YuboWang726; no m-a-p HF collection mentions SuperGPQA; no blog. HIGHLIGHT: adoption verified by fetching https://arxiv.org/html/2505.09388 (Qwen3 Technical Report; SuperGPQA listed as a 5-shot CoT general-task benchmark with score rows) and https://arxiv.org/html/2507.20534 (Kimi K2; 'SuperGPQA (Acc.)' rows); abs pages of both fetched and titles confirmed. Alternative highlight from the provided Google Scholar snapshot (198 on 2026-10-14): '190+ citations'. OTHER: 26,529 questions in the summary = sum of the README discipline-count table (485+873+484+7892+674+656+1676+501+2755+205+347+9838+143). First arXiv version published 2025-02-20 (month 2, year 2025). For the teaser task: the README embeds an overview figure at images/main_final.png in the repo (not fetched/verified here), and the PDF's Figure 1 is a benchmark-comparison radar chart."
+  },
+  {
+   "key": "mmmu-pro",
+   "title": "MMMU-Pro: A More Robust Multi-discipline Multimodal Understanding Benchmark",
+   "authors": [
+    {
+     "name": "Xiang Yue",
+     "equal": true,
+     "core": false
+    },
+    {
+     "name": "Tianyu Zheng",
+     "equal": true,
+     "core": false
+    },
+    {
+     "name": "Yuansheng Ni",
+     "equal": true,
+     "core": false
+    },
+    {
+     "name": "Yubo Wang",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Kai Zhang",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Shengbang Tong",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Yuxuan Sun",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Botao Yu",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Ge Zhang",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Huan Sun",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Yu Su",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Wenhu Chen",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Graham Neubig",
+     "equal": false,
+     "core": false
+    }
+   ],
+   "yubo_position": 4,
+   "display_authors": "Xiang Yue, Tianyu Zheng, Yuansheng Ni, Yubo Wang, ..., Graham Neubig",
+   "venue_short": "ACL 2025",
+   "venue_long": "The 63rd Annual Meeting of the Association for Computational Linguistics (ACL 2025), Main Conference, Volume 1: Long Papers",
+   "distinction": "Main Conference (Long Paper)",
+   "year": 2024,
+   "month": 9,
+   "arxiv_url": "https://arxiv.org/abs/2409.02813",
+   "pub_page_url": "https://aclanthology.org/2025.acl-long.736/",
+   "github_stars": 597,
+   "links": [
+    {
+     "label": "Paper",
+     "url": "https://arxiv.org/abs/2409.02813",
+     "verified": true,
+     "note": "arXiv abs page HTTP 200; page title matches; arXiv comment field reads 'ACL 2025 Main'; v3 dated 22 May 2025"
+    },
+    {
+     "label": "Publication Page",
+     "url": "https://aclanthology.org/2025.acl-long.736/",
+     "verified": true,
+     "note": "ACL Anthology page title matches; Proceedings of ACL 2025 Volume 1: Long Papers (main conference), Vienna, July 2025, pp. 15134-15186, DOI 10.18653/v1/2025.acl-long.736; author list identical to arXiv"
+    },
+    {
+     "label": "Project Page",
+     "url": "https://mmmu-benchmark.github.io/",
+     "verified": true,
+     "note": "HTTP 200; shared MMMU/MMMU-Pro homepage listed in the PDF header, README and HF card; links to arXiv 2409.02813 and the MMMU_Pro dataset. Page <title> is the original MMMU paper"
+    },
+    {
+     "label": "Code",
+     "url": "https://github.com/MMMU-Benchmark/MMMU",
+     "verified": true,
+     "note": "gh api: 597 stars; README states it is the evaluation code for MMMU-Pro and MMMU and contains an mmmu-pro/ evaluation folder (evaluate.py, infer/, prompts.yaml)"
+    },
+    {
+     "label": "Dataset",
+     "url": "https://huggingface.co/datasets/MMMU/MMMU_Pro",
+     "verified": true,
+     "note": "HF API: author MMMU, 92 likes, ~20.4K downloads, tagged arxiv:2409.02813; configs 'standard (10 options)', 'standard (4 options)', 'vision'; 1,730 test items per config"
+    },
+    {
+     "label": "Leaderboard",
+     "url": "https://mmmu-benchmark.github.io/#leaderboard",
+     "verified": true,
+     "note": "Section id='leaderboard' with MMMU-Pro / MMMU (Val) / MMMU (Test) tabs; this exact URL is printed under the author block in the PDF and in the README"
+    },
+    {
+     "label": "Tweet",
+     "url": "https://x.com/xiangyue96/status/1831710337034231859",
+     "verified": true,
+     "note": "Thread head by first author @xiangyue96, 2024-09-05: 'Introducing MMMU-Pro: A more robust version of MMMU ...' (143 likes, ~25K views); confirmed via api.fxtwitter.com text/author and the Wayback CDX index"
+    }
+   ],
+   "summary": "Builds a harder version of MMMU by filtering text-only-solvable questions, expanding to ten options and adding vision-only screenshot inputs; model accuracy drops 16.8–26.9 points versus MMMU.",
+   "highlight": "Headline multimodal benchmark in Google's Gemini 3 Pro launch",
+   "highlight_source_url": "https://blog.google/products/gemini/gemini-3/",
+   "notes": "AUTHORS: arXiv API order matches the PDF first page exactly (13 authors). The PDF marks Xiang Yue*, Tianyu Zheng*, Yuansheng Ni* with the footnote '* Equal contributions'; Yubo Wang (4th) carries no marker and there is no 'core contributor' designation. The author block carries the byline 'MMMU Team' as a collective affiliation; display_authors omits it since this is a normally authored paper, but prefix 'MMMU Team: ' if the site treats it as a team paper. Because Yubo is 4th, only one ellipsis is needed in display_authors. VENUE: arXiv comments 'ACL 2025 Main'; ACL Anthology 2025.acl-long.736 sits in 'Volume 1: Long Papers' = main conference; no oral/spotlight/award found. year/month (2024/9) follow the task's instruction to use the first arXiv version (published 2024-09-04); the publication year is 2025. Note 2025.acl-long.737 is a different paper ('Cheems'); 736 is correct. CITATIONS: Google Scholar snapshot 550 (2026-10-14) -> alternative highlight '500+ citations'; OpenAlex shows only 26 (anthology record) + 3 (arXiv record), Semantic Scholar was rate-limited (429). HIGHLIGHT: direct fetch of the Gemini 3 blog contains 'Beyond text, Gemini 3 Pro redefines multimodal reasoning with 81% on MMMU-Pro and 87.6% on Video-MMMU.' Other verified adoption signals: Artificial Analysis runs a dedicated page titled 'MMMU-Pro Benchmark Leaderboard' (https://artificialanalysis.ai/evaluations/mmmu-pro); VLMEvalKit README lists MMMU-Pro as a supported benchmark. Llama 4 / Qwen2.5-VL / Qwen3-VL pages had no textual match (benchmark tables are images), so no claim is made. NOT FOUND / OMITTED: no official HF collection (HF org 'MMMU' has none), no HF space/model/demo, no blog post; the hysts/MMMU-dataset-viewer space is third-party and for MMMU; the eval.ai challenge 2179 in the README is for the original MMMU. The project page links only the Nov-2023 MMMU tweet (status 1729698316554801358), not MMMU-Pro. No MMMU-Pro tweet by @YuboWang726 found (his site's Sep-2024 tweet 1839330905145610688 is attached to MMLU-Pro). A third-party tweet by @arankomatsuzaki (status 1831516846308389042) also announces the paper. WebSearch is blocked by org policy in this environment; DDG/Brave/Mojeek returned bot-challenge pages. GitHub stars are for the shared MMMU/MMMU-Pro repo. TEASER CANDIDATES (both HTTP 200 image/png): README overview https://raw.githubusercontent.com/MMMU-Benchmark/MMMU/main/mmmu-pro.png (626 KB) and HF card overview https://cdn-uploads.huggingface.co/production/uploads/64de37ee5e192985054be575/LN8IQGwUJI4NYtQo1wav8.png (131 KB); in the PDF, Figure 1 on page 2 ('An overview of the construction process of MMMU-Pro', three-step pipeline: LLM filtering -> option augmentation -> photos/screenshots) is the natural method-overview figure."
+  },
+  {
+   "key": "mammoth-vl",
+   "title": "MAmmoTH-VL: Eliciting Multimodal Reasoning with Instruction Tuning at Scale",
+   "authors": [
+    {
+     "name": "Jarvis Guo",
+     "equal": true,
+     "core": false
+    },
+    {
+     "name": "Tuney Zheng",
+     "equal": true,
+     "core": false
+    },
+    {
+     "name": "Yuelin Bai",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Bo Li",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Yubo Wang",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "King Zhu",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Yizhi Li",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Graham Neubig",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Wenhu Chen",
+     "equal": false,
+     "core": false
+    },
+    {
+     "name": "Xiang Yue",
+     "equal": false,
+     "core": false
+    }
+   ],
+   "yubo_position": 5,
+   "display_authors": "Jarvis Guo, Tuney Zheng, Yuelin Bai, Bo Li, Yubo Wang, King Zhu, Yizhi Li, Graham Neubig, Wenhu Chen, Xiang Yue",
+   "venue_short": "ACL 2025",
+   "venue_long": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), Main Conference",
+   "distinction": "Main Conference (Long Paper)",
+   "year": 2024,
+   "month": 12,
+   "arxiv_url": "https://arxiv.org/abs/2412.05237",
+   "pub_page_url": "https://aclanthology.org/2025.acl-long.680/",
+   "github_stars": 50,
+   "links": [
+    {
+     "label": "Paper",
+     "url": "https://arxiv.org/abs/2412.05237",
+     "verified": true,
+     "note": "arXiv API entry and abs page title match; v2 dated 2025-06-04, v1 published 2024-12-06"
+    },
+    {
+     "label": "Publication Page",
+     "url": "https://aclanthology.org/2025.acl-long.680/",
+     "verified": true,
+     "note": "ACL Anthology page; title matches exactly; Venue ACL, July 2025, pages 13869-13920; DOI 10.18653/v1/2025.acl-long.680 (confirmed via Crossref and OpenAlex)"
+    },
+    {
+     "label": "Project Page",
+     "url": "https://mammoth-vl.github.io/",
+     "verified": true,
+     "note": "HTTP 200, <title>MAmmoTH-VL</title>; links to the GitHub repo, HF model, dataset and demo space; cited in the PDF"
+    },
+    {
+     "label": "Code",
+     "url": "https://github.com/MAmmoTH-VL/MAmmoTH-VL",
+     "verified": true,
+     "note": "gh api: 50 stars, description '(ACL 2025) MAmmoTH-VL: ...', not archived"
+    },
+    {
+     "label": "Dataset",
+     "url": "https://huggingface.co/datasets/MAmmoTH-VL/MAmmoTH-VL-Instruct-12M",
+     "verified": true,
+     "note": "HF API 200; 67 likes, 3,055 downloads; the 12M instruction-tuning dataset from the paper"
+    },
+    {
+     "label": "Model(s)",
+     "url": "https://huggingface.co/MAmmoTH-VL/MAmmoTH-VL-8B",
+     "verified": true,
+     "note": "HF API 200; 19 likes. A second checkpoint MAmmoTH-VL/MAmmoTH-VL-8B-SI (single-image stage) also verified via HF API"
+    },
+    {
+     "label": "HF Collection",
+     "url": "https://huggingface.co/collections/TIGER-Lab/mammoth-vl-675dd5695679c80ce5c3a035",
+     "verified": true,
+     "note": "HF collections API: title 'MAmmoTH-VL', owner TIGER-Lab; contains MAmmoTH-VL-8B, MAmmoTH-VL-8B-SI and MAmmoTH-VL-Instruct-12M"
+    },
+    {
+     "label": "Demo",
+     "url": "https://huggingface.co/spaces/paralym/MAmmoTH-VL-8B",
+     "verified": true,
+     "note": "Official demo linked from README and project page, but HF API reports runtime stage RUNTIME_ERROR as of 2026-10-15; consider omitting from the site unless restored"
+    }
+   ],
+   "summary": "Builds a 12M-example multimodal instruction-tuning dataset with chain-of-thought rationales using only open models; training MAmmoTH-VL-8B on it gains +8.1% on MathVerse and +7% on MMMU-Pro.",
+   "highlight": "150+ citations",
+   "highlight_source_url": "https://scholar.google.com/scholar?q=%22MAmmoTH-VL%3A+Eliciting+Multimodal+Reasoning+with+Instruction+Tuning+at+Scale%22",
+   "notes": "year/month (2024-12) are the first arXiv version (API 'published' 2024-12-06); the ACL publication itself is July 2025. Venue confirmed from four sources: arXiv comment 'ACL 2025 Main', GitHub repo description '(ACL 2025)', Crossref/OpenAlex DOI 10.18653/v1/2025.acl-long.680 (container 'Proceedings of the 63rd Annual Meeting of the ACL (Volume 1: Long Papers)'), and the anthology page (no Award field). Author marks from PDF page 1 footnotes: '* Equal contribution' on Jarvis Guo and Tuney Zheng; '† Corresponding author: xyue2@andrew.cmu.edu' on Xiang Yue (corresponding, not an equal/core mark - schema has no field for it). No 'Core Contributors' section. Affiliations: Guo/Zheng/Bai/Zhu = M-A-P; Bo Li = NTU; Yubo Wang & Wenhu Chen = University of Waterloo; Yizhi Li = University of Manchester; Neubig & Yue = CMU. Citation highlight uses the harness-provided Google Scholar snapshot (153 on 2026-10-14), rounded down to '150+'; the highlight_source_url is a Scholar query URL that I could NOT fetch (Scholar blocks curl), so treat it as unverified; OpenAlex lists only 7 citations for the ACL record and Semantic Scholar/DBLP APIs returned 429. Tweet omitted: no X link on the project page, and r.jina.ai timelines for @YuboWang726, @xiangyue96 and @WenhuChen only expose recent posts, so no Dec-2024 status URL could be confirmed. README also references an older dataset mirror https://huggingface.co/datasets/MMSFT/MAmmoTH-VL-12M (not verified, not included). No leaderboard or blog exists for this paper. Teaser candidates in the PDF: Figure 1 on page 1 is a scaling-curve grid (accuracy vs. training data scale across benchmarks); the dataset-construction pipeline overview figure (rewriting + self-filtering) appears later in the paper and is the better 'method overview' image."
+  },
+  {
+   "key": "mega-bench",
+   "title": "MEGA-Bench: Scaling Multimodal Evaluation to over 500 Real-World Tasks",
+   "authors": [
+    {
+     "name": "Jiacheng Chen",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Tianhao Liang",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Sherman Siu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Zhengqing Wang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Kai Wang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yubo Wang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yuansheng Ni",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Wang Zhu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Ziyan Jiang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Bohan Lyu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Dongfu Jiang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Xuan He",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yuan Liu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Hexiang Hu",
+     "core": false,
+     "equal": true
+    },
+    {
+     "name": "Xiang Yue",
+     "core": false,
+     "equal": true
+    },
+    {
+     "name": "Wenhu Chen",
+     "core": true,
+     "equal": false
+    }
+   ],
+   "yubo_position": 6,
+   "display_authors": "Jiacheng Chen, Tianhao Liang, Sherman Siu, ..., Yubo Wang, ..., Wenhu Chen",
+   "venue_short": "ICLR 2025",
+   "venue_long": "The Thirteenth International Conference on Learning Representations (ICLR 2025)",
+   "distinction": "Poster",
+   "year": 2024,
+   "month": 10,
+   "arxiv_url": "https://arxiv.org/abs/2410.10563",
+   "pub_page_url": "https://openreview.net/forum?id=2rWbKbmOuM",
+   "links": [
+    {
+     "label": "Paper",
+     "url": "https://arxiv.org/abs/2410.10563",
+     "verified": true,
+     "note": "arXiv API returns matching title; v1 published 2024-10-14, v3 (ICLR camera-ready) 2025-07-13"
+    },
+    {
+     "label": "Project Page",
+     "url": "https://tiger-ai-lab.github.io/MEGA-Bench/",
+     "verified": true,
+     "note": "HTTP 200; page title matches paper; includes on-page leaderboard and task viewer"
+    },
+    {
+     "label": "Code",
+     "url": "https://github.com/TIGER-AI-Lab/MEGA-Bench",
+     "verified": true,
+     "note": "gh api: 83 stars (2026-10-15); repo description cites ICLR 2025"
+    },
+    {
+     "label": "Dataset",
+     "url": "https://huggingface.co/datasets/TIGER-Lab/MEGA-Bench",
+     "verified": true,
+     "note": "HF API: public, ungated, tagged arxiv:2410.10563; 23 likes, 448 downloads/month"
+    },
+    {
+     "label": "Leaderboard",
+     "url": "https://huggingface.co/spaces/TIGER-Lab/MEGA-Bench",
+     "verified": true,
+     "note": "HF API: Gradio space titled 'MEGA-Bench Leaderboard', status RUNNING, 51 likes; README labels it Leaderboard"
+    },
+    {
+     "label": "HF Collection",
+     "url": "https://huggingface.co/collections/TIGER-Lab/mega-bench-671033ec0953c8d9a9550012",
+     "verified": true,
+     "note": "HF collections API: title 'MEGA-Bench', owner TIGER-Lab; items = space, dataset, paper 2410.10563"
+    },
+    {
+     "label": "Publication Page",
+     "url": "https://openreview.net/forum?id=2rWbKbmOuM",
+     "verified": true,
+     "note": "HTTP 200. OpenReview content is behind a browser challenge for scripted fetches, but ICLR 2025 official virtual-site data lists this exact URL as paper_url for this title, and the repo README links it as the OpenReview page"
+    }
+   ],
+   "github_stars": 83,
+   "summary": "Builds a benchmark of 505 real-world multimodal tasks (8,000+ samples) with diverse output formats and 40+ metrics, yielding fine-grained capability reports for frontier vision-language models.",
+   "highlight": "Integrated into lmms-eval and VLMEvalKit",
+   "highlight_source_url": "https://github.com/EvolvingLMMs-Lab/lmms-eval/tree/main/lmms_eval/tasks/megabench",
+   "notes": "Author marks from PDF page 1 footnote: '*' = Core Contributors (Jiacheng Chen, Tianhao Liang, Wenhu Chen); '‡' = Contributed equally (Hexiang Hu, Xiang Yue); '†' = corresponding authors (Jiacheng Chen, Wenhu Chen). Yubo Wang (6/16) carries no mark. The paper also has an 'Author Contribution Statement' (not read; PDF reading was limited to pages 1-2). The PDF lists 'MEGA-Bench Team' as the affiliation line under the authors; I did not prefix display_authors with it since this is a conference paper with individually listed authors, but the orchestrator can add it if desired. Author order: arXiv/PDF list Wang Zhu before Ziyan Jiang; the ICLR virtual-site record swaps those two; I followed arXiv/PDF. Venue evidence: PDF header 'Published as a conference paper at ICLR 2025'; arXiv comments 'ICLR 2025 camera-ready version'; ICLR 2025 virtual data (https://iclr.cc/static/virtual/data/iclr-2025-orals-posters.json): decision 'Accept (Poster)', eventtype Poster, Poster Session 3, 2025-04-24, Hall 3 + Hall 2B, poster #198, virtual page https://iclr.cc/virtual/2025/poster/31110 (HTTP 200, title matches). So the track is a regular main-conference poster (not spotlight/oral); 'distinction' = 'Poster' is factual and can be omitted from display. OpenReview (forum, pdf, api v1/v2) all return a browser challenge/403 to scripted access; dblp was bot-walled; Semantic Scholar rate-limited (429); WebSearch blocked by org policy. No official tweet found: Yubo's X profile (r.jina.ai), Wenhu Chen's X profile, and jina search showed no MEGA-Bench status URL, so 'Tweet' is omitted. Highlight evidence: repo README news (2025-03) states integration into lmms-eval and VLMEvalKit; lmms-eval task folder exists (gh api contents; its README title is 'MEGA-Bench ... [ICLR 2025]'); VLMEvalKit PR #724 '[Benchmark] Add MEGA-Bench' merged 2025-03-28 (https://github.com/open-compass/VLMEvalKit/pull/724, HTTP 200). Citation snapshot 47 (<100) and 83 stars, so no citation/star highlight. Google Scholar not queried. Stars/likes/downloads are as of 2026-10-15."
+  },
+  {
+   "key": "map-neo",
+   "title": "MAP-Neo: Highly Capable and Transparent Bilingual Large Language Model Series",
+   "authors": [
+    {
+     "name": "Ge Zhang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Scott Qu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Jiaheng Liu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Chenchen Zhang",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Chenghua Lin",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Chou Leuang Yu",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Danny Pan",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Esther Cheng",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Jie Liu",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Qunshu Lin",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Raven Yuan",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Tuney Zheng",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Wei Pang",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Xinrun Du",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Yiming Liang",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Yinghao Ma",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Yizhi Li",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Ziyang Ma",
+     "core": true,
+     "equal": false
+    },
+    {
+     "name": "Bill Lin",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Emmanouil Benetos",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Huan Yang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Junting Zhou",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Kaijing Ma",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Minghao Liu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Morry Niu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Noah Wang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Quehry Que",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Ruibo Liu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Sine Liu",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Shawn Guo",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Soren Gao",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Wangchunshu Zhou",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Xinyue Zhang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yizhi Zhou",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yubo Wang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yuelin Bai",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yuhan Zhang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Yuxiang Zhang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Zenith Wang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Zhenzhu Yang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Zijian Zhao",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Jiajun Zhang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Wanli Ouyang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Wenhao Huang",
+     "core": false,
+     "equal": false
+    },
+    {
+     "name": "Wenhu Chen",
+     "core": false,
+     "equal": false
+    }
+   ],
+   "yubo_position": 35,
+   "display_authors": "M-A-P Team: Ge Zhang, Scott Qu, Jiaheng Liu, ..., Yubo Wang, ..., Wenhu Chen",
+   "venue_short": "Tech Report 2024",
+   "venue_long": "Technical Report (arXiv preprint arXiv:2405.19327)",
+   "distinction": "",
+   "year": 2024,
+   "month": 5,
+   "arxiv_url": "https://arxiv.org/abs/2405.19327",
+   "links": [
+    {
+     "label": "Paper",
+     "url": "https://arxiv.org/abs/2405.19327",
+     "verified": true,
+     "note": "arXiv abs page fetched; title matches; v4 dated 2024-07-10, first version 2024-05-29"
+    },
+    {
+     "label": "Project Page",
+     "url": "https://map-neo.github.io/",
+     "verified": true,
+     "note": "HTTP 200, <title>MAP-Neo</title>; links to arXiv, GitHub, HF collection and Matrix dataset; also given as the arXiv comments field"
+    },
+    {
+     "label": "Code",
+     "url": "https://github.com/multimodal-art-projection/MAP-NEO",
+     "verified": true,
+     "note": "gh api: 992 stars on 2026-10-15; MIT license; README links HF collection, Matrix dataset, Discord, WeChat, and the announcement tweet"
+    },
+    {
+     "label": "Model(s)",
+     "url": "https://huggingface.co/m-a-p/neo_7b",
+     "verified": true,
+     "note": "HF API: m-a-p/neo_7b, MAP-Neo 7B base model, apache-2.0, 58 likes"
+    },
+    {
+     "label": "HF Collection",
+     "url": "https://huggingface.co/collections/m-a-p/neo-models-66395a5c9662bb58d5d70f04",
+     "verified": true,
+     "note": "HF API: 'Neo-Models' collection by m-a-p (17 upvotes) with 9 checkpoints: neo_7b, neo_7b_sft_v0.1, neo_7b_instruct_v0.1, neo_7b_intermediate, neo_7b_decay, neo_2b_general, neo_scalinglaw_250M/460M/980M"
+    },
+    {
+     "label": "Dataset",
+     "url": "https://huggingface.co/datasets/m-a-p/Matrix",
+     "verified": true,
+     "note": "HF API: m-a-p/Matrix pre-training corpus (4.7T tokens), 180 likes, ~31K downloads in last 30 days"
+    },
+    {
+     "label": "Tweet",
+     "url": "https://x.com/GeZhang86038849/status/1788874345927889203",
+     "verified": true,
+     "note": "Ge Zhang's official Neo + Matrix release thread (2024-05-10, 183K views), linked as the Twitter badge in the GitHub README; confirmed via r.jina.ai and HTTP 200"
+    }
+   ],
+   "github_stars": 992,
+   "summary": "Fully open bilingual 7B LLM trained from scratch on 4.5T tokens, releasing the Matrix corpus, data pipeline, intermediate checkpoints, and training code, with performance comparable to open-weight peers.",
+   "highlight": "Fully open 7B bilingual LLM: data, pipeline, checkpoints, code",
+   "highlight_source_url": "https://arxiv.org/abs/2405.19327",
+   "notes": "AUTHORS: 45 authors confirmed identical in the arXiv API, the arXiv abs citation_author meta tags, the GitHub README BibTeX and the project-page BibTeX; Yubo Wang is 35 of 45. The PDF first page carries no individual names, only the affiliation line 'M-A-P, University of Waterloo, Wuhan AI Research, 01.AI' (hence the 'M-A-P Team:' prefix). The paper's Sec. 13 'Contributions and Acknowledgments' (read from the arXiv HTML of v4, same version as the local PDF) tiers the authors: Team Leaders = positions 1-3 (Ge Zhang, Scott Qu, Jiaheng Liu); 'Core Contributors: (Alphabet Order)' = positions 4-18 (marked core=true above, exactly as the paper labels them); 'Contributors: (Alphabet Order)' = positions 19-41, including 'Yubo Wang, University of Waterloo, Pretrain'; Advisors = positions 42-45. There is no asterisk/dagger or 'equal contribution' footnote, so equal=false everywhere. If the site wants to treat Team Leaders as core as well, flip core=true for positions 1-3. VENUE: no journal-ref on arXiv; the arXiv comments field is only the project URL; the PDF has no conference header; the GitHub/project BibTeX cites 'arXiv preprint'; an OpenReview search returned only the DBLP mirror record 'CoRR 2024' and no conference submission. So it is a technical report / arXiv preprint, not a peer-reviewed publication; no Publication Page exists. Semantic Scholar API was rate-limited (429) on three attempts and dblp.org was behind a bot-check, so those were not used. HIGHLIGHT: GitHub stars are 992 (< 1,000) and the citation snapshot is 72 (< 100), so neither qualifies; the highlight instead states the paper's main verified claim (first fully open bilingual LLM with corpus, pipeline, checkpoints and code released), supported by the arXiv abstract. OTHER: no official blog, demo space, or leaderboard was found on the project page, README, or among m-a-p's 4 HF spaces; the README also links a Discord invite and WeChat QR (not included). The 'Neo-Datasets' HF collection (https://huggingface.co/collections/m-a-p/neo-datasets-66395dc55cbebc0a7767bbd5) exists but only contains Matrix, so the direct dataset link was used instead. Yubo Wang's own X feed showed no MAP-Neo post via r.jina.ai; the tweet returned is the project's official announcement by first author Ge Zhang. The huggingface_guess link (m-a-p/neo_7b) was confirmed as the official 7B base model."
+  }
+ ],
+ "logos": {
+  "logos": [
+   {
+    "slug": "uwaterloo",
+    "org": "University of Waterloo",
+    "file": "/rmeng_data/yubo_data/October/yubo/website_work/logos/uwaterloo.png",
+    "width": 223,
+    "height": 256,
+    "source_url": "https://uwaterloo.ca/profiles/uw_base_profile/themes/uw_fdsu_theme_resp/icon.svg",
+    "source_kind": "official site SVG icon (UW shield only), rasterised with headless Chromium; raw: logos/raw/uwaterloo_site/icon.svg",
+    "licence_note": "Coat of arms / trademark of the University of Waterloo; used nominatively for affiliation",
+    "ok": true,
+    "dark_bg_ok": true
+   },
+   {
+    "slug": "vector",
+    "org": "Vector Institute (Toronto)",
+    "file": "/rmeng_data/yubo_data/October/yubo/website_work/logos/vector.png",
+    "width": 640,
+    "height": 234,
+    "source_url": "https://vectorinstitute.ai/wp-content/uploads/2026/03/logo-vector-en-dark.svg",
+    "source_kind": "official site header logo SVG (English horizontal lockup, black V + magenta arrow), rasterised; raw: logos/raw/vector_site/logo-vector-en-dark.svg",
+    "licence_note": "Trademark of the Vector Institute; used nominatively for affiliation",
+    "ok": true,
+    "dark_bg_ok": false
+   },
+   {
+    "slug": "ucdavis",
+    "org": "University of California, Davis",
+    "file": "/rmeng_data/yubo_data/October/yubo/website_work/logos/ucdavis.png",
+    "width": 256,
+    "height": 256,
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_University_of_California_Davis.svg",
+    "source_kind": "Wikimedia Commons SVG (UC Davis seal), Commons server-rendered PNG at 1280 px; raw: logos/raw/commons/The_University_of_California_Davis.svg",
+    "licence_note": "Commons licence: public domain (SVG by User:Casecrer); the seal is official insignia / trademark of the Regents of the University of California; used nominatively for affiliation",
+    "ok": true,
+    "dark_bg_ok": true
+   },
+   {
+    "slug": "zju",
+    "org": "Zhejiang University",
+    "file": "/rmeng_data/yubo_data/October/yubo/website_work/logos/zju.png",
+    "width": 256,
+    "height": 256,
+    "source_url": "https://en.wikipedia.org/wiki/File:Zhejiang_University_Logo.svg",
+    "source_kind": "English Wikipedia SVG of the official emblem (non-free logo hosted on Wikipedia under fair use), rasterised; official reference page https://www.zju.edu.cn/572/list.htm (official but only 318x253 opaque PNG saved at logos/raw/zju_site/zju_2.png); raw: logos/raw/zju_enwiki/Zhejiang_University_Logo.svg",
+    "licence_note": "Emblem / trademark of Zhejiang University (non-free; fair-use file on Wikipedia); used nominatively for affiliation",
+    "ok": true,
+    "dark_bg_ok": false
+   },
+   {
+    "slug": "tencent",
+    "org": "Tencent",
+    "file": "/rmeng_data/yubo_data/October/yubo/website_work/logos/tencent.png",
+    "width": 640,
+    "height": 109,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Tencent_Logo.svg",
+    "source_kind": "Wikimedia Commons SVG traced from Tencent's official PDF (Commons: public domain / text logo), server-rendered at 3840 px and cropped to the English 'Tencent' wordmark (same lockup tencent.com uses in its English header); raw: logos/raw/commons/Tencent_Logo.svg",
+    "licence_note": "Trademark of Tencent Holdings Ltd (wordmark below threshold of originality per Commons); used nominatively for affiliation",
+    "ok": true,
+    "dark_bg_ok": true
+   },
+   {
+    "slug": "minimax",
+    "org": "MiniMax",
+    "file": "/rmeng_data/yubo_data/October/yubo/website_work/logos/minimax.png",
+    "width": 256,
+    "height": 256,
+    "source_url": "https://filecdn.minimax.chat/public/58eca777-e31f-448a-9823-e2220e49b426.png",
+    "source_kind": "official site og:image square brand icon of minimax.io / minimax.cn (300x300 lossless PNG; gradient tile with wave mark and MINIMAX wordmark); raw: logos/raw/minimax_site/og-512.png",
+    "licence_note": "Trademark of MiniMax (Shanghai Xiyu Jizhi Technology Co.); used nominatively for affiliation",
+    "ok": true,
+    "dark_bg_ok": true
+   },
+   {
+    "slug": "hkust",
+    "org": "Hong Kong University of Science and Technology",
+    "file": "/rmeng_data/yubo_data/October/yubo/website_work/logos/hkust.png",
+    "width": 640,
+    "height": 206,
+    "source_url": "https://hkust.edu.hk/sites/default/files/2024-03/HKUST_logo_1.svg",
+    "source_kind": "official site header logo SVG (emblem + HKUST, navy #003366), rasterised; raw: logos/raw/hkust_site/HKUST_logo_1.svg",
+    "licence_note": "Trademark of HKUST; used nominatively for affiliation",
+    "ok": true,
+    "dark_bg_ok": false
+   }
+  ],
+  "missing": [],
+  "notes": "All 7 slugs obtained; all finals are RGBA PNGs, trimmed, height 256 px (or width 640 px for the wide lockups: vector 640x234, tencent 640x109, hkust 640x206), each viewed and confirmed correct. Extras in the same directory (/rmeng_data/yubo_data/October/yubo/website_work/logos/): vector_dark.png (640x234, white English lockup from https://vectorinstitute.ai/wp-content/uploads/2026/03/logo-vector-en-light.svg), vector_mark.png (227x256, V+arrow icon only, from the official Vector-Logo-Icon.jpg with white background keyed out), tencent_mark.png (232x256, blue T-arrow site icon from https://www.tencent.com/wp-content/uploads/2024/05/cropped-04_Tencent_Graphics2.png; compact but less recognisable than the wordmark, dark-bg contrast weak), hkust_dark.png (640x205, white lockup from brand.hkust.edu.hk hkust_logo_small.svg) and hkust_emblem.png (170x256, emblem cropped from the official SVG render). A provenance manifest is at logos/sources.json. Dark-mode guidance: vector.png (black) and hkust.png (navy) are not readable on dark backgrounds - swap to the *_dark.png variants or place logos on a light chip; zju.png is visible but low contrast (~2.6:1) on dark; uwaterloo (white keyline), ucdavis (gold ring), tencent (blue ~3:1+) and minimax (self-contained gradient tile) are fine. Source notes: no rsvg-convert/inkscape/cairosvg were installed, so Commons SVGs were fetched as Commons server-rendered PNGs and non-Commons SVGs were rasterised with the already-installed playwright Chromium (scripts/svg2png.py); the hkust and zju GitHub avatars are default identicons (unusable); Vector/MiniMax have no Commons files; Zhejiang University's official .ai downloads were saved without PDF compatibility (unrenderable) and its official PNG is only 318 px, so the Wikipedia vector of the same emblem was used; HKUST's logo.ust.hk download site returns HTTP 500. Helper scripts live in /rmeng_data/yubo_data/October/yubo/website_work/scripts/ (commons_search.py, commons_info.py, commons_fetch.py, probe_site.py, svg2png.py, normalize_logo.py, contact_sheet.py, final_sheet.py); raw originals are under logos/raw/<source>/ with triage sheets in logos/raw/probe/."
+ },
+ "bio": {
+  "facts": [
+   {
+    "field": "education.bachelor",
+    "value": "B.Eng./Bachelor's in Computer Science, Chu Kochen Honors College, Zhejiang University (dates NOT found)",
+    "confidence": 0.9,
+    "source_url": "https://x.com/YuboWang726",
+    "note": "X bio: 'PhD student: @UWaterloo, MSc: @ucdavis B.Eng: @ZJU_China' (fetched via r.jina.ai). Old homepage https://wyyyb.github.io/ says 'Bachelor's degree in Computer Science from Chu Kochen Honors College, Zhejiang University'. Wenhu Chen's lab page https://wenhuchen.github.io/lab.html says '(BS: ZJU, MS: UC Davis)'. Degree wording differs (B.Eng on X vs Bachelor's/BS elsewhere); years unknown."
+   },
+   {
+    "field": "education.master",
+    "value": "M.S. in Computer Science, University of California, Davis (dates NOT found)",
+    "confidence": 0.9,
+    "source_url": "https://wyyyb.github.io/",
+    "note": "Old homepage: 'Master's degree in Computer Science from UC Davis'; X bio 'MSc: @ucdavis'; Wenhu Chen lab page '(MS: UC Davis)'. No thesis/advisor/year source found (UC Davis CS site search returned nothing)."
+   },
+   {
+    "field": "education.phd",
+    "value": "Ph.D. student, Computer Science, University of Waterloo (TIGER-Lab, advisor Wenhu Chen); started Spring 2025 term — arrived on campus April 2025",
+    "confidence": 0.85,
+    "source_url": "https://wenhuchen.github.io/lab.html",
+    "note": "Lab page lists under 'Co-advised students': 'PhD (Spring 2025 -): Yubo Wang (BS: ZJU, MS: UC Davis)' linking to wyyyb.github.io. Corroborated by a news item in his own site repo dated 2025-04-13: 'I arrived at the University of Waterloo and started my Ph.D. journey!' (https://raw.githubusercontent.com/Wyyyb/wyyyb.github.io/8c9dc7b93fc16bc77ff4efc7e84f76956163665f/_news/Arrived_UW.md; later deleted in commit d4fa3d4 on 2025-12-14). Co-advisor NOT identified (not on Jimmy Lin / Freda Shi / Victor Zhong / Hongyang Zhang / Poupart / Kerschbaum pages). Wenhu Chen's homepage says he is currently 'Researcher at Meta Superintelligence Labs' and 'assistant professor at the University of Waterloo (on leave)'."
+   },
+   {
+    "field": "experience.waterloo_pre_phd",
+    "value": "Affiliated with University of Waterloo / TIGER-Lab as a researcher from at least Sept 2023 (before the PhD started in 2025); formal title unknown",
+    "confidence": 0.8,
+    "source_url": "https://arxiv.org/pdf/2309.02233v1",
+    "note": "arXiv v1 (5 Sep 2023) first page: 'Yubo Wang, Xueguang Ma, Wenhu Chen* — University of Waterloo, Department of Computer Science — yubo.wang.sunny@gmail.com'. MMLU-Pro v1 (June 2024, https://arxiv.org/pdf/2406.01574v1) lists 'y726wang@uwaterloo.ca'. Semantic Scholar author 2238120100 affiliation: University of Waterloo. Whether this was a remote RA/visiting role is unknown."
+   },
+   {
+    "field": "affiliation.vector_institute",
+    "value": "Vector Institute (Toronto) affiliate — listed as his affiliation on papers from June 2025 onward",
+    "confidence": 0.9,
+    "source_url": "https://arxiv.org/abs/2506.03295",
+    "note": "One-Shot CFT (June 2025) first page: 'Yubo Wang 1,2 … 1 University of Waterloo, 2 Vector Institute'. Also on Critique-Coder (2509.22824: 'University of Waterloo, 2 Vector Institute', Yubo 1,2), ClawBench (2604.08523, Yubo 2,5 = Vector Institute + Waterloo) and FIM-Midtraining (2607.12463, Yubo 1,5 = Waterloo + Vector Institute). His own homepage subtitle lists 'University of Waterloo; Vector Institute'."
+   },
+   {
+    "field": "experience.tencent",
+    "value": "Tencent (Smart Healthcare / 腾讯医疗健康), full-time NLP Algorithm Engineer (LinkedIn snippet wording: 'Applied Scientist'), 2021–2023 (months unknown)",
+    "confidence": 0.75,
+    "source_url": "https://raw.githubusercontent.com/Wyyyb/wyyyb.github.io/a35c6c516eb36a5b55cf7d19c2a688c59ae2f797/_pages/about.md",
+    "note": "Self-reported. July 2025 version of about.md: 'From 2021 to 2023, I worked as a full-time NLP Algorithm Engineer at [Tencent Smart Healthcare]' with link https://www.tencent.com/en-us/business/smart-healthcare.html; current live page https://wyyyb.github.io/ shortens it to 'Tencent'. The task-provided LinkedIn search snippet says 'Applied Scientist at Tencent'. No third-party source found; exact months/team unknown."
+   },
+   {
+    "field": "experience.hkust_research_assistant",
+    "value": "Research Assistant at HKUST — only the task-provided LinkedIn snippet supports this; dates, lab and advisor NOT found",
+    "confidence": 0.4,
+    "source_url": "https://www.linkedin.com/in/yubo-wang-1321a7195",
+    "note": "LinkedIn itself unreachable (HTTP 999). No HKUST affiliation appears on any of his papers (2309.02233 v1 and later are Waterloo). Not found on hkust-nlp.github.io, jxhe.github.io or other HKUST group pages checked. The arXiv paper 2604.12243 (HKUST-GZ co-authors) that Semantic Scholar attributes to him is actually by a different Yubo Wang (School of Automation, Beijing Institute of Technology) — do not use it."
+   },
+   {
+    "field": "experience.minimax_internship",
+    "value": "Research Intern at MiniMax, working on agent-LLM mid-training; ongoing per LinkedIn snippet; evidence places it at least Dec 2025 – May 2026 (start/end dates and team NOT found)",
+    "confidence": 0.7,
+    "source_url": "https://arxiv.org/abs/2605.26494",
+    "note": "(1) Task-provided LinkedIn snippet: 'now a Research Intern at MiniMax, working on agent LLM mid-training'. (2) 'The MiniMax-M2 Series: Mini Activations Unleashing Max Real-World Intelligence' tech report (May 2026) lists 'Yubo Wang' in Appendix A Contributors (alphabetical contributor list, no role/intern marking). (3) Commits to his own site repo on 2025-12-14 (d4fa3d4caa402e41f505751aa99ddf01b1d1dd88, 666467ea4d1b4f9f57249715d329f1e06a33c11d) carry the git identity 'feishan <feishan@minimaxi.com>', i.e. were made from a MiniMax-configured machine. (4) His July 2026 first-author paper is on mid-training for coding agents (arXiv 2607.12463) but lists only Waterloo/Vector affiliations and no MiniMax acknowledgment. Dates are inference-free unknowns."
+   },
+   {
+    "field": "award.mmlu_pro_spotlight",
+    "value": "MMLU-Pro selected as a Spotlight at NeurIPS 2024 Datasets & Benchmarks Track (Wenhu Chen's CV: 'Spotlight, Top 10% of accepted papers')",
+    "confidence": 0.95,
+    "source_url": "https://wenhuchen.github.io/images/CV_WENHU.pdf",
+    "note": "Also: OpenReview venue string 'NeurIPS 2024 Track Datasets and Benchmarks Spotlight' (https://api2.openreview.net/notes/search?term=MMLU-Pro&type=terms&source=all) and the Google Scholar screenshot ('NeurIPS 2024 (Spotlight)'). No scholarships/fellowships found anywhere."
+   },
+   {
+    "field": "service.reviewing",
+    "value": "A 'Yubo Wang' is listed among Reviewers for ICLR 2025 (1 entry), NeurIPS 2025 (2 entries) and ICLR 2026 (1 entry); NOT attributable with certainty because the name is shared (Semantic Scholar has 174 authors named Yubo Wang)",
+    "confidence": 0.4,
+    "source_url": "https://neurips.cc/Conferences/2025/ProgramCommittee",
+    "note": "Also https://iclr.cc/Conferences/2025/ProgramCommittee and https://iclr.cc/Conferences/2026/ProgramCommittee. Not present in NeurIPS 2024, ICML 2025, ICML 2026 program committee pages. ACL Anthology front-matter PDFs (EMNLP 2024, ACL/EMNLP/NAACL 2025, ACL 2026) contain 'Yubo Wang' only in the table of contents (as author), not in reviewer lists. OpenReview profile (~Yubo_Wang9) would settle this but is behind a browser challenge."
+   },
+   {
+    "field": "service.invited_talks",
+    "value": "None found",
+    "confidence": 0.5,
+    "source_url": "https://x.com/YuboWang726",
+    "note": "No talk announcements in the X posts retrievable via r.jina.ai (login wall for full timeline); nothing on wenhuchen.github.io/talks.html; nitter is shut down."
+   },
+   {
+    "field": "profile.google_scholar",
+    "value": "Google Scholar: 'Yubo Wang, University of Waterloo, Verified email at uwaterloo.ca'; interests NLP / AI / LLMs; 4012 citations, h-index 11, i10-index 11 (screenshot dated 2026-10-14)",
+    "confidence": 0.9,
+    "source_url": "https://scholar.google.com/citations?user=s_ZW7voAAAAJ",
+    "note": "From the user-supplied screenshot /rmeng_data/yubo_data/test_data/huayu_service_v2607/personal_website_yubo/Screenshot 2026-10-14 at 5.00.55 PM.png (Scholar blocks direct fetches). Top co-authors shown: Wenhu Chen, Xiang Yue, Ge Zhang, Xueguang Ma, Yuxuan Zhang, Ping Nie, Dongfu Jiang, Jiarong Liang."
+   },
+   {
+    "field": "profile.semantic_scholar",
+    "value": "Semantic Scholar authorId 2238120100 (affiliation University of Waterloo, homepage https://wyyyb.github.io/, DBLP keys 'Yubo Wang' / 'Yubo Wang 0019', 20 papers, 3425 citations)",
+    "confidence": 0.9,
+    "source_url": "https://api.semanticscholar.org/graph/v1/author/2238120100?fields=name,affiliations,homepage,paperCount,citationCount,externalIds",
+    "note": "WARNING: S2 wrongly merges two papers by other people into this profile — arXiv 2604.12243 (Yubo Wang @ Beijing Institute of Technology) and arXiv 2605.12500 SenseNova-U1 (Yubo Wang @ SenseTime). Exclude them from the publication list."
+   },
+   {
+    "field": "profile.openreview",
+    "value": "OpenReview profile id ~Yubo_Wang9",
+    "confidence": 0.9,
+    "source_url": "https://api2.openreview.net/notes/search?term=Critique%20Fine-Tuning%3A%20Learning%20to%20Critique%20is%20More%20Effective&type=terms&source=all",
+    "note": "authorids on the COLM 2025 CFT and ScholarCopilot notes and the NeurIPS 2024 MMLU-Pro note all give ~Yubo_Wang9. Profile page/API (v1 and v2, direct and via r.jina.ai, Wayback) all blocked by challenge, so history/dates could not be read."
+   },
+   {
+    "field": "profile.emails_and_handles",
+    "value": "y726wang@uwaterloo.ca (papers); yubo.wang.sunny@gmail.com (old site socials.yml, arXiv 2309.02233v1); GitHub Wyyyb (display name 'yubowang', 16 followers, 28 repos); X @YuboWang726; Chinese name 王钰博 (site title)",
+    "confidence": 0.9,
+    "source_url": "https://github.com/Wyyyb",
+    "note": "GitHub bio/company/location fields are empty; no profile README. Live site title: 'Yubo Wang (王钰博)'."
+   },
+   {
+    "field": "profile.acl_anthology",
+    "value": "https://aclanthology.org/people/y/yubo-wang/ is a DIFFERENT Yubo Wang (Semantic-Eval, ACL 2025); his EMNLP papers must be under one of the disambiguated pages /people/yubo-wang-0927/ or /people/yubo-wang-7240/ (not verified which)",
+    "confidence": 0.7,
+    "source_url": "https://aclanthology.org/people/y/yubo-wang/",
+    "note": "His Anthology entries: 2024.findings-emnlp (Augmenting Black-box LLMs with Medical Textbooks for Biomedical Question Answering) and 2025.emnlp-main.149 (One-Shot CFT)."
+   }
+  ],
+  "unknowns": [
+   "Zhejiang University dates (start/end years) and exact degree name (X says B.Eng, homepage says Bachelor's/B.S. in CS) — no source found",
+   "UC Davis M.S. dates, thesis/advisor — no source found",
+   "Tencent: exact start/end months, exact title (homepage: 'NLP Algorithm Engineer'; LinkedIn snippet: 'Applied Scientist'), and team name beyond 'Smart Healthcare' — only self-reported sources",
+   "HKUST Research Assistant: dates, lab/advisor, and any independent confirmation — nothing beyond the task-provided LinkedIn snippet",
+   "MiniMax internship: start date, end date / whether still ongoing in Oct 2026, team name — evidence only spans Dec 2025 (commits from a minimaxi.com git identity) to May 2026 (M2 report contributor list)",
+   "His formal role at Waterloo between Sept 2023 (first Waterloo-affiliated paper, gmail address) and the April/May 2025 PhD start (uwaterloo.ca email by June 2024) — RA/visiting/remote status unknown",
+   "Identity of the PhD co-advisor (Wenhu Chen lists him under 'Co-advised students')",
+   "Reviewing service cannot be attributed by name alone (ICLR 2025/2026, NeurIPS 2025 lists contain a 'Yubo Wang'); OpenReview profile ~Yubo_Wang9 is behind a browser challenge",
+   "No scholarships, fellowships or invited talks found in any reachable source",
+   "LinkedIn profile itself unreachable (HTTP 999; no Wayback snapshot); the 'Applied Scientist at Tencent / RA at HKUST / Research Intern at MiniMax' wording rests solely on the search-result snippet quoted in the task",
+   "Environment hint only (NOT a public fact): this machine's account is 'ubowang_google_com' under /rmeng_data, which may indicate a Google-related affiliation as of Oct 2026 — ask the user before writing anything about it",
+   "The 2025-04-13 'arrived at UW' news item was deleted by the user on 2025-12-14 — confirm with the user before re-using that date publicly"
+  ],
+  "sources_tried": [
+   "Local: /rmeng_data/yubo_data/test_data/huayu_service_v2607/personal_website_yubo (Google Scholar screenshot, portrait, paper PDFs; first-page affiliations extracted with pdftotext)",
+   "Local: /rmeng_data/yubo_data/October/yubo/website_work/wyyyb.github.io (al-folio clone; _pages/about.md incl. git history, _news, _data/socials.yml, commit authors/emails)",
+   "Local: /rmeng_data/yubo_data/October/yubo/website_work/arxiv_pdfs/minimax-m2/2605.26494.pdf (MiniMax-M2 contributor list)",
+   "https://wyyyb.github.io/ (live) and raw.githubusercontent.com for commits 8c9dc7b…, a35c6c5…",
+   "https://x.com/YuboWang726 via r.jina.ai (bio + recent posts); /with_replies (login wall); syndication.twitter.com and cdn.syndication.twimg.com (empty); nitter.net (shut down)",
+   "https://wenhuchen.github.io/ , /lab.html , /publication.html , /talks.html , /images/CV_WENHU.pdf",
+   "https://tiger-ai-lab.github.io/ (404 — no GitHub Pages site)",
+   "https://cs.uwaterloo.ca/~y726wang/ (empty directory index), uwaterloo.ca profile URL guesses (404)",
+   "https://vectorinstitute.ai/?s=%22Yubo+Wang%22 (no results)",
+   "Google Scholar direct + via r.jina.ai (403 'automated queries')",
+   "Semantic Scholar Graph API: paper arXiv:2501.17703, author 2238120100 (+papers), author search (429s then success)",
+   "OpenReview: api2/api v1 profiles ~Yubo_Wang1-20 and ~Yubo_Wang9, profile HTML via r.jina.ai, profiles/search, notes by authorid (all ChallengeRequired/403); notes/search (works — gave ~Yubo_Wang9 and venue strings)",
+   "Wayback Machine availability/CDX for linkedin.com/in/yubo-wang-1321a7195, wyyyb.github.io, scholar, openreview, x.com (no useful snapshots)",
+   "DBLP dblp.org / dblp.dagstuhl.de / dblp.uni-trier.de author API and via r.jina.ai (Anubis bot challenge / 500)",
+   "ACL Anthology https://aclanthology.org/people/y/yubo-wang/ (different person) and front-matter PDFs 2024.findings-emnlp.0, 2024.emnlp-main.0, 2025.acl-long.0, 2025.findings-acl.0, 2025.naacl-long.0, 2025.emnlp-main.0, 2025.findings-emnlp.0, 2026.acl-long.0",
+   "Conference PC pages: neurips.cc 2024/2025/2026 ProgramCommittee, iclr.cc 2025/2026 ProgramCommittee & Reviewers, icml.cc 2025/2026, colmweb.org (reviewer pages 404)",
+   "arXiv PDFs: 2309.02233v1, 2406.01574v1, 2509.22824, 2604.12243, 2605.12500, 2406.13923; arXiv export API",
+   "GitHub: api.github.com/users/Wyyyb (rate-limited 403), github.com/Wyyyb via r.jina.ai, raw README (404)",
+   "Search engines (all blocked/CAPTCHA or irrelevant): html.duckduckgo.com, lite.duckduckgo.com, bing.com, search.brave.com, mojeek.com, ecosia.org, search.yahoo.com, s.jina.ai, baidu.com, sogou.com, so.com",
+   "HKUST group pages: hkust-nlp.github.io, jxhe.github.io, caire.ust.hk, yqsong/KnowComp, dirtyharrylyl.github.io (no Yubo)",
+   "Waterloo faculty pages for co-advisor: jimmylin (students.html), fhs, victorzhong.com, hongyanz.github.io, mli, ppoupart, fkerschb (no Yubo)",
+   "UC Davis CS site search https://cs.ucdavis.edu/?s=%22Yubo+Wang%22 (no results)"
+  ]
+ }
+}
