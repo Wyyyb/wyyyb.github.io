@@ -133,7 +133,7 @@ html:not(.js) .theme-toggle, html:not(.js) .seg, html:not(.js) .news-more { disp
 
 /* ---------- 4. Hero ---------- */
 .hero {
-  display: grid; grid-template-columns: minmax(0, 1fr) 216px;
+  display: grid; grid-template-columns: minmax(0, 1fr) 168px;
   gap: 24px 48px; align-items: center;
   padding-top: 56px; padding-bottom: 8px;
 }
@@ -182,7 +182,7 @@ html:not(.js) .theme-toggle, html:not(.js) .seg, html:not(.js) .news-more { disp
 .hero-stats .icon { margin-right: .5em; color: var(--ink-3); }
 .hero-photo { margin: 0; justify-self: end; }
 .hero-photo img {
-  width: 216px; height: 270px; object-fit: cover;
+  width: 168px; height: 210px; object-fit: cover;
   border-radius: 14px; border: 1px solid var(--hairline); box-shadow: var(--shadow);
 }
 
@@ -385,16 +385,16 @@ html:not(.js) .theme-toggle, html:not(.js) .seg, html:not(.js) .news-more { disp
 /* ---------- 12. Responsive ---------- */
 @media (max-width: 900px) {
   :root { --figure-w: 184px; --figure-gap: 22px; }
-  .hero { grid-template-columns: minmax(0, 1fr) 176px; gap: 24px 36px; }
-  .hero-photo img { width: 176px; height: 220px; }
+  .hero { grid-template-columns: minmax(0, 1fr) 144px; gap: 24px 36px; }
+  .hero-photo img { width: 144px; height: 180px; }
 }
 @media (max-width: 720px) {
   :root { --gutter: 18px; }
   /* Photo sits beside the eyebrow / name / tagline; the rest of the hero spans the full width. */
-  .hero { grid-template-columns: minmax(0, 1fr) 108px; gap: 0 16px; align-items: start; padding-top: 24px; }
+  .hero { grid-template-columns: minmax(0, 1fr) 96px; gap: 0 16px; align-items: start; padding-top: 24px; }
   .hero-body { display: contents; }
   .hero-photo { grid-column: 2; grid-row: 1 / span 3; justify-self: end; margin-top: 2px; }
-  .hero-photo img { width: 108px; height: 135px; border-radius: 12px; }
+  .hero-photo img { width: 96px; height: 120px; border-radius: 12px; }
   .hero-eyebrow, .hero-name, .hero-tagline { grid-column: 1; }
   .hero-affil, .hero-links, .hero-chips, .hero-stats { grid-column: 1 / -1; }
   .hero-eyebrow { margin-bottom: 10px; }

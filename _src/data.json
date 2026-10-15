@@ -53,17 +53,13 @@
       "Evaluation & Benchmarks",
       "Coding Agents & Mid-Training"
     ],
-    "scholar_stats": {
-      "citations": "4,000+",
-      "h_index": 11,
-      "as_of": "Oct 2026"
-    },
+    "scholar_stats": null,
     "site_url": "https://wyyyb.github.io/",
     "description_meta": "Yubo Wang (王钰博) — Ph.D. student in Computer Science at the University of Waterloo (TIGER-Lab, Vector Institute). Research on LLM post-training and reasoning, evaluation benchmarks (MMLU-Pro), and coding-agent foundation models."
   },
   "about": {
     "paragraphs": [
-      "I am a Ph.D. student in Computer Science at the <a href=\"https://uwaterloo.ca/\">University of Waterloo</a>, advised by Prof. <a href=\"https://wenhuchen.github.io/\">Wenhu Chen</a> in <a href=\"https://huggingface.co/TIGER-Lab\">TIGER-Lab</a>, and I am affiliated with the <a href=\"https://vectorinstitute.ai/\">Vector Institute</a>. I have been working with TIGER-Lab since 2023. Before Waterloo, I was an Applied Scientist at <a href=\"https://www.tencent.com/\">Tencent</a> Smart Healthcare (2021–2023), and I also worked as a Research Assistant at <a href=\"https://hkust.edu.hk/\">HKUST</a>. I received my M.S. in Computer Science from <a href=\"https://www.ucdavis.edu/\">UC Davis</a> and my B.Eng. in Computer Science from <a href=\"http://ckc.zju.edu.cn/\">Chu Kochen Honors College</a>, <a href=\"https://www.zju.edu.cn/english/\">Zhejiang University</a>. I have also been a Research Intern at <a href=\"https://www.minimax.io/\">MiniMax</a> (2025–2026), working on mid-training for agentic LLMs and contributing to <a href=\"https://arxiv.org/abs/2605.26494\">MiniMax-M2</a>.",
+      "I am a Ph.D. student in Computer Science at the <a href=\"https://uwaterloo.ca/\">University of Waterloo</a>, advised by Prof. <a href=\"https://wenhuchen.github.io/\">Wenhu Chen</a> in <a href=\"https://huggingface.co/TIGER-Lab\">TIGER-Lab</a>, and I am affiliated with the <a href=\"https://vectorinstitute.ai/\">Vector Institute</a>. I am also a Student Researcher at <a href=\"https://research.google/\">Google</a>. Before Waterloo, I was an Applied Scientist at <a href=\"https://www.tencent.com/\">Tencent</a> Smart Healthcare (2021–2023), and I have been working with TIGER-Lab since 2023. I received my M.S. in Computer Science from <a href=\"https://www.ucdavis.edu/\">UC Davis</a> and my B.Eng. in Computer Science from <a href=\"http://ckc.zju.edu.cn/\">Chu Kochen Honors College</a>, <a href=\"https://www.zju.edu.cn/english/\">Zhejiang University</a>. In 2025–2026 I was a Research Intern at <a href=\"https://www.minimax.io/\">MiniMax</a>, working on mid-training for agentic LLMs and contributing to <a href=\"https://arxiv.org/abs/2605.26494\">MiniMax-M2</a>.",
       "My research asks how to make LLMs both more capable and more measurable. I work on <strong>post-training for reasoning</strong> (<a href=\"https://arxiv.org/abs/2501.17703\">Critique Fine-Tuning</a> teaches models to critique rather than imitate, and <a href=\"https://arxiv.org/abs/2506.03295\">works even with a single training problem</a>), <strong>evaluation</strong> (<a href=\"https://arxiv.org/abs/2406.01574\">MMLU-Pro</a> has become a standard benchmark for frontier models; <a href=\"https://claw-bench.com\">ClawBench</a> tests agents on live websites), and <strong>foundation models for coding agents</strong> (<a href=\"https://arxiv.org/abs/2607.12463\">function-aware fill-in-the-middle mid-training</a>)."
     ],
     "interests": [
@@ -210,6 +206,16 @@
   ],
   "experience": [
     {
+      "role": "Student Researcher",
+      "org": "Google",
+      "org_url": "https://research.google/",
+      "where": "",
+      "dates": "",
+      "logo": "assets/img/logos/google.png",
+      "logo_text": "G",
+      "details": ""
+    },
+    {
       "role": "Research Intern",
       "org": "MiniMax",
       "org_url": "https://www.minimax.io/",
@@ -226,20 +232,9 @@
       "where": "",
       "dates": "2021 – 2023",
       "logo": "assets/img/logos/tencent.png",
+      "logo_square": "assets/img/logos/tencent_mark.png",
       "logo_text": "T",
-      "details": "Tencent Smart Healthcare.",
-      "logo_square": "assets/img/logos/tencent_mark.png"
-    },
-    {
-      "role": "Research Assistant",
-      "org": "Hong Kong University of Science and Technology",
-      "org_url": "https://hkust.edu.hk/",
-      "where": "Hong Kong",
-      "dates": "",
-      "logo": "assets/img/logos/hkust.png",
-      "logo_text": "HK",
-      "details": "",
-      "logo_square": "assets/img/logos/hkust_mark.png"
+      "details": "Tencent Smart Healthcare."
     }
   ],
   "education": [
@@ -289,6 +284,11 @@
       "logo": "assets/img/logos/vector.png"
     },
     {
+      "name": "Google",
+      "url": "https://research.google/",
+      "logo": "assets/img/logos/google.png"
+    },
+    {
       "name": "MiniMax",
       "url": "https://www.minimax.io/",
       "logo": "assets/img/logos/minimax.png"
@@ -297,11 +297,6 @@
       "name": "Tencent",
       "url": "https://www.tencent.com/",
       "logo": "assets/img/logos/tencent.png"
-    },
-    {
-      "name": "HKUST",
-      "url": "https://hkust.edu.hk/",
-      "logo": "assets/img/logos/hkust.png"
     },
     {
       "name": "UC Davis",
