@@ -1,0 +1,1081 @@
+{
+  "profile": {
+    "name": "Yubo Wang",
+    "name_cn": "王钰博",
+    "eyebrow": "Ph.D. Student in Computer Science",
+    "tagline": "I train and evaluate large language models: post-training for reasoning, robust benchmarks, and foundation models for coding agents.",
+    "affiliations": [
+      {
+        "name": "University of Waterloo",
+        "url": "https://uwaterloo.ca/"
+      },
+      {
+        "name": "Vector Institute",
+        "url": "https://vectorinstitute.ai/"
+      },
+      {
+        "name": "TIGER-Lab",
+        "url": "https://huggingface.co/TIGER-Lab"
+      }
+    ],
+    "location": "Waterloo, Canada",
+    "photo_portrait": "assets/img/profile.jpg",
+    "email": "y726wang@uwaterloo.ca",
+    "links": [
+      {
+        "label": "Email",
+        "url": "mailto:y726wang@uwaterloo.ca",
+        "icon": "envelope"
+      },
+      {
+        "label": "Google Scholar",
+        "url": "https://scholar.google.com/citations?user=s_ZW7voAAAAJ",
+        "icon": "google-scholar"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Wyyyb",
+        "icon": "github"
+      },
+      {
+        "label": "X",
+        "url": "https://x.com/YuboWang726",
+        "icon": "x-twitter"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/yubo-wang-1321a7195",
+        "icon": "linkedin"
+      }
+    ],
+    "chips": [
+      "LLM Post-Training & Reasoning",
+      "Evaluation & Benchmarks",
+      "Coding Agents & Mid-Training"
+    ],
+    "scholar_stats": {
+      "citations": "4,000+",
+      "h_index": 11,
+      "as_of": "Oct 2026"
+    },
+    "site_url": "https://wyyyb.github.io/",
+    "description_meta": "Yubo Wang (王钰博) — Ph.D. student in Computer Science at the University of Waterloo (TIGER-Lab, Vector Institute). Research on LLM post-training and reasoning, evaluation benchmarks (MMLU-Pro), and coding-agent foundation models."
+  },
+  "about": {
+    "paragraphs": [
+      "I am a Ph.D. student in Computer Science at the <a href=\"https://uwaterloo.ca/\">University of Waterloo</a>, advised by Prof. <a href=\"https://wenhuchen.github.io/\">Wenhu Chen</a> in <a href=\"https://huggingface.co/TIGER-Lab\">TIGER-Lab</a>, and I am affiliated with the <a href=\"https://vectorinstitute.ai/\">Vector Institute</a>. I have been working with TIGER-Lab since 2023. Before Waterloo, I was an Applied Scientist at <a href=\"https://www.tencent.com/\">Tencent</a> Smart Healthcare (2021–2023), and I also worked as a Research Assistant at <a href=\"https://hkust.edu.hk/\">HKUST</a>. I received my M.S. in Computer Science from <a href=\"https://www.ucdavis.edu/\">UC Davis</a> and my B.Eng. in Computer Science from <a href=\"http://ckc.zju.edu.cn/\">Chu Kochen Honors College</a>, <a href=\"https://www.zju.edu.cn/english/\">Zhejiang University</a>. I have also been a Research Intern at <a href=\"https://www.minimax.io/\">MiniMax</a> (2025–2026), working on mid-training for agentic LLMs and contributing to <a href=\"https://arxiv.org/abs/2605.26494\">MiniMax-M2</a>.",
+      "My research asks how to make LLMs both more capable and more measurable. I work on <strong>post-training for reasoning</strong> (<a href=\"https://arxiv.org/abs/2501.17703\">Critique Fine-Tuning</a> teaches models to critique rather than imitate, and <a href=\"https://arxiv.org/abs/2506.03295\">works even with a single training problem</a>), <strong>evaluation</strong> (<a href=\"https://arxiv.org/abs/2406.01574\">MMLU-Pro</a> has become a standard benchmark for frontier models; <a href=\"https://claw-bench.com\">ClawBench</a> tests agents on live websites), and <strong>foundation models for coding agents</strong> (<a href=\"https://arxiv.org/abs/2607.12463\">function-aware fill-in-the-middle mid-training</a>)."
+    ],
+    "interests": [
+      {
+        "label": "Post-training & Reasoning",
+        "items": [
+          {
+            "name": "Critique Fine-Tuning",
+            "url": "https://arxiv.org/abs/2501.17703"
+          },
+          {
+            "name": "One-shot CFT",
+            "url": "https://arxiv.org/abs/2506.03295"
+          },
+          {
+            "name": "Critique-Coder",
+            "url": "https://arxiv.org/abs/2509.22824"
+          },
+          {
+            "name": "RewardHarness",
+            "url": "https://arxiv.org/abs/2605.08703"
+          }
+        ]
+      },
+      {
+        "label": "Evaluation & Benchmarks",
+        "items": [
+          {
+            "name": "MMLU-Pro",
+            "url": "https://arxiv.org/abs/2406.01574"
+          },
+          {
+            "name": "MMMU-Pro",
+            "url": "https://arxiv.org/abs/2409.02813"
+          },
+          {
+            "name": "SuperGPQA",
+            "url": "https://arxiv.org/abs/2502.14739"
+          },
+          {
+            "name": "MEGA-Bench",
+            "url": "https://arxiv.org/abs/2410.10563"
+          },
+          {
+            "name": "ClawBench",
+            "url": "https://arxiv.org/abs/2604.08523"
+          }
+        ]
+      },
+      {
+        "label": "Agents, Coding & Retrieval-Augmented LLMs",
+        "items": [
+          {
+            "name": "FIM Mid-Training",
+            "url": "https://arxiv.org/abs/2607.12463"
+          },
+          {
+            "name": "MiniMax-M2",
+            "url": "https://arxiv.org/abs/2605.26494"
+          },
+          {
+            "name": "ScholarCopilot",
+            "url": "https://arxiv.org/abs/2504.00824"
+          },
+          {
+            "name": "LLM-AMT",
+            "url": "https://arxiv.org/abs/2309.02233"
+          }
+        ]
+      }
+    ]
+  },
+  "news": [
+    {
+      "date": "2026-08",
+      "emoji": "🎉",
+      "html": "<a href=\"https://arxiv.org/abs/2604.08523\">ClawBench</a> is accepted to <strong>Findings of EMNLP 2026</strong>."
+    },
+    {
+      "date": "2026-07",
+      "emoji": "🚀",
+      "html": "Released <a href=\"https://arxiv.org/abs/2607.12463\">Function-Aware FIM Mid-Training</a> for coding-agent foundation models, with <a href=\"https://github.com/TIGER-AI-Lab/FIM-Midtraining\">code</a>, <a href=\"https://huggingface.co/datasets/TIGER-Lab/FIM-Midtraining-400K\">data</a> and <a href=\"https://huggingface.co/collections/TIGER-Lab/fim-midtraining-6a55b20af7dd02d36b445cc5\">models</a>."
+    },
+    {
+      "date": "2026-07",
+      "emoji": "🎉",
+      "html": "<a href=\"https://arxiv.org/abs/2605.08703\">RewardHarness</a> is accepted to <strong>COLM 2026</strong>."
+    },
+    {
+      "date": "2026-05",
+      "emoji": "📄",
+      "html": "The <a href=\"https://arxiv.org/abs/2605.26494\">MiniMax-M2</a> technical report is out; I contributed as a research intern at MiniMax."
+    },
+    {
+      "date": "2026-04",
+      "emoji": "🦀",
+      "html": "Released <a href=\"https://claw-bench.com\">ClawBench</a>: 153 everyday online tasks on 144 live websites for AI agents."
+    },
+    {
+      "date": "2026-01",
+      "emoji": "🎉",
+      "html": "<a href=\"https://arxiv.org/abs/2509.22824\">Critique-Coder</a> is accepted to <strong>ICLR 2026</strong>."
+    },
+    {
+      "date": "2025-11",
+      "emoji": "📊",
+      "html": "<a href=\"https://arxiv.org/abs/2409.02813\">MMMU-Pro</a> is featured in Google's <a href=\"https://blog.google/products/gemini/gemini-3/\">Gemini 3</a> launch (Gemini 3 Pro scores 81%)."
+    },
+    {
+      "date": "2025-09",
+      "emoji": "🎉",
+      "html": "<a href=\"https://arxiv.org/abs/2502.14739\">SuperGPQA</a> is accepted to <strong>NeurIPS 2025</strong> (Datasets &amp; Benchmarks)."
+    },
+    {
+      "date": "2025-08",
+      "emoji": "🎉",
+      "html": "<a href=\"https://arxiv.org/abs/2506.03295\">One-Shot CFT</a> is accepted to <strong>EMNLP 2025</strong> (Main)."
+    },
+    {
+      "date": "2025-07",
+      "emoji": "🎉",
+      "html": "<a href=\"https://arxiv.org/abs/2501.17703\">Critique Fine-Tuning</a> and <a href=\"https://arxiv.org/abs/2504.00824\">ScholarCopilot</a> are accepted to <strong>COLM 2025</strong>."
+    },
+    {
+      "date": "2025-05",
+      "emoji": "🎉",
+      "html": "<a href=\"https://arxiv.org/abs/2409.02813\">MMMU-Pro</a> and <a href=\"https://arxiv.org/abs/2412.05237\">MAmmoTH-VL</a> are accepted to <strong>ACL 2025</strong> (Main)."
+    },
+    {
+      "date": "2025-01",
+      "emoji": "🎉",
+      "html": "<a href=\"https://arxiv.org/abs/2410.10563\">MEGA-Bench</a> is accepted to <strong>ICLR 2025</strong>."
+    },
+    {
+      "date": "2024-09",
+      "emoji": "🏆",
+      "html": "<a href=\"https://arxiv.org/abs/2406.01574\">MMLU-Pro</a> is accepted to <strong>NeurIPS 2024</strong> (Datasets &amp; Benchmarks) as a <strong>Spotlight</strong>, and <a href=\"https://arxiv.org/abs/2309.02233\">LLM-AMT</a> is accepted to <strong>Findings of EMNLP 2024</strong>."
+    },
+    {
+      "date": "2024-06",
+      "emoji": "🚀",
+      "html": "Released <a href=\"https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro\">MMLU-Pro</a>; it was adopted as a core benchmark of the Hugging Face <a href=\"https://huggingface.co/docs/leaderboards/open_llm_leaderboard/about\">Open LLM Leaderboard v2</a>."
+    }
+  ],
+  "experience": [
+    {
+      "role": "Research Intern",
+      "org": "MiniMax",
+      "org_url": "https://www.minimax.io/",
+      "where": "",
+      "dates": "2025 – 2026",
+      "logo": "assets/img/logos/minimax.png",
+      "logo_text": "MM",
+      "details": "Mid-training for agentic LLMs; contributor to the MiniMax-M2 series."
+    },
+    {
+      "role": "Applied Scientist",
+      "org": "Tencent",
+      "org_url": "https://www.tencent.com/",
+      "where": "",
+      "dates": "2021 – 2023",
+      "logo": "assets/img/logos/tencent.png",
+      "logo_text": "T",
+      "details": "Tencent Smart Healthcare.",
+      "logo_square": "assets/img/logos/tencent_mark.png"
+    },
+    {
+      "role": "Research Assistant",
+      "org": "Hong Kong University of Science and Technology",
+      "org_url": "https://hkust.edu.hk/",
+      "where": "Hong Kong",
+      "dates": "",
+      "logo": "assets/img/logos/hkust.png",
+      "logo_text": "HK",
+      "details": "",
+      "logo_square": "assets/img/logos/hkust_mark.png"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Ph.D. in Computer Science",
+      "org": "University of Waterloo",
+      "org_url": "https://uwaterloo.ca/",
+      "dates": "2025 – Present",
+      "logo": "assets/img/logos/uwaterloo.png",
+      "logo_text": "UW",
+      "details": "Advisor: Prof. Wenhu Chen · TIGER-Lab · Vector Institute. Working with TIGER-Lab since 2023."
+    },
+    {
+      "degree": "M.S. in Computer Science",
+      "org": "University of California, Davis",
+      "org_url": "https://www.ucdavis.edu/",
+      "dates": "",
+      "logo": "assets/img/logos/ucdavis.png",
+      "logo_text": "UCD",
+      "details": ""
+    },
+    {
+      "degree": "B.Eng. in Computer Science",
+      "org": "Zhejiang University",
+      "org_url": "https://www.zju.edu.cn/english/",
+      "dates": "",
+      "logo": "assets/img/logos/zju.png",
+      "logo_text": "ZJU",
+      "details": "Chu Kochen Honors College"
+    }
+  ],
+  "service": null,
+  "footer": {
+    "copyright": "© 2026 Yubo Wang",
+    "updated": "Last updated: October 2026",
+    "credit": "Design inspired by the homepages of Jon Barron, Haozhe Wang and Dongfu Jiang."
+  },
+  "affiliation_logos": [
+    {
+      "name": "University of Waterloo",
+      "url": "https://uwaterloo.ca/",
+      "logo": "assets/img/logos/uwaterloo.png"
+    },
+    {
+      "name": "Vector Institute",
+      "url": "https://vectorinstitute.ai/",
+      "logo": "assets/img/logos/vector.png"
+    },
+    {
+      "name": "MiniMax",
+      "url": "https://www.minimax.io/",
+      "logo": "assets/img/logos/minimax.png"
+    },
+    {
+      "name": "Tencent",
+      "url": "https://www.tencent.com/",
+      "logo": "assets/img/logos/tencent.png"
+    },
+    {
+      "name": "HKUST",
+      "url": "https://hkust.edu.hk/",
+      "logo": "assets/img/logos/hkust.png"
+    },
+    {
+      "name": "UC Davis",
+      "url": "https://www.ucdavis.edu/",
+      "logo": "assets/img/logos/ucdavis.png"
+    },
+    {
+      "name": "Zhejiang University",
+      "url": "https://www.zju.edu.cn/english/",
+      "logo": "assets/img/logos/zju.png"
+    }
+  ],
+  "publications": [
+    {
+      "key": "fim-midtraining",
+      "selected": true,
+      "first_author": true,
+      "title": "Function-Aware Fill-in-the-Middle as Mid-Training for Coding Agent Foundation Models",
+      "authors_html": "<b>Yubo Wang</b>*, Jiarong Liang*, Yuxuan Zhang, Xuye Liu, Cong Wei, Yuyu Zhang, Ping Nie, Wenhu Chen",
+      "n_authors": 8,
+      "venue_short": "arXiv 2026",
+      "venue_long": "arXiv preprint arXiv:2607.12463",
+      "distinction": "",
+      "year": 2026,
+      "month": 7,
+      "arxiv_url": "https://arxiv.org/abs/2607.12463",
+      "pub_page_url": "",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2607.12463"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/TIGER-AI-Lab/FIM-Midtraining"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/TIGER-Lab/FIM-Midtraining-400K"
+        },
+        {
+          "label": "Models",
+          "url": "https://huggingface.co/TIGER-Lab/FIM-8B"
+        },
+        {
+          "label": "HF Collection",
+          "url": "https://huggingface.co/collections/TIGER-Lab/fim-midtraining-6a55b20af7dd02d36b445cc5"
+        },
+        {
+          "label": "Tweet",
+          "url": "https://x.com/YuboWang726/status/2077521989447676246"
+        }
+      ],
+      "github_stars": 21,
+      "summary": "Proposes function-aware fill-in-the-middle mid-training on 2.6B tokens of code before agentic post-training, improving SWE-Bench-Verified by +2.8 to +3.2 points on Qwen2.5-Coder-7B/14B and Qwen3-8B.",
+      "highlight": "",
+      "highlight_source_url": "https://huggingface.co/collections/TIGER-Lab/fim-midtraining-6a55b20af7dd02d36b445cc5",
+      "teaser": "assets/img/teasers/fim-midtraining.webp",
+      "teaser_alt": "The left and middle panels of the Figure 1 teaser: a side-by-side schematic showing that a function call site (caller/callee) and a coding-agent step (agent/tool) share the same context -> call -> return -> continuation structure, next to the function-level FIM mid-training recipe where a target function B is chosen from the program dependency graph, masked in an FIM-formatted prompt (<fim_prefix>/<fim_suffix>/<fim_middle>), and the SFT target is a CoT rationale plus B's body.",
+      "teaser_verified": true
+    },
+    {
+      "key": "minimax-m2",
+      "selected": false,
+      "first_author": false,
+      "title": "The MiniMax-M2 Series: Mini Activations Unleashing Max Real-World Intelligence",
+      "authors_html": "MiniMax (218 contributors in alphabetical order, incl. <b>Yubo Wang</b>)",
+      "n_authors": 218,
+      "venue_short": "Tech Report 2026",
+      "venue_long": "MiniMax Technical Report (arXiv preprint 2605.26494)",
+      "distinction": "Technical report; contributors listed alphabetically (no core/equal-contribution marks)",
+      "year": 2026,
+      "month": 5,
+      "arxiv_url": "https://arxiv.org/abs/2605.26494",
+      "pub_page_url": "",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2605.26494"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/MiniMax-AI/MiniMax-M2"
+        },
+        {
+          "label": "Models",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2"
+        },
+        {
+          "label": "HF Collection",
+          "url": "https://huggingface.co/collections/MiniMaxAI/minimax-m2-69607bef9bd3881ee76e11cb"
+        },
+        {
+          "label": "Blog",
+          "url": "https://www.minimax.io/news/minimax-m2"
+        }
+      ],
+      "github_stars": 2604,
+      "summary": "Introduces MiniMax-M2, open-weight 229.9B-total/9.8B-active MoE models trained with agent-driven data pipelines and the Forge RL system, competitive with closed frontier models on agentic coding and search benchmarks.",
+      "highlight": "",
+      "highlight_source_url": "https://github.com/MiniMax-AI/MiniMax-M2",
+      "teaser": "assets/img/teasers/minimax-m2.webp",
+      "teaser_alt": "Two-panel framework diagram of M2.7's self-evolution setup: (A) the Model Iteration System in which a human configures/steers/reviews an Agent Harness (hierarchical skills, persistent memory, guardrails, evaluation infra) that runs the M2 agent, and (B) the dual-loop RL-team workflow (Exp Plan -> Exp Dev & Run -> Analyze & Report -> Review & Discuss -> Exp Iterate Loop) with agent auto-continue and human-triggered iterations.",
+      "teaser_verified": true
+    },
+    {
+      "key": "rewardharness",
+      "selected": false,
+      "first_author": false,
+      "title": "RewardHarness: Self-Evolving Agentic Post-Training",
+      "authors_html": "Yuxuan Zhang*, Cong Wei*, Penghui Du*, …, <b>Yubo Wang</b>, …, Kelsey R. Allen",
+      "n_authors": 14,
+      "venue_short": "COLM 2026",
+      "venue_long": "Third Conference on Language Modeling (COLM 2026)",
+      "distinction": "",
+      "year": 2026,
+      "month": 5,
+      "arxiv_url": "https://arxiv.org/abs/2605.08703",
+      "pub_page_url": "https://openreview.net/forum?id=tXv4YSeA2j",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2605.08703"
+        },
+        {
+          "label": "Publication Page",
+          "url": "https://openreview.net/forum?id=tXv4YSeA2j"
+        },
+        {
+          "label": "Project Page",
+          "url": "https://rewardharness.com/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/TIGER-AI-Lab/RewardHarness"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/AgPerry/EditReward-Data-100"
+        },
+        {
+          "label": "Tweet",
+          "url": "https://x.com/ReacherZhang/status/2107694309231460657"
+        }
+      ],
+      "github_stars": 77,
+      "summary": "A training-free agentic reward model for image editing that evolves a skill-and-tool library from 100 preference demonstrations, beating GPT-5 by 5.3 points on EditReward-Bench and GenAI-Bench.",
+      "highlight": "",
+      "highlight_source_url": "https://huggingface.co/papers/2605.08703",
+      "teaser": "assets/img/teasers/rewardharness.webp",
+      "teaser_alt": "The full RewardHarness method pipeline: multi-modal inputs (source image, prompt, edited image) flow into an Orchestration Layer that routes a subset of Skills/Tools from a shared library via progressive disclosure, a frozen Sub-Agent VLM builds a reasoning chain to output a preference score, and an Analysis stage compares the prediction to ground truth and emits improvement signals that update the Skills and Tools libraries in a self-evolution loop.",
+      "teaser_verified": true
+    },
+    {
+      "key": "clawbench",
+      "selected": true,
+      "first_author": false,
+      "title": "ClawBench: Can AI Agents Complete Everyday Online Tasks?",
+      "authors_html": "Yuxuan Zhang, <b>Yubo Wang</b>, Yipeng Zhu, …, Kelsey R. Allen",
+      "n_authors": 28,
+      "venue_short": "Findings of EMNLP 2026",
+      "venue_long": "Findings of the Association for Computational Linguistics: EMNLP 2026",
+      "distinction": "Findings (in-person poster, Poster Session B, 25 Oct 2026); also presented as a poster at the COLM 2026 Workshop on Agent Behavior (WAB)",
+      "year": 2026,
+      "month": 4,
+      "arxiv_url": "https://arxiv.org/abs/2604.08523",
+      "pub_page_url": "https://openreview.net/forum?id=bqzqPmhNiN",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2604.08523"
+        },
+        {
+          "label": "Project Page",
+          "url": "https://claw-bench.com"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/TIGER-AI-Lab/ClawBench"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/NAIL-Group/ClawBench"
+        },
+        {
+          "label": "Leaderboard",
+          "url": "https://huggingface.co/spaces/TIGER-Lab/ClawBench"
+        },
+        {
+          "label": "HF Collection",
+          "url": "https://huggingface.co/collections/TIGER-Lab/clawbench-6a0247d04680f475038797d4"
+        },
+        {
+          "label": "Tweet",
+          "url": "https://x.com/YuboWang726/status/2042578117894574507"
+        }
+      ],
+      "github_stars": 1031,
+      "summary": "Evaluates agents on 153 everyday online tasks across 144 live websites, blocking final submissions for safety; the best of eight frontier models (Claude Sonnet 4.6) completes only 33.3%.",
+      "highlight": "1,000+ GitHub stars",
+      "highlight_source_url": "https://github.com/TIGER-AI-Lab/ClawBench",
+      "teaser": "assets/img/teasers/clawbench.webp",
+      "teaser_alt": "The Left and Middle panels of the paper's overview figure: a grid of the 15 everyday-life task categories (with counts and icons) next to a schematic contrasting traditional offline/sandbox benchmark evaluation with ClawBench's live real-website evaluation, whose five-layer trace (session replay, action screenshots, HTTP traffic, agent messages, browser actions) feeds an Agentic Evaluator that returns a rich, traceable verdict.",
+      "teaser_verified": true
+    },
+    {
+      "key": "critique-coder",
+      "selected": true,
+      "first_author": false,
+      "title": "Critique-Coder: Enhancing Coder Models by Critique Reinforcement Learning",
+      "authors_html": "Chi Ruan, Dongfu Jiang, <b>Yubo Wang</b>, Wenhu Chen",
+      "n_authors": 4,
+      "venue_short": "ICLR 2026",
+      "venue_long": "The Fourteenth International Conference on Learning Representations (ICLR 2026)",
+      "distinction": "Poster",
+      "year": 2025,
+      "month": 9,
+      "arxiv_url": "https://arxiv.org/abs/2509.22824",
+      "pub_page_url": "https://openreview.net/forum?id=tsuxIeLUsz",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2509.22824"
+        },
+        {
+          "label": "Publication Page",
+          "url": "https://openreview.net/forum?id=tsuxIeLUsz"
+        },
+        {
+          "label": "Project Page",
+          "url": "https://tiger-ai-lab.github.io/Critique-Coder/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/TIGER-AI-Lab/Critique-Coder"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/TIGER-Lab/rStar-Critique-Data"
+        },
+        {
+          "label": "Models",
+          "url": "https://huggingface.co/TIGER-Lab/Critique-Coder-8B"
+        },
+        {
+          "label": "HF Collection",
+          "url": "https://huggingface.co/collections/TIGER-Lab/critique-coder-68dbdcdf09dbf87ed11822e4"
+        }
+      ],
+      "github_stars": 13,
+      "summary": "Proposes Critique Reinforcement Learning (CRL), rewarding models for correctly judging question–solution pairs; replacing 20% of RL data with CRL pushes Critique-Coder-8B past 60% on LiveCodeBench v5.",
+      "highlight": "",
+      "highlight_source_url": "https://arxiv.org/abs/2509.22824",
+      "teaser": "assets/img/teasers/critique-coder.webp",
+      "teaser_alt": "The method overview of Critique-Coder: the rStarCoder data-preparation pipeline (generate solutions, filter slow tests) feeding two GRPO training loops of one Coding LLM Policy, Standard RL (question -> solutions -> tests -> reward) and Critique RL (question + solution -> judgement of solution -> correct judge? -> reward).",
+      "teaser_verified": true
+    },
+    {
+      "key": "one-shot-cft",
+      "selected": true,
+      "first_author": true,
+      "title": "Unleashing the Reasoning Potential of Pre-trained LLMs by Critique Fine-Tuning on One Problem",
+      "authors_html": "<b>Yubo Wang</b>, Ping Nie, Kai Zou, Lijun Wu, Wenhu Chen",
+      "n_authors": 5,
+      "venue_short": "EMNLP 2025",
+      "venue_long": "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP 2025, Main Conference)",
+      "distinction": "",
+      "year": 2025,
+      "month": 6,
+      "arxiv_url": "https://arxiv.org/abs/2506.03295",
+      "pub_page_url": "https://aclanthology.org/2025.emnlp-main.149/",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2506.03295"
+        },
+        {
+          "label": "Publication Page",
+          "url": "https://aclanthology.org/2025.emnlp-main.149/"
+        },
+        {
+          "label": "Project Page",
+          "url": "https://tiger-ai-lab.github.io/One-Shot-CFT/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/TIGER-AI-Lab/One-Shot-CFT"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/TIGER-Lab/One-Shot-CFT-Data"
+        },
+        {
+          "label": "Models",
+          "url": "https://huggingface.co/TIGER-Lab/One-Shot-CFT-Math-Qwen-7B"
+        },
+        {
+          "label": "HF Collection",
+          "url": "https://huggingface.co/collections/TIGER-Lab/one-shot-cft-683fbb4d2bcf698dbea8fb21"
+        },
+        {
+          "label": "Tweet",
+          "url": "https://x.com/YuboWang726/status/1930454445613088986"
+        }
+      ],
+      "github_stars": 33,
+      "summary": "Fine-tuning LLMs on teacher critiques of diverse solutions to a single problem improves Qwen-Math-7B by 15% on six math benchmarks, matching RL at 20x less compute.",
+      "highlight": "",
+      "highlight_source_url": "",
+      "teaser": "assets/img/teasers/one-shot-cft.webp",
+      "teaser_alt": "A two-part method overview: the top shows the one-shot CFT data pipeline (a single problem fed to 10 solution generators producing 100 candidate solutions, critiqued by 7 teacher models into 700 critiques, then verified and filtered to 600), and the bottom contrasts the SFT paradigm (input problem, output reference solution) with the CFT paradigm (input problem plus candidate solution, output critique).",
+      "teaser_verified": true
+    },
+    {
+      "key": "scholarcopilot",
+      "selected": true,
+      "first_author": true,
+      "title": "ScholarCopilot: Training Large Language Models for Academic Writing with Accurate Citations",
+      "authors_html": "<b>Yubo Wang</b>†, Xueguang Ma†, Ping Nie, Huaye Zeng, Zhiheng Lyu, Yuxuan Zhang, Benjamin Schneider, Yi Lu, Xiang Yue, Wenhu Chen†",
+      "n_authors": 10,
+      "venue_short": "COLM 2025",
+      "venue_long": "Conference on Language Modeling (COLM) 2025",
+      "distinction": "",
+      "year": 2025,
+      "month": 4,
+      "arxiv_url": "https://arxiv.org/abs/2504.00824",
+      "pub_page_url": "https://openreview.net/forum?id=r8nloXtluk",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2504.00824"
+        },
+        {
+          "label": "Publication Page",
+          "url": "https://openreview.net/forum?id=r8nloXtluk"
+        },
+        {
+          "label": "Project Page",
+          "url": "https://tiger-ai-lab.github.io/ScholarCopilot/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/TIGER-AI-Lab/ScholarCopilot"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/TIGER-Lab/ScholarCopilot-Data-v1"
+        },
+        {
+          "label": "Models",
+          "url": "https://huggingface.co/TIGER-Lab/ScholarCopilot-v1"
+        },
+        {
+          "label": "Demo",
+          "url": "https://huggingface.co/spaces/TIGER-Lab/ScholarCopilot"
+        },
+        {
+          "label": "HF Collection",
+          "url": "https://huggingface.co/collections/TIGER-Lab/scholarcopilot-6756f940df88114b24232074"
+        },
+        {
+          "label": "Tweet",
+          "url": "https://x.com/WenhuChen/status/1907861046833885397"
+        }
+      ],
+      "github_stars": 253,
+      "summary": "Fine-tunes Qwen2.5-7B on 500K arXiv papers to emit a [RET] token that retrieves citations mid-generation, reaching 40.1% top-1 citation retrieval accuracy versus 15.0% for E5-Mistral-7B.",
+      "highlight": "",
+      "highlight_source_url": "https://huggingface.co/spaces/TIGER-Lab/ScholarCopilot",
+      "teaser": "assets/img/teasers/scholarcopilot.webp",
+      "teaser_alt": "Side-by-side schematic of a traditional RAG pipeline (separate Retriever and Generator) versus ScholarCopilot's single Generator that emits [RET] tokens to retrieve references mid-generation, with a strip of headline results (generation quality, retrieval accuracy, human study) along the bottom.",
+      "teaser_verified": true
+    },
+    {
+      "key": "supergpqa",
+      "selected": false,
+      "first_author": false,
+      "title": "SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines",
+      "authors_html": "M-A-P Team: Xinrun Du, Yifan Yao, Kaijing Ma, …, <b>Yubo Wang</b>, …, Ge Zhang",
+      "n_authors": 97,
+      "venue_short": "NeurIPS 2025",
+      "venue_long": "Advances in Neural Information Processing Systems (NeurIPS 2025), Datasets and Benchmarks Track",
+      "distinction": "Datasets and Benchmarks Track (poster)",
+      "year": 2025,
+      "month": 2,
+      "arxiv_url": "https://arxiv.org/abs/2502.14739",
+      "pub_page_url": "https://openreview.net/forum?id=6WgflzYQpf",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2502.14739"
+        },
+        {
+          "label": "Publication Page",
+          "url": "https://openreview.net/forum?id=6WgflzYQpf"
+        },
+        {
+          "label": "Project Page",
+          "url": "https://supergpqa.github.io/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/SuperGPQA/SuperGPQA"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/m-a-p/SuperGPQA"
+        }
+      ],
+      "github_stars": 193,
+      "summary": "Introduces SuperGPQA, a 26,529-question benchmark spanning 285 graduate disciplines built via human-LLM collaborative filtering; the strongest model tested, DeepSeek-R1, reaches 61.82% accuracy.",
+      "highlight": "Used in the Qwen3 and Kimi K2 evaluations",
+      "highlight_source_url": "https://arxiv.org/abs/2505.09388",
+      "teaser": "assets/img/teasers/supergpqa.webp",
+      "teaser_alt": "A three-stage pipeline diagram of how SuperGPQA is built: expert Source Screening of credible resources, crowd-sourced Transcription (translate, convert to multiple-choice, standardize, generate distractors), and a rule-/model-/human-based Quality Inspection stage with its checklists.",
+      "teaser_verified": true
+    },
+    {
+      "key": "cft",
+      "selected": true,
+      "first_author": true,
+      "title": "Critique Fine-Tuning: Learning to Critique is More Effective than Learning to Imitate",
+      "authors_html": "<b>Yubo Wang</b>, Xiang Yue, Wenhu Chen",
+      "n_authors": 3,
+      "venue_short": "COLM 2025",
+      "venue_long": "Second Conference on Language Modeling (COLM 2025)",
+      "distinction": "",
+      "year": 2025,
+      "month": 1,
+      "arxiv_url": "https://arxiv.org/abs/2501.17703",
+      "pub_page_url": "https://openreview.net/forum?id=vTAz44GgOA",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2501.17703"
+        },
+        {
+          "label": "Publication Page",
+          "url": "https://openreview.net/forum?id=vTAz44GgOA"
+        },
+        {
+          "label": "Project Page",
+          "url": "https://tiger-ai-lab.github.io/CritiqueFineTuning/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/TIGER-AI-Lab/CritiqueFineTuning"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/TIGER-Lab/WebInstruct-CFT"
+        },
+        {
+          "label": "Models",
+          "url": "https://huggingface.co/TIGER-Lab/Qwen2.5-Math-7B-CFT"
+        },
+        {
+          "label": "HF Collection",
+          "url": "https://huggingface.co/collections/TIGER-Lab/critiquefinetuning-679b25e1528e75180f55e5c4"
+        },
+        {
+          "label": "Tweet",
+          "url": "https://x.com/WenhuChen/status/1885060597500567562"
+        }
+      ],
+      "github_stars": 180,
+      "summary": "Trains LLMs to critique noisy responses rather than imitate correct ones, outperforming SFT by 4-10% on six math benchmarks after one hour of training on 50K examples.",
+      "highlight": "",
+      "highlight_source_url": "",
+      "teaser": "assets/img/teasers/cft.webp",
+      "teaser_alt": "A side-by-side schematic contrasting Supervised Fine-Tuning (query + imitated answer) with Critique Fine-Tuning (query + noisy answer + GPT-4o critique with a verdict), above two bar charts (MATH, OlympiadBench) showing CFT beating Base/SFT-GPT4o/SFT-verified across DeepSeek-Math, Qwen2.5 and Qwen2.5-Math base models.",
+      "teaser_verified": true
+    },
+    {
+      "key": "mammoth-vl",
+      "selected": false,
+      "first_author": false,
+      "title": "MAmmoTH-VL: Eliciting Multimodal Reasoning with Instruction Tuning at Scale",
+      "authors_html": "Jarvis Guo*, Tuney Zheng*, Yuelin Bai, Bo Li, <b>Yubo Wang</b>, King Zhu, Yizhi Li, Graham Neubig, Wenhu Chen, Xiang Yue",
+      "n_authors": 10,
+      "venue_short": "ACL 2025",
+      "venue_long": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), Main Conference",
+      "distinction": "Main Conference (Long Paper)",
+      "year": 2024,
+      "month": 12,
+      "arxiv_url": "https://arxiv.org/abs/2412.05237",
+      "pub_page_url": "https://aclanthology.org/2025.acl-long.680/",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2412.05237"
+        },
+        {
+          "label": "Publication Page",
+          "url": "https://aclanthology.org/2025.acl-long.680/"
+        },
+        {
+          "label": "Project Page",
+          "url": "https://mammoth-vl.github.io/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/MAmmoTH-VL/MAmmoTH-VL"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/MAmmoTH-VL/MAmmoTH-VL-Instruct-12M"
+        },
+        {
+          "label": "Models",
+          "url": "https://huggingface.co/MAmmoTH-VL/MAmmoTH-VL-8B"
+        },
+        {
+          "label": "HF Collection",
+          "url": "https://huggingface.co/collections/TIGER-Lab/mammoth-vl-675dd5695679c80ce5c3a035"
+        }
+      ],
+      "github_stars": 50,
+      "summary": "Builds a 12M-example multimodal instruction-tuning dataset with chain-of-thought rationales using only open models; training MAmmoTH-VL-8B on it gains +8.1% on MathVerse and +7% on MMMU-Pro.",
+      "highlight": "",
+      "highlight_source_url": "https://scholar.google.com/scholar?q=%22MAmmoTH-VL%3A+Eliciting+Multimodal+Reasoning+with+Instruction+Tuning+at+Scale%22",
+      "teaser": "assets/img/teasers/mammoth-vl.webp",
+      "teaser_alt": "The MAmmoTH-VL data-construction pipeline (collect 153 open multimodal instruct datasets and grade their source quality, rewrite them into detailed step-by-step CoT responses with open MLLMs/LLMs, then self-filter with the same MLLM as judge to produce MAmmoTH-VL-Instruct-12M and the VL model), with before/after Math and Science examples underneath.",
+      "teaser_verified": true
+    },
+    {
+      "key": "mega-bench",
+      "selected": false,
+      "first_author": false,
+      "title": "MEGA-Bench: Scaling Multimodal Evaluation to over 500 Real-World Tasks",
+      "authors_html": "Jiacheng Chen†, Tianhao Liang†, Sherman Siu, …, <b>Yubo Wang</b>, …, Wenhu Chen†",
+      "n_authors": 16,
+      "venue_short": "ICLR 2025",
+      "venue_long": "The Thirteenth International Conference on Learning Representations (ICLR 2025)",
+      "distinction": "Poster",
+      "year": 2024,
+      "month": 10,
+      "arxiv_url": "https://arxiv.org/abs/2410.10563",
+      "pub_page_url": "https://openreview.net/forum?id=2rWbKbmOuM",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2410.10563"
+        },
+        {
+          "label": "Publication Page",
+          "url": "https://openreview.net/forum?id=2rWbKbmOuM"
+        },
+        {
+          "label": "Project Page",
+          "url": "https://tiger-ai-lab.github.io/MEGA-Bench/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/TIGER-AI-Lab/MEGA-Bench"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/TIGER-Lab/MEGA-Bench"
+        },
+        {
+          "label": "Leaderboard",
+          "url": "https://huggingface.co/spaces/TIGER-Lab/MEGA-Bench"
+        },
+        {
+          "label": "HF Collection",
+          "url": "https://huggingface.co/collections/TIGER-Lab/mega-bench-671033ec0953c8d9a9550012"
+        }
+      ],
+      "github_stars": 83,
+      "summary": "Builds a benchmark of 505 real-world multimodal tasks (8,000+ samples) with diverse output formats and 40+ metrics, yielding fine-grained capability reports for frontier vision-language models.",
+      "highlight": "Integrated into lmms-eval and VLMEvalKit",
+      "highlight_source_url": "https://github.com/EvolvingLMMs-Lab/lmms-eval/tree/main/lmms_eval/tasks/megabench",
+      "teaser": "assets/img/teasers/mega-bench.webp",
+      "teaser_alt": "The paper's teaser: a radial taxonomy tree of MEGA-Bench's eight application areas (Perception, Planning, Coding, Information Extraction, Mathematics, Knowledge, Science, Metrics) around the MEGA-Bench gem logo, surrounded by representative multimodal task examples (images plus their questions) illustrating the diversity of the 505 tasks.",
+      "teaser_verified": true
+    },
+    {
+      "key": "mmmu-pro",
+      "selected": false,
+      "first_author": false,
+      "title": "MMMU-Pro: A More Robust Multi-discipline Multimodal Understanding Benchmark",
+      "authors_html": "Xiang Yue*, Tianyu Zheng*, Yuansheng Ni*, <b>Yubo Wang</b>, …, Graham Neubig",
+      "n_authors": 13,
+      "venue_short": "ACL 2025",
+      "venue_long": "The 63rd Annual Meeting of the Association for Computational Linguistics (ACL 2025), Main Conference, Volume 1: Long Papers",
+      "distinction": "Main Conference (Long Paper)",
+      "year": 2024,
+      "month": 9,
+      "arxiv_url": "https://arxiv.org/abs/2409.02813",
+      "pub_page_url": "https://aclanthology.org/2025.acl-long.736/",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2409.02813"
+        },
+        {
+          "label": "Publication Page",
+          "url": "https://aclanthology.org/2025.acl-long.736/"
+        },
+        {
+          "label": "Project Page",
+          "url": "https://mmmu-benchmark.github.io/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/MMMU-Benchmark/MMMU"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/MMMU/MMMU_Pro"
+        },
+        {
+          "label": "Leaderboard",
+          "url": "https://mmmu-benchmark.github.io/#leaderboard"
+        },
+        {
+          "label": "Tweet",
+          "url": "https://x.com/xiangyue96/status/1831710337034231859"
+        }
+      ],
+      "github_stars": 597,
+      "summary": "Builds a harder version of MMMU by filtering text-only-solvable questions, expanding to ten options and adding vision-only screenshot inputs; model accuracy drops 16.8–26.9 points versus MMMU.",
+      "highlight": "Featured in Google's Gemini 3 launch",
+      "highlight_source_url": "https://blog.google/products/gemini/gemini-3/",
+      "teaser": "assets/img/teasers/mmmu-pro.webp",
+      "teaser_alt": "Five real-world photos/screenshots (a website, a monitor, handwritten paper, a notebook) in which a multiple-choice question with up to 10 options is embedded, illustrating MMMU-Pro's vision-only input setting and option augmentation.",
+      "teaser_verified": true
+    },
+    {
+      "key": "mmlu-pro",
+      "selected": true,
+      "first_author": true,
+      "title": "MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark",
+      "authors_html": "<b>Yubo Wang</b>†, Xueguang Ma†, Ge Zhang, …, Wenhu Chen†",
+      "n_authors": 17,
+      "venue_short": "NeurIPS 2024",
+      "venue_long": "Thirty-Eighth Conference on Neural Information Processing Systems (NeurIPS 2024), Datasets and Benchmarks Track",
+      "distinction": "Spotlight (Datasets and Benchmarks Track)",
+      "year": 2024,
+      "month": 6,
+      "arxiv_url": "https://arxiv.org/abs/2406.01574",
+      "pub_page_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/ad236edc564f3e3156e1b2feafb99a24-Abstract-Datasets_and_Benchmarks_Track.html",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2406.01574"
+        },
+        {
+          "label": "Publication Page",
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/ad236edc564f3e3156e1b2feafb99a24-Abstract-Datasets_and_Benchmarks_Track.html"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/TIGER-AI-Lab/MMLU-Pro"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro"
+        },
+        {
+          "label": "Leaderboard",
+          "url": "https://huggingface.co/spaces/TIGER-Lab/MMLU-Pro"
+        },
+        {
+          "label": "HF Collection",
+          "url": "https://huggingface.co/collections/TIGER-Lab/mmlu-pro-68941812ba966b4780c47a85"
+        },
+        {
+          "label": "Tweet",
+          "url": "https://x.com/YuboWang726/status/1839330905145610688"
+        }
+      ],
+      "github_stars": 430,
+      "summary": "Extends MMLU to 12K harder, reasoning-focused questions with ten options each; model accuracy drops 16-33% and prompt sensitivity falls from 4-5% to 2%.",
+      "highlight": "Adopted by the Hugging Face Open LLM Leaderboard",
+      "highlight_source_url": "https://huggingface.co/docs/leaderboards/open_llm_leaderboard/about",
+      "teaser": "assets/img/teasers/mmlu-pro.webp",
+      "teaser_alt": "The six-step icon flow chart of how MMLU-Pro was built: Original MMLU -> Initial Filtering -> Question Collection and Integration -> Option Augmentation -> Expert Review -> MMLU-Pro.",
+      "teaser_verified": true
+    },
+    {
+      "key": "map-neo",
+      "selected": false,
+      "first_author": false,
+      "title": "MAP-Neo: Highly Capable and Transparent Bilingual Large Language Model Series",
+      "authors_html": "Ge Zhang, Scott Qu, Jiaheng Liu, …, <b>Yubo Wang</b>, …, Wenhu Chen",
+      "n_authors": 45,
+      "venue_short": "Tech Report 2024",
+      "venue_long": "Technical Report (arXiv preprint arXiv:2405.19327)",
+      "distinction": "",
+      "year": 2024,
+      "month": 5,
+      "arxiv_url": "https://arxiv.org/abs/2405.19327",
+      "pub_page_url": "",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2405.19327"
+        },
+        {
+          "label": "Project Page",
+          "url": "https://map-neo.github.io/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/multimodal-art-projection/MAP-NEO"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/m-a-p/Matrix"
+        },
+        {
+          "label": "Models",
+          "url": "https://huggingface.co/m-a-p/neo_7b"
+        },
+        {
+          "label": "HF Collection",
+          "url": "https://huggingface.co/collections/m-a-p/neo-models-66395a5c9662bb58d5d70f04"
+        },
+        {
+          "label": "Tweet",
+          "url": "https://x.com/GeZhang86038849/status/1788874345927889203"
+        }
+      ],
+      "github_stars": 992,
+      "summary": "Fully open bilingual 7B LLM trained from scratch on 4.5T tokens, releasing the Matrix corpus, data pipeline, intermediate checkpoints, and training code, with performance comparable to open-weight peers.",
+      "highlight": "",
+      "highlight_source_url": "https://arxiv.org/abs/2405.19327",
+      "teaser": "assets/img/teasers/map-neo.webp",
+      "teaser_alt": "A left-to-right flow chart of MAP-Neo's document conversion pipeline: a raw Document goes through Layout Detection, is split into Text/Title, Figure, Table, Equation and Others elements, which are routed into Content/Image/Table/Latex Blocks (or dropped) by an Ordering stage, then Post Processed into MarkDown.",
+      "teaser_verified": true
+    },
+    {
+      "key": "llm-amt",
+      "selected": true,
+      "first_author": true,
+      "title": "Augmenting Black-box LLMs with Medical Textbooks for Biomedical Question Answering",
+      "authors_html": "<b>Yubo Wang</b>, Xueguang Ma, Wenhu Chen",
+      "n_authors": 3,
+      "venue_short": "Findings of EMNLP 2024",
+      "venue_long": "Findings of the Association for Computational Linguistics: EMNLP 2024",
+      "distinction": "Findings",
+      "year": 2023,
+      "month": 9,
+      "arxiv_url": "https://arxiv.org/abs/2309.02233",
+      "pub_page_url": "https://aclanthology.org/2024.findings-emnlp.95/",
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2309.02233"
+        },
+        {
+          "label": "Publication Page",
+          "url": "https://aclanthology.org/2024.findings-emnlp.95/"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/TIGER-AI-Lab/LLM-AMT"
+        }
+      ],
+      "github_stars": 14,
+      "summary": "Augments black-box LLMs with retrieval from medical textbooks via a query augmenter, hybrid retriever and knowledge self-refiner, improving accuracy 11.6-16.6% on three medical QA benchmarks.",
+      "highlight": "",
+      "highlight_source_url": "",
+      "teaser": "assets/img/teasers/llm-amt.webp",
+      "teaser_alt": "The four-stage LLM-AMT pipeline flow chart: Query Augmenter (query rewriting and expansion), Hybrid Textbook Retriever (sparse + dense retrieval, merge, reranking to top-k passages), Knowledge Self-Refiner (relevance filter, decompose into segments, usefulness filter, recompose), and LLM Reader (generator producing the final answer), illustrated with a worked medical QA example.",
+      "teaser_verified": true
+    }
+  ],
+  "publications_meta": {
+    "count": 15,
+    "selected_count": 8,
+    "has_equal_marks": true,
+    "has_core_marks": true
+  }
+}
