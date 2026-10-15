@@ -23,13 +23,13 @@ HANDOVER.md         full handover document for future maintainers / agents
 **Option A — edit the data file, then rebuild (recommended)**
 
 1. Edit `_src/data.json`:
-   - a new paper → add an object to `publications` (`key`, `title`, `authors_html` with `<b>Yubo Wang</b>`, `venue_short`, `year`, `month`, `links`, `summary`, `selected`, `teaser` path), and drop its teaser image into `assets/img/teasers/`;
+   - a new paper → add an object to `publications` (`key`, `title`, `venue_short`, `year`, `month`, `arxiv_url`, `links`, `authors_html` with `<b>Yubo Wang</b>`, `summary`, `selected`, `teaser` path — see the paste-ready template in `HANDOVER.md` §4.4), and drop its teaser image into `assets/img/teasers/`;
    - a new news item → prepend to `news` (`date: "YYYY-MM"`, `emoji`, `html`);
    - dates/roles → `experience`, `education`.
-2. Run `python3 _src/build.py` from the repository root (needs `pip install jinja2 pillow`). It rewrites `index.html`, `style.css` and `script.js`.
+2. Run `python3 _src/build.py` from the repository root (needs `pip install jinja2 pillow`). It rewrites `index.html`, `style.css`, `script.js` and `sitemap.xml`.
 3. Commit and push to `main`. If GitHub Pages does not pick it up within a minute, request a build: `gh api -X POST repos/Wyyyb/wyyyb.github.io/pages/builds`.
 
-**Option B — edit `index.html` directly.** Every publication, news item and row is a clearly delimited block (`<!-- PUB: key --> … <!-- /PUB: key -->`). If you go this route, stop running the generator (it would overwrite your edits) or mirror the change in `_src/data.json`.
+**Option B — edit `index.html` directly.** Each publication is wrapped in `<!-- PUB: key --> … <!-- /PUB: key -->`; news items and experience/education rows are plain `<li>` elements under a section comment. If you go this route, stop running the generator (it would overwrite your edits) or mirror the change in `_src/data.json`.
 
 ## Handover
 

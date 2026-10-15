@@ -16,7 +16,7 @@ SITE = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.dirname(SR
 data = json.load(open(os.path.join(SRC, 'data.json'), encoding='utf-8'))
 
 MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-# Icon ids refer to <symbol>s in _src/icons.svg (built by scripts/make_sprite.py from Font Awesome Free + Academicons).
+# Icon ids refer to <symbol>s in _src/icons.svg (built by _src/tools/make_sprite.py from Font Awesome Free + Academicons).
 ICONS = {
     'envelope': 'i-envelope', 'google-scholar': 'i-scholar', 'github': 'i-github',
     'x-twitter': 'i-x', 'linkedin': 'i-linkedin', 'cv': 'i-cv',
@@ -78,7 +78,9 @@ for pub in data['publications']:
     links = [link_view(l) for l in pub['links']]
     # keep one of arXiv/Paper first
     v['links'] = links
-    v['primary_url'] = next((l['url'] for l in links if l['label'] in ('arXiv', 'Paper')), pub['arxiv_url'])
+    v['primary_url'] = next((l['url'] for l in links if l['label'] in ('arXiv', 'Paper')), pub.get('arxiv_url') or (links[0]['url'] if links else '#'))
+    v.setdefault('month', 1); v.setdefault('selected', False); v.setdefault('first_author', False)
+    v.setdefault('authors_html', ''); v.setdefault('summary', ''); v.setdefault('highlight', ''); v.setdefault('distinction', '')
     if pub.get('teaser'):
         w, h = img_size(pub['teaser'])
         if w is None:
@@ -97,6 +99,11 @@ def display_year(p):
 for p in pubs:
     p['display_year'] = display_year(p)
 pubs.sort(key=lambda p: (p['display_year'], p['year'], p['month'], p.get('first_author', False)), reverse=True)
+# publications_meta is derived here (the value in data.json is informational only)
+pubs_meta = {
+    'count': len(pubs), 'selected_count': sum(1 for p in pubs if p['selected']),
+    'has_equal_marks': any('*' in p['authors_html'] for p in pubs), 'has_core_marks': any('†' in p['authors_html'] for p in pubs),
+}
 groups = []
 for p in pubs:
     if not groups or groups[-1]['year'] != p['display_year']:
@@ -137,6 +144,8 @@ photo_srcset = ', '.join(f"{p} {w}w" for p, w in variants)
 
 prof = data['profile']
 scholar_url = next((l['url'] for l in prof['links'] if l['icon'] == 'google-scholar'), '#')
+x_url = next((l['url'] for l in prof['links'] if l['icon'] == 'x-twitter'), '')
+x_handle = ('@' + x_url.rstrip('/').rsplit('/', 1)[-1]) if x_url else ''
 jsonld = {
     '@context': 'https://schema.org', '@type': 'Person',
     'name': prof['name'], 'alternateName': prof['name_cn'], 'url': prof['site_url'],
@@ -149,7 +158,8 @@ jsonld = {
 env = jinja2.Environment(loader=jinja2.FileSystemLoader(SRC), autoescape=True, trim_blocks=False, lstrip_blocks=False)
 tpl = env.get_template('template.html.j2')
 html = tpl.render(
-    p=prof, about=data['about'], news=news, news_limit=6, pub_groups=groups, pubs_meta=data['publications_meta'],
+    p=prof, about=data['about'], news=news, news_limit=6, pub_groups=groups, pubs_meta=pubs_meta,
+    x_handle=x_handle, title_affiliation=(prof['affiliations'][0]['name'] if prof.get('affiliations') else ''),
     experience=with_logo_size(data['experience']), education=with_logo_size(data['education']),
     service=data.get('service'), footer=data['footer'], affiliation_logos=aff,
     photo_w=photo_w, photo_h=photo_h, photo_srcset=photo_srcset, scholar_url=scholar_url, repo_url='https://github.com/Wyyyb/wyyyb.github.io',
@@ -161,4 +171,7 @@ with open(os.path.join(SITE, 'index.html'), 'w', encoding='utf-8') as f:
     f.write(html)
 for fn in ('style.css', 'script.js'):
     shutil.copyfile(os.path.join(SRC, fn), os.path.join(SITE, fn))
-print(f"built {os.path.join(SITE, 'index.html')} ({len(html)//1024} KB): {len(pubs)} publications in {len(groups)} year groups, {len(news)} news items, {len(aff)} logos")
+with open(os.path.join(SITE, 'sitemap.xml'), 'w', encoding='utf-8') as f:
+    f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>%s</loc><lastmod>%s</lastmod></url></urlset>\n'
+            % (prof['site_url'], datetime.date.today().isoformat()))
+print(f"built {os.path.join(SITE, 'index.html')} ({len(html.encode('utf-8'))//1024} KiB): {len(pubs)} publications ({pubs_meta['selected_count']} selected) in {len(groups)} year groups, {len(news)} news items, {len(aff)} logos; sitemap.xml lastmod {datetime.date.today().isoformat()}")

@@ -10,7 +10,7 @@ with sync_playwright() as p:
     ctx = b.new_context(viewport={"width": width, "height": 900}, device_scale_factor=1, color_scheme=scheme)
     pg = ctx.new_page()
     pg.goto(url, wait_until="networkidle")
-    pg.wait_for_timeout(500)
+    pg.wait_for_timeout(1500)
     pg.screenshot(path=out, full_page=full)
     print("saved", out)
     b.close()
