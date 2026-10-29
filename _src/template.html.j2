@@ -251,7 +251,7 @@
           {%- endfor %}
         </ul>
       </div>
-      <p class="footer-credit">{{ footer.credit }} Built as plain HTML/CSS; <a href="{{ repo_url }}">source on GitHub</a>.</p>
+      <p class="footer-credit">{% if footer.credit %}{{ footer.credit }} {% endif %}Built as plain HTML/CSS; <a href="{{ repo_url }}">source on GitHub</a>.</p>
     </div>
   </footer>
 
