@@ -252,6 +252,10 @@
         </ul>
       </div>
       <p class="footer-credit">{% if footer.credit %}{{ footer.credit }} {% endif %}Built as plain HTML/CSS; <a href="{{ repo_url }}">source on GitHub</a>.</p>
+{%- if footer.visitor_counter == 'mapmyvisitors' %}
+      <!-- Visitor map and statistics (MapMyVisitors; same widget id as the previous site, so the history is preserved). Click the map for the dashboard. -->
+      <div class="footer-map"><script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d={{ footer.mapmyvisitors_id }}&amp;cl=ffffff&amp;w=300&amp;h=200"></script></div>
+{%- endif %}
     </div>
   </footer>
 
