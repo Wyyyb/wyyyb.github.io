@@ -136,7 +136,7 @@ Field semantics:
 The logo strip between News and Publications: [{name,url,logo}]. Wordmarks (aspect > 1.8) automatically get the `is-wordmark` class (rendered at 72 % plate height).
 
 ### 4.7 footer / service
-`footer.copyright`, `footer.updated` ("Last updated: October 2026" — **bump it whenever content changes**), `footer.credit` (empty by owner's request — no design-credit line), `footer.visitor_counter` (`"hits"` = hits.sh badge in the footer meta line, counting page loads since 2026-10-30; `"busuanzi"` = 不蒜子 text counter, whose API was unreachable when tested; remove the key to show no counter). `service` is null (section hidden); set `{"reviewing": "…"}` to show a Service section.
+`footer.copyright`, `footer.updated` ("Last updated: October 2026" — **bump it whenever content changes**), `footer.credit` (empty by owner's request — no design-credit line), `footer.visitor_counter` (`"mapmyvisitors"` = the MapMyVisitors map + statistics widget carried over from the old al-folio site, widget id in `footer.mapmyvisitors_id`, dashboard at http://mapmyvisitors.com/web/1byqr — the owner's choice; `"hits"` = hits.sh badge; `"busuanzi"` = 不蒜子 text counter, whose API was unreachable when tested; remove the key to show no counter). `service` is null (section hidden); set `{"reviewing": "…"}` to show a Service section.
 
 ## 5. Build, deploy, verify
 
@@ -289,4 +289,4 @@ Notes: RewardHarness's COLM camera-ready title differs ("RewardHarness: Learning
 - Service section (`service.reviewing`) once the owner lists reviewing duties.
 - Re-crop LLM-AMT / MEGA-Bench / MMMU-Pro teasers to ~2:1 panels if the letterboxing bothers anyone.
 - When ClawBench's Anthology page and the FIM paper's venue are known, update venue/links/news (§8).
-- Optional: 404.html, a real analytics dashboard (GoatCounter / Cloudflare Web Analytics need the owner's account; currently only the hits.sh badge), Semantic Scholar/ORCID pills (§7.4).
+- Optional: 404.html, a real analytics dashboard (GoatCounter / Cloudflare Web Analytics need the owner's account; MapMyVisitors is installed), Semantic Scholar/ORCID pills (§7.4).
