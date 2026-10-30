@@ -136,7 +136,7 @@ Field semantics:
 The logo strip between News and Publications: [{name,url,logo}]. Wordmarks (aspect > 1.8) automatically get the `is-wordmark` class (rendered at 72 % plate height).
 
 ### 4.7 footer / service
-`footer.copyright`, `footer.updated` ("Last updated: October 2026" — **bump it whenever content changes**), `footer.credit`. `service` is null (section hidden); set `{"reviewing": "…"}` to show a Service section.
+`footer.copyright`, `footer.updated` ("Last updated: October 2026" — **bump it whenever content changes**), `footer.credit` (empty by owner's request — no design-credit line), `footer.visitor_counter` (`"hits"` = hits.sh badge in the footer meta line, counting page loads since 2026-10-30; `"busuanzi"` = 不蒜子 text counter, whose API was unreachable when tested; remove the key to show no counter). `service` is null (section hidden); set `{"reviewing": "…"}` to show a Service section.
 
 ## 5. Build, deploy, verify
 
@@ -282,10 +282,11 @@ Notes: RewardHarness's COLM camera-ready title differs ("RewardHarness: Learning
 - `make_sprite.py` strips `<title>` from source SVGs; keep that behaviour when adding icons.
 - Pushes to `main` trigger a Pages build by themselves; `gh api -X POST …/pages/builds` is only a fallback (a POST during a running build adds a harmless `errored, duration 0` entry).
 - Google Scholar numbers were deliberately removed; don't add citation counts back without asking.
+- Advisors are "Prof. Wenhu Chen and Prof. Yuntian Deng" (changed 2026-10-29 at the owner's request; do not add a reason). The Tencent entry must not mention a team name.
 
 ## 12. Backlog / ideas (none required)
 - Add a CV: put the PDF at `assets/pdf/Yubo_Wang_CV.pdf` and add `{"label":"CV","url":"assets/pdf/Yubo_Wang_CV.pdf","icon":"cv"}` to `profile.links`.
 - Service section (`service.reviewing`) once the owner lists reviewing duties.
 - Re-crop LLM-AMT / MEGA-Bench / MMMU-Pro teasers to ~2:1 panels if the letterboxing bothers anyone.
 - When ClawBench's Anthology page and the FIM paper's venue are known, update venue/links/news (§8).
-- Optional: 404.html, analytics (none installed on purpose), Semantic Scholar/ORCID pills (§7.4).
+- Optional: 404.html, a real analytics dashboard (GoatCounter / Cloudflare Web Analytics need the owner's account; currently only the hits.sh badge), Semantic Scholar/ORCID pills (§7.4).
