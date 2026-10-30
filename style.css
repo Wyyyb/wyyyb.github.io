@@ -376,6 +376,7 @@ html:not(.js) .theme-toggle, html:not(.js) .seg, html:not(.js) .news-more { disp
 .footer-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px 24px; }
 .footer-meta, .footer-credit { margin: 0; }
 .footer-visits { color: var(--faint, var(--ink-3)); font-variant-numeric: tabular-nums; }
+.footer-badge { display: inline-block; height: 18px; width: auto; vertical-align: -4px; margin-left: 2px; border-radius: 3px; opacity: .9; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 4px 18px; list-style: none; margin: 0; padding: 0; }
 .footer-links a { display: inline-block; padding: 4px 0; color: var(--ink-2); text-decoration: none; }
 .footer-links a:hover { color: var(--accent-ink); }

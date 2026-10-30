@@ -244,7 +244,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-row">
-        <p class="footer-meta">{{ footer.copyright }} · {{ footer.updated }}{% if footer.visitor_counter == 'busuanzi' %}<span class="footer-visits" id="busuanzi_container_site_pv" style="display:none"> · <span id="busuanzi_value_site_uv"></span> visitors · <span id="busuanzi_value_site_pv"></span> page views</span>{% endif %}</p>
+        <p class="footer-meta">{{ footer.copyright }} · {{ footer.updated }}{% if footer.visitor_counter == 'busuanzi' %}<span class="footer-visits" id="busuanzi_container_site_pv" style="display:none"> · <span id="busuanzi_value_site_uv"></span> visitors · <span id="busuanzi_value_site_pv"></span> page views</span>{% elif footer.visitor_counter == 'hits' %} · <img class="footer-badge" src="https://hits.sh/wyyyb.github.io.svg?style=flat-square&amp;label=visits&amp;color=1f6b63&amp;labelColor=8a857c" alt="visit counter" height="18" decoding="async">{% endif %}</p>
         <ul class="footer-links" role="list" aria-label="Contact and profiles">
           {%- for l in p.links %}
           <li><a href="{{ l.url }}"><svg class="icon" aria-hidden="true"><use href="#{{ icon_id(l.icon) }}"/></svg>{{ 'Scholar' if l.label == 'Google Scholar' else l.label }}</a></li>
