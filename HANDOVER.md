@@ -25,7 +25,7 @@ _Last updated: 2026-10-15. Owner: Yubo Wang (GitHub `Wyyyb`). This document was 
 
 **Confirmed by the owner (chat, 2026-10-15) or by primary sources:**
 - Yubo Wang (王钰博). Ph.D. student in Computer Science, University of Waterloo, **May 2024 – Present**; advisor Prof. Wenhu Chen (TIGER-Lab); affiliated with the Vector Institute; collaborating with TIGER-Lab since 2023 (first Waterloo-affiliated paper Sept 2023).
-- Student Researcher, **Google Cloud AI Research (CAIR)**, **Aug 2026 – Jan 2027**, working on automated research methods.
+- Student Researcher, **Google Cloud AI Research (CAIR)**, **Aug 2026 – Jan 2027**, working on autonomous research.
 - Research Intern, **MiniMax**, **Jun 2025 – Dec 2025**, pre-training and mid-training for the MiniMax-M2 series (listed contributor of the MiniMax-M2 technical report).
 - Applied Scientist, **Tencent Smart Healthcare**, **Apr 2021 – Aug 2023** (his older homepage called the job "NLP Algorithm Engineer"; LinkedIn says Applied Scientist; the owner accepted "Applied Scientist").
 - M.S. in Computer Science, UC Davis, **Sep 2019 – Jan 2021**. B.Eng. in Computer Science, Chu Kochen Honors College, Zhejiang University, **Aug 2015 – Jun 2019**.
